@@ -1158,6 +1158,89 @@ a {
   transform: translateY(-2px);
 }
 
+/* ---------- Instagram Community Strip (reemplaza Instafeed) ---------- */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.insta-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+.insta-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.insta-tile:hover img {
+  transform: scale(1.06);
+}
+.insta-tile span {
+  position: absolute;
+  inset: auto 8px 8px 8px;
+  background: rgba(24, 24, 22, 0.72);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 900px) {
+  .insta-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------- Sticky Add-To-Cart Bar (reemplaza satcb.min.js) ---------- */
+.sticky-atc-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%) translateY(120px);
+  z-index: 45;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px 8px 10px;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100vw - 24px);
+  transition: transform 0.28s ease;
+}
+.sticky-atc-bar.visible {
+  transform: translateX(-50%) translateY(0);
+}
+.sticky-atc-bar img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+.sticky-atc-info { min-width: 0; }
+.sticky-atc-info strong {
+  display: block;
+  font-size: 0.86rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+.sticky-atc-info small {
+  color: var(--wax-red);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
 /* ---------- Cart Drawer & Modals ---------- */
 .backdrop {
   position: fixed;

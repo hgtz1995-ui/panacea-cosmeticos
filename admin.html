@@ -49,6 +49,11 @@
           <span class="nav-ico">🏠</span>
           <span class="nav-txt">Inicio</span>
         </button>
+        <button class="nav-item" data-tab="pedidos">
+          <span class="nav-ico">📦</span>
+          <span class="nav-txt">Pedidos</span>
+          <span class="nav-count" id="navOrdersCount">0</span>
+        </button>
         <button class="nav-item" data-tab="productos">
           <span class="nav-ico">🧴</span>
           <span class="nav-txt">Mis Productos</span>
@@ -137,6 +142,27 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- ==================== TAB: PEDIDOS ==================== -->
+      <section class="tab-panel" id="tab-pedidos">
+        <div class="page-head">
+          <div>
+            <h1>📦 Mis Pedidos</h1>
+            <p class="lead">Aquí llegan los pedidos de tu tienda. Toca el botón verde para avanzar cada pedido: <b>Nuevo → Pagado → Enviado → Entregado</b>.</p>
+          </div>
+          <button class="big-btn btn-green" id="addOrderBtn">➕ Anotar pedido manual</button>
+        </div>
+
+        <div class="filter-pills" id="orderStatusPills">
+          <button class="pill active" data-ostatus="all">Todos</button>
+          <button class="pill" data-ostatus="nuevo">🟡 Nuevos</button>
+          <button class="pill" data-ostatus="pagado">💚 Pagados</button>
+          <button class="pill" data-ostatus="enviado">🚚 Enviados</button>
+          <button class="pill" data-ostatus="entregado">✅ Entregados</button>
+        </div>
+
+        <div class="orders-list" id="ordersList"></div>
       </section>
 
       <!-- ==================== TAB: MIS PRODUCTOS ==================== -->
@@ -250,6 +276,29 @@
               <label for="settingWhatsapp">💬 Número de WhatsApp de pedidos</label>
               <input type="text" id="settingWhatsapp" placeholder="528110188422" required />
               <small>Con lada de país sin signos (ej. <code>528110188422</code>).</small>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>🔌 Apps y Píxeles (ya traídos de tu tienda Shopify)</h3>
+            <p class="hint" style="margin-bottom:14px;">Tus mediciones de Google y Klaviyo ya están conectadas. Si usas anuncios en Facebook/Instagram o TikTok, pega aquí su número de píxel.</p>
+            <div class="two-col">
+              <div class="field">
+                <label for="settingGa4">📊 Google Analytics 4</label>
+                <input type="text" id="settingGa4" placeholder="G-WTJDDNZHX2" />
+              </div>
+              <div class="field">
+                <label for="settingKlaviyo">✉️ Klaviyo (correos y carritos)</label>
+                <input type="text" id="settingKlaviyo" placeholder="XnsDsN" />
+              </div>
+              <div class="field">
+                <label for="settingMetaPixel">📘 Meta Pixel (Facebook / Instagram Ads)</label>
+                <input type="text" id="settingMetaPixel" placeholder="Opcional: ej. 123456789012345" />
+              </div>
+              <div class="field">
+                <label for="settingTiktokPixel">🎵 TikTok Pixel</label>
+                <input type="text" id="settingTiktokPixel" placeholder="Opcional: ej. CXXXXXXXXX" />
+              </div>
             </div>
           </div>
 
@@ -547,6 +596,53 @@
           <div class="modal-footer-right">
             <button type="button" class="big-btn btn-outline" id="cancelReviewBtn">Cancelar</button>
             <button type="submit" class="big-btn btn-green">💾 Guardar opinión</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: ANOTAR PEDIDO MANUAL ==================== -->
+  <div class="modal-overlay hidden" id="orderModal" role="dialog" aria-modal="true">
+    <div class="modal-sheet modal-sm">
+      <div class="modal-head">
+        <h2>➕ Anotar pedido (WhatsApp / Teléfono)</h2>
+        <button class="icon-close" id="closeOrderModal" aria-label="Cerrar">✕</button>
+      </div>
+      <form id="orderForm" class="modal-body">
+        <div class="two-col">
+          <div class="field">
+            <label for="ofName">Nombre de la clienta</label>
+            <input type="text" id="ofName" required placeholder="Ej. Laura Garza" />
+          </div>
+          <div class="field">
+            <label for="ofPhone">WhatsApp / Teléfono</label>
+            <input type="text" id="ofPhone" required placeholder="81 1234 5678" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="ofItems">¿Qué pidió?</label>
+          <input type="text" id="ofItems" required placeholder="Ej. 1x Vitamina C, 1x Agua de Rosas" />
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="ofTotal">Total ($ MXN)</label>
+            <input type="number" id="ofTotal" min="0" step="1" required placeholder="Ej. 850" />
+          </div>
+          <div class="field">
+            <label for="ofDelivery">Entrega</label>
+            <input type="text" id="ofDelivery" value="Envío Nacional" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="ofNotes">Nota o dirección (opcional)</label>
+          <textarea id="ofNotes" rows="2" placeholder="Ej. Pasa a recoger hoy a las 5 pm"></textarea>
+        </div>
+        <div class="modal-footer">
+          <div></div>
+          <div class="modal-footer-right">
+            <button type="button" class="big-btn btn-outline" id="cancelOrderBtn">Cancelar</button>
+            <button type="submit" class="big-btn btn-green">💾 Guardar pedido</button>
           </div>
         </div>
       </form>

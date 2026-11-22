@@ -18,28 +18,28 @@ window.PANACEA_DATA = {
       "id": "acne",
       "title": "Piel con Acné",
       "subtitle": "Control de sebo, poros y brotes sin resecar",
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/mj.jpg?v=1668454715&width=900",
+      "image": "assets/img/mj-ba679cc2.jpg",
       "badge": "Purificante"
     },
     {
       "id": "sensible",
       "title": "Piel Seca o Sensible",
       "subtitle": "Calma rojeces, dermatitis y repara la barrera",
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/pau.jpg?v=1667931001&width=900",
+      "image": "assets/img/pau-f4900b85.jpg",
       "badge": "Calmante"
     },
     {
       "id": "antiedad",
       "title": "Arrugas y Textura",
       "subtitle": "Firmeza, colágeno y regeneración nocturna",
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/katia.jpg?v=1667931344&width=900",
+      "image": "assets/img/katia-9d802919.jpg",
       "badge": "Regenerador"
     },
     {
       "id": "manchas",
       "title": "Hidratación y Manchas",
       "subtitle": "Luminosidad, tono uniforme y antioxidantes",
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/chava.jpg?v=1667932993&width=900",
+      "image": "assets/img/chava-a22c4c2a.jpg",
       "badge": "Iluminador"
     }
   ],
@@ -61,12 +61,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0740.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/6F5373D1-3153-4267-B859-799AD5B25C5A.png",
+      "image": "assets/img/img_0740-7d5b3c60.jpg",
+      "hoverImage": "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A-90b9e36a.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0740.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/6F5373D1-3153-4267-B859-799AD5B25C5A.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/img_0740.jpg?v=1713401799"
+        "assets/img/img_0740-7d5b3c60.jpg",
+        "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A-90b9e36a.png",
+        "assets/img/img_0740-3c212ccc.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -89,11 +89,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0667.jpg",
-      "hoverImage": "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/img_0667.jpg?v=1713455935",
+      "image": "assets/img/img_0667-f3723fc6.jpg",
+      "hoverImage": "assets/img/img_0667-abeb444b.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0667.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/img_0667.jpg?v=1713455935"
+        "assets/img/img_0667-f3723fc6.jpg",
+        "assets/img/img_0667-abeb444b.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -118,12 +118,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/serums.png",
+      "image": "assets/img/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9-8e90d4b6.jpg",
+      "hoverImage": "assets/img/serums-af9e5eda.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/serums.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9.jpg?v=1759344428"
+        "assets/img/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9-8e90d4b6.jpg",
+        "assets/img/serums-af9e5eda.png",
+        "assets/img/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9-9ee981db.jpg"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -149,12 +149,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/2_96fd43a8-99be-4e00-982d-7ca58b6afb50.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/IMG_0679.jpg",
+      "image": "assets/img/2_96fd43a8-99be-4e00-982d-7ca58b6afb50-e56f88d9.jpg",
+      "hoverImage": "assets/img/IMG_0679-520344f0.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/2_96fd43a8-99be-4e00-982d-7ca58b6afb50.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/IMG_0679.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/2_96fd43a8-99be-4e00-982d-7ca58b6afb50.jpg?v=1759344456"
+        "assets/img/2_96fd43a8-99be-4e00-982d-7ca58b6afb50-e56f88d9.jpg",
+        "assets/img/IMG_0679-520344f0.jpg",
+        "assets/img/2_96fd43a8-99be-4e00-982d-7ca58b6afb50-cd6e5132.jpg"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -179,12 +179,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_PANACEA_Vitamina_C.png?v=1776457532&width=1920",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_PANACEA_Vitamina_C.png",
+      "image": "assets/img/Caja_de_PANACEA_Vitamina_C-f358ef63.png",
+      "hoverImage": "assets/img/Caja_de_PANACEA_Vitamina_C-a411d872.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_PANACEA_Vitamina_C.png?v=1776457532&width=1920",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_PANACEA_Vitamina_C.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_PANACEA_Vitamina_C_grande.png"
+        "assets/img/Caja_de_PANACEA_Vitamina_C-f358ef63.png",
+        "assets/img/Caja_de_PANACEA_Vitamina_C-a411d872.png",
+        "assets/img/Caja_de_PANACEA_Vitamina_C_grande-bf3e6917.png"
       ],
       "description": "Vitamina C, E y ácido hialurónico, altamente hidratante y antioxidante,  reafirma, da luminosidad, unifica tono y textura, protege la piel de radicales libres. Estimula la producción del colágeno brindando firmeza a la piel.",
       "accordions": {
@@ -216,12 +216,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_cuidado_facial_PANACEA.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/REGALIZ-1.png",
+      "image": "assets/img/Caja_de_cuidado_facial_PANACEA-5bc1d25e.png",
+      "hoverImage": "assets/img/REGALIZ-1-58fdc5c8.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_cuidado_facial_PANACEA.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/REGALIZ-1.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Caja_de_cuidado_facial_PANACEA.png?v=1776457723"
+        "assets/img/Caja_de_cuidado_facial_PANACEA-5bc1d25e.png",
+        "assets/img/REGALIZ-1-58fdc5c8.png",
+        "assets/img/Caja_de_cuidado_facial_PANACEA-35a81bd9.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -246,12 +246,12 @@ window.PANACEA_DATA = {
       "badge": "Favorito #1",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/35.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/36.png",
+      "image": "assets/img/35-38ea55f3.png",
+      "hoverImage": "assets/img/36-26216167.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/35.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/36.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/35.png?v=1776471962"
+        "assets/img/35-38ea55f3.png",
+        "assets/img/36-26216167.png",
+        "assets/img/35-663505e6.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -274,12 +274,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/SOS-3.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/Msos.jpg",
+      "image": "assets/img/SOS-3-e7cd96d4.png",
+      "hoverImage": "assets/img/Msos-5413a0d5.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/SOS-3.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/Msos.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/SOS-3.png?v=1706902767"
+        "assets/img/SOS-3-e7cd96d4.png",
+        "assets/img/Msos-5413a0d5.jpg",
+        "assets/img/SOS-3-b9da32c2.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -304,12 +304,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/38.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/39.png",
+      "image": "assets/img/38-5ca04818.png",
+      "hoverImage": "assets/img/39-a5934dfd.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/38.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/39.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/38.png?v=1776472697"
+        "assets/img/38-5ca04818.png",
+        "assets/img/39-a5934dfd.png",
+        "assets/img/38-3bfdb73a.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -332,12 +332,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/ANTIS_C3_89PTICO-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002506.jpg",
+      "image": "assets/img/ANTIS_C3_89PTICO-2-5b37b107.png",
+      "hoverImage": "assets/img/B0002506-74fef9e5.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/ANTIS_C3_89PTICO-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002506.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/ANTIS_C3_89PTICO-2.png?v=1706902502"
+        "assets/img/ANTIS_C3_89PTICO-2-5b37b107.png",
+        "assets/img/B0002506-74fef9e5.jpg",
+        "assets/img/ANTIS_C3_89PTICO-2-7eab86f1.png"
       ],
       "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
       "accordions": {},
@@ -360,12 +360,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-DE-HAMMAMELIS-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002919.jpg",
+      "image": "assets/img/AGUA-DE-HAMMAMELIS-2-b9a87e59.png",
+      "hoverImage": "assets/img/B0002919-bfe5a45b.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-DE-HAMMAMELIS-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002919.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/AGUA-DE-HAMMAMELIS-2.png?v=1706902438"
+        "assets/img/AGUA-DE-HAMMAMELIS-2-b9a87e59.png",
+        "assets/img/B0002919-bfe5a45b.jpg",
+        "assets/img/AGUA-DE-HAMMAMELIS-2-9e36c3e4.png"
       ],
       "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
       "accordions": {},
@@ -390,12 +390,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-DE-CAL_C3_89NDULA-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002551-1.jpg",
+      "image": "assets/img/AGUA-DE-CAL_C3_89NDULA-2-8e3ec32b.png",
+      "hoverImage": "assets/img/B0002551-1-0e98c299.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-DE-CAL_C3_89NDULA-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002551-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/AGUA-DE-CAL_C3_89NDULA-2.png?v=1706902455"
+        "assets/img/AGUA-DE-CAL_C3_89NDULA-2-8e3ec32b.png",
+        "assets/img/B0002551-1-0e98c299.jpg",
+        "assets/img/AGUA-DE-CAL_C3_89NDULA-2-4db6312e.png"
       ],
       "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
       "accordions": {},
@@ -418,12 +418,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-AZUFRADA-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002553-1.jpg",
+      "image": "assets/img/AGUA-AZUFRADA-2-44e2a327.png",
+      "hoverImage": "assets/img/B0002553-1-060f43a9.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-AZUFRADA-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002553-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/AGUA-AZUFRADA-2.png?v=1706902471"
+        "assets/img/AGUA-AZUFRADA-2-44e2a327.png",
+        "assets/img/B0002553-1-060f43a9.jpg",
+        "assets/img/AGUA-AZUFRADA-2-861108c6.png"
       ],
       "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
       "accordions": {},
@@ -446,12 +446,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/IMG_4550.jpg?v=1794505319&width=1920",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/IMG_4550.jpg",
+      "image": "assets/img/IMG_4550-ceace374.jpg",
+      "hoverImage": "assets/img/IMG_4550-a94b07e9.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/IMG_4550.jpg?v=1794505319&width=1920",
-        "https://panacea-cosmeticos.com/cdn/shop/files/IMG_4550.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/IMG_4550_grande.jpg"
+        "assets/img/IMG_4550-ceace374.jpg",
+        "assets/img/IMG_4550-a94b07e9.jpg",
+        "assets/img/IMG_4550_grande-dd04eec6.jpg"
       ],
       "description": "El Tónico Capilar para Caída y Crecimiento es un tratamiento diseñado para fortalecer el cuero cabelludo y estimular el crecimiento del cabello. Su fórmula ayuda a combatir la caída y el adelgazamiento capilar al actuar directamente sobre el folículo piloso, favoreciendo un cabello más fuerte, resistente y saludable.",
       "accordions": {
@@ -481,12 +481,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/jabonromero.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Capturadepantalla2023-09-13alas1.57.26p.m._2c61b67c-1dad-42d8-97ff-edb8daacb409.jpg",
+      "image": "assets/img/jabonromero-3dcaea95.jpg",
+      "hoverImage": "assets/img/Capturadepantalla2023-09-13alas1-57-26p-m-_2c-3f5c74da.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/jabonromero.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Capturadepantalla2023-09-13alas1.57.26p.m._2c61b67c-1dad-42d8-97ff-edb8daacb409.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/jabonromero.jpg?v=1694646860"
+        "assets/img/jabonromero-3dcaea95.jpg",
+        "assets/img/Capturadepantalla2023-09-13alas1-57-26p-m-_2c-3f5c74da.jpg",
+        "assets/img/jabonromero-2bb584d2.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -509,12 +509,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Crema_Panacea_para_estrias.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Crema_para_estrias_Panacea.png",
+      "image": "assets/img/Crema_Panacea_para_estrias-6aaf6fe7.png",
+      "hoverImage": "assets/img/Crema_para_estrias_Panacea-3c6fa55a.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Crema_Panacea_para_estrias.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Crema_para_estrias_Panacea.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Crema_Panacea_para_estrias.png?v=1776462363"
+        "assets/img/Crema_Panacea_para_estrias-6aaf6fe7.png",
+        "assets/img/Crema_para_estrias_Panacea-3c6fa55a.png",
+        "assets/img/Crema_Panacea_para_estrias-2b38d11b.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -537,12 +537,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/1_00591567-13cd-4392-8e0a-4f600e741294.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080_f8b7970b-7e95-4637-8561-59dc9d533829.jpg",
+      "image": "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-1b408ae0.png",
+      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080_f8b7970b-7e95-4637-856-0a24df58.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/1_00591567-13cd-4392-8e0a-4f600e741294.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080_f8b7970b-7e95-4637-8561-59dc9d533829.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/1_00591567-13cd-4392-8e0a-4f600e741294.png?v=1682002918"
+        "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-1b408ae0.png",
+        "assets/img/61jeeSc6c9L-_AC_SL1080_f8b7970b-7e95-4637-856-0a24df58.jpg",
+        "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-70956c06.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -568,12 +568,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/18.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/19.png",
+      "image": "assets/img/18-faf4e43d.png",
+      "hoverImage": "assets/img/19-e2851e77.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/18.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/19.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/18.png?v=1776472510"
+        "assets/img/18-faf4e43d.png",
+        "assets/img/19-e2851e77.png",
+        "assets/img/18-24d696ca.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
       "accordions": {},
@@ -596,12 +596,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/ROZADURAS-1.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/625ad823853a477694b1fd01991fe532.thumbnail.0000000000.jpg",
+      "image": "assets/img/ROZADURAS-1-200865a2.png",
+      "hoverImage": "assets/img/625ad823853a477694b1fd01991fe532-thumbnail-00-7b88e7ae.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/ROZADURAS-1.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/625ad823853a477694b1fd01991fe532.thumbnail.0000000000.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/ROZADURAS-1.png?v=1660775730"
+        "assets/img/ROZADURAS-1-200865a2.png",
+        "assets/img/625ad823853a477694b1fd01991fe532-thumbnail-00-7b88e7ae.jpg",
+        "assets/img/ROZADURAS-1-4364eb31.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
       "accordions": {},
@@ -624,12 +624,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/31.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/32.png",
+      "image": "assets/img/31-2b30bca5.png",
+      "hoverImage": "assets/img/32-d057c0d9.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/31.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/32.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/31.png?v=1776472232"
+        "assets/img/31-2b30bca5.png",
+        "assets/img/32-d057c0d9.png",
+        "assets/img/31-8336952a.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -652,12 +652,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/1_acab076e-79bb-47a3-b341-5bd0dca28ea8.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/2_3aef7bf8-0262-45ca-a510-6bd7b09e9068.png",
+      "image": "assets/img/1_acab076e-79bb-47a3-b341-5bd0dca28ea8-c7a08403.png",
+      "hoverImage": "assets/img/2_3aef7bf8-0262-45ca-a510-6bd7b09e9068-0c60a8c9.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/1_acab076e-79bb-47a3-b341-5bd0dca28ea8.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/2_3aef7bf8-0262-45ca-a510-6bd7b09e9068.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/1_acab076e-79bb-47a3-b341-5bd0dca28ea8.png?v=1776472406"
+        "assets/img/1_acab076e-79bb-47a3-b341-5bd0dca28ea8-c7a08403.png",
+        "assets/img/2_3aef7bf8-0262-45ca-a510-6bd7b09e9068-0c60a8c9.png",
+        "assets/img/1_acab076e-79bb-47a3-b341-5bd0dca28ea8-8d9205f2.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -680,12 +680,12 @@ window.PANACEA_DATA = {
       "badge": "Más vendido",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LAVANDA-1.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002617-1.jpg",
+      "image": "assets/img/DESODORANTE-LAVANDA-1-c97e80b3.png",
+      "hoverImage": "assets/img/B0002617-1-3801582d.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LAVANDA-1.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002617-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/DESODORANTE-LAVANDA-1.png?v=1706902712"
+        "assets/img/DESODORANTE-LAVANDA-1-c97e80b3.png",
+        "assets/img/B0002617-1-3801582d.jpg",
+        "assets/img/DESODORANTE-LAVANDA-1-ba180830.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -708,11 +708,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.54.30.jpg",
-      "hoverImage": "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/WhatsAppImage2026-07-30at09.54.30.jpg?v=1785441032",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-e850881f.jpg",
+      "hoverImage": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.54.30.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/WhatsAppImage2026-07-30at09.54.30.jpg?v=1785441032"
+        "assets/img/WhatsAppImage2026-07-30at09-54-30-e850881f.jpg",
+        "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -735,12 +735,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0819.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/9B7AC3A2-D5CE-442E-9DFD-CBC7986F22A8.png",
+      "image": "assets/img/img_0819-0ac79e51.jpg",
+      "hoverImage": "assets/img/9B7AC3A2-D5CE-442E-9DFD-CBC7986F22A8-57272705.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0819.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/9B7AC3A2-D5CE-442E-9DFD-CBC7986F22A8.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/img_0819.jpg?v=1713378098"
+        "assets/img/img_0819-0ac79e51.jpg",
+        "assets/img/9B7AC3A2-D5CE-442E-9DFD-CBC7986F22A8-57272705.png",
+        "assets/img/img_0819-6b71dd34.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -765,12 +765,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0770.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/6F5373D1-3153-4267-B859-799AD5B25C5A_f6be95ed-f288-4642-8033-dc5c3f8e5361.png",
+      "image": "assets/img/img_0770-408cd786.jpg",
+      "hoverImage": "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A_f6be95ed-2c4aac95.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0770.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/6F5373D1-3153-4267-B859-799AD5B25C5A_f6be95ed-f288-4642-8033-dc5c3f8e5361.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/img_0770.jpg?v=1713387562"
+        "assets/img/img_0770-408cd786.jpg",
+        "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A_f6be95ed-2c4aac95.png",
+        "assets/img/img_0770-aa969a52.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -793,11 +793,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.52.33.jpg",
-      "hoverImage": "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/WhatsAppImage2026-07-30at09.52.33.jpg?v=1785438444",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-52-33-6bf0710d.jpg",
+      "hoverImage": "assets/img/WhatsAppImage2026-07-30at09-52-33-d39bb9e3.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.52.33.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/WhatsAppImage2026-07-30at09.52.33.jpg?v=1785438444"
+        "assets/img/WhatsAppImage2026-07-30at09-52-33-6bf0710d.jpg",
+        "assets/img/WhatsAppImage2026-07-30at09-52-33-d39bb9e3.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -820,11 +820,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0683.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/img_0683_grande.jpg",
+      "image": "assets/img/img_0683-97b2d22f.jpg",
+      "hoverImage": "assets/img/img_0683_grande-865fb181.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0683.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0683_grande.jpg"
+        "assets/img/img_0683-97b2d22f.jpg",
+        "assets/img/img_0683_grande-865fb181.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {
@@ -854,11 +854,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0791.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/img_0791_grande.jpg",
+      "image": "assets/img/img_0791-305789c8.jpg",
+      "hoverImage": "assets/img/img_0791_grande-b8ca8142.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0791.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0791_grande.jpg"
+        "assets/img/img_0791-305789c8.jpg",
+        "assets/img/img_0791_grande-b8ca8142.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {
@@ -887,11 +887,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0697.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/img_0697_grande.jpg",
+      "image": "assets/img/img_0697-e2ea4cc1.jpg",
+      "hoverImage": "assets/img/img_0697_grande-dfeb36ea.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0697.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0697_grande.jpg"
+        "assets/img/img_0697-e2ea4cc1.jpg",
+        "assets/img/img_0697_grande-dfeb36ea.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {
@@ -920,11 +920,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Disenosintitulo.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Disenosintitulo_grande.png",
+      "image": "assets/img/Disenosintitulo-c12992cd.png",
+      "hoverImage": "assets/img/Disenosintitulo_grande-1e32ff53.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Disenosintitulo.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Disenosintitulo_grande.png"
+        "assets/img/Disenosintitulo-c12992cd.png",
+        "assets/img/Disenosintitulo_grande-1e32ff53.png"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {
@@ -954,11 +954,11 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0801.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/img_0801_grande.jpg",
+      "image": "assets/img/img_0801-19f65ec5.jpg",
+      "hoverImage": "assets/img/img_0801_grande-495a0577.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0801.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0801_grande.jpg"
+        "assets/img/img_0801-19f65ec5.jpg",
+        "assets/img/img_0801_grande-495a0577.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {
@@ -987,12 +987,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.53.15.jpg?v=1785440744&width=1920",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.53.15.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-53-15-fcbb756f.jpg",
+      "hoverImage": "assets/img/WhatsAppImage2026-07-30at09-53-15-70cadfea.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.53.15.jpg?v=1785440744&width=1920",
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.53.15.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2026-07-30at09.53.15_grande.jpg"
+        "assets/img/WhatsAppImage2026-07-30at09-53-15-fcbb756f.jpg",
+        "assets/img/WhatsAppImage2026-07-30at09-53-15-70cadfea.jpg",
+        "assets/img/WhatsAppImage2026-07-30at09-53-15_grande-4507af36.jpg"
       ],
       "description": "Devuélvele a tu piel la calma, hidratación y protección que necesita. Nuestro Kit Calmante para Piel Irritada está formulado para aliviar el enrojecimiento, la sensibilidad y la irritación, ayudando a fortalecer la barrera natural de la piel mientras la mantiene protegida durante el día.",
       "accordions": {
@@ -1019,12 +1019,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/ChatGPTImage16feb2026_12_32_07p.m..png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/ChatGPTImage16feb2026_12_46_51p.m..png",
+      "image": "assets/img/ChatGPTImage16feb2026_12_32_07p-m-72ecaf89.png",
+      "hoverImage": "assets/img/ChatGPTImage16feb2026_12_46_51p-m-bcacc073.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/ChatGPTImage16feb2026_12_32_07p.m..png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/ChatGPTImage16feb2026_12_46_51p.m..png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/ChatGPTImage16feb2026_12_32_07p.m..png?v=1771268323"
+        "assets/img/ChatGPTImage16feb2026_12_32_07p-m-72ecaf89.png",
+        "assets/img/ChatGPTImage16feb2026_12_46_51p-m-bcacc073.png",
+        "assets/img/ChatGPTImage16feb2026_12_32_07p-m-1fe71090.png"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -1047,12 +1047,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/img_0829.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/img_0841.jpg",
+      "image": "assets/img/img_0829-b70ce6cc.jpg",
+      "hoverImage": "assets/img/img_0841-a43403b4.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0829.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0841.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/img_0829.jpg?v=1713470093"
+        "assets/img/img_0829-b70ce6cc.jpg",
+        "assets/img/img_0841-a43403b4.jpg",
+        "assets/img/img_0829-ff37516b.jpg"
       ],
       "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
       "accordions": {},
@@ -1076,12 +1076,12 @@ window.PANACEA_DATA = {
       "badge": "Fórmula Médica",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_melatonina_Panacea_con_sello.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/MELATONINA-1.png",
+      "image": "assets/img/Caja_de_melatonina_Panacea_con_sello-d9532f69.png",
+      "hoverImage": "assets/img/MELATONINA-1-07d2c7f9.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_melatonina_Panacea_con_sello.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/MELATONINA-1.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Caja_de_melatonina_Panacea_con_sello.png?v=1776457499"
+        "assets/img/Caja_de_melatonina_Panacea_con_sello-d9532f69.png",
+        "assets/img/MELATONINA-1-07d2c7f9.png",
+        "assets/img/Caja_de_melatonina_Panacea_con_sello-35d39c1f.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -1106,12 +1106,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_producto_PANACEA_en_primer_plano.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/AMINOACIDOS-2.png",
+      "image": "assets/img/Caja_de_producto_PANACEA_en_primer_plano-af7a971f.png",
+      "hoverImage": "assets/img/AMINOACIDOS-2-74fd467c.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_producto_PANACEA_en_primer_plano.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/AMINOACIDOS-2.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Caja_de_producto_PANACEA_en_primer_plano.png?v=1776457968"
+        "assets/img/Caja_de_producto_PANACEA_en_primer_plano-af7a971f.png",
+        "assets/img/AMINOACIDOS-2-74fd467c.png",
+        "assets/img/Caja_de_producto_PANACEA_en_primer_plano-be0c8278.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -1137,12 +1137,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_producto_B-COMPLEX_PANACEA.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/b-complex1.jpg",
+      "image": "assets/img/Caja_de_producto_B-COMPLEX_PANACEA-171f69ee.png",
+      "hoverImage": "assets/img/b-complex1-5a05b3f1.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_producto_B-COMPLEX_PANACEA.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/b-complex1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Caja_de_producto_B-COMPLEX_PANACEA.png?v=1776457658"
+        "assets/img/Caja_de_producto_B-COMPLEX_PANACEA-171f69ee.png",
+        "assets/img/b-complex1-5a05b3f1.jpg",
+        "assets/img/Caja_de_producto_B-COMPLEX_PANACEA-98508855.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -1168,12 +1168,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_con_sello_de_cera_y_enzimas.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/ENZIMAS-1.png",
+      "image": "assets/img/Caja_con_sello_de_cera_y_enzimas-da0be226.png",
+      "hoverImage": "assets/img/ENZIMAS-1-8aae77db.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_con_sello_de_cera_y_enzimas.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/ENZIMAS-1.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Caja_con_sello_de_cera_y_enzimas.png?v=1776457687"
+        "assets/img/Caja_con_sello_de_cera_y_enzimas-da0be226.png",
+        "assets/img/ENZIMAS-1-8aae77db.png",
+        "assets/img/Caja_con_sello_de_cera_y_enzimas-5c156c57.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -1198,12 +1198,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_crema_de_calendula_PANACEA.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/CALENDULA-1_214566da-9c47-455b-a1bc-b8c1cc27e71e.png",
+      "image": "assets/img/Caja_de_crema_de_calendula_PANACEA-dde6fe1e.png",
+      "hoverImage": "assets/img/CALENDULA-1_214566da-9c47-455b-a1bc-b8c1cc27e-a73d71a3.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Caja_de_crema_de_calendula_PANACEA.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/CALENDULA-1_214566da-9c47-455b-a1bc-b8c1cc27e71e.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Caja_de_crema_de_calendula_PANACEA.png?v=1776457989"
+        "assets/img/Caja_de_crema_de_calendula_PANACEA-dde6fe1e.png",
+        "assets/img/CALENDULA-1_214566da-9c47-455b-a1bc-b8c1cc27e-a73d71a3.png",
+        "assets/img/Caja_de_crema_de_calendula_PANACEA-f267c7b4.png"
       ],
       "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
       "accordions": {},
@@ -1229,12 +1229,12 @@ window.PANACEA_DATA = {
       "badge": "Botica 240ml",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-ENZIM_C3_81TICA-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002692-1.jpg",
+      "image": "assets/img/AGUA-ENZIM_C3_81TICA-2-2778b7d7.png",
+      "hoverImage": "assets/img/B0002692-1-8aa19f87.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-ENZIM_C3_81TICA-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002692-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/AGUA-ENZIM_C3_81TICA-2.png?v=1706902423"
+        "assets/img/AGUA-ENZIM_C3_81TICA-2-2778b7d7.png",
+        "assets/img/B0002692-1-8aa19f87.jpg",
+        "assets/img/AGUA-ENZIM_C3_81TICA-2-e7b1a769.png"
       ],
       "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
       "accordions": {},
@@ -1260,12 +1260,12 @@ window.PANACEA_DATA = {
       "badge": "Botica 240ml",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-DE-ROSAS-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002804-1.jpg",
+      "image": "assets/img/AGUA-DE-ROSAS-2-a3bb3d94.png",
+      "hoverImage": "assets/img/B0002804-1-77595733.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/AGUA-DE-ROSAS-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002804-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/AGUA-DE-ROSAS-2.png?v=1706902488"
+        "assets/img/AGUA-DE-ROSAS-2-a3bb3d94.png",
+        "assets/img/B0002804-1-77595733.jpg",
+        "assets/img/AGUA-DE-ROSAS-2-61ae01a8.png"
       ],
       "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
       "accordions": {},
@@ -1288,12 +1288,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/img_0611.jpg",
+      "image": "assets/img/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c-a1507a01.jpg",
+      "hoverImage": "assets/img/img_0611-71ea7434.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/img_0611.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c.jpg?v=1714758905"
+        "assets/img/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c-a1507a01.jpg",
+        "assets/img/img_0611-71ea7434.jpg",
+        "assets/img/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c-848079ec.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1316,12 +1316,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/jaboncarbonactivado.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/preview_images/5bf6613a2dca4fcfa20e9f734be2661e.thumbnail.0000000000.jpg",
+      "image": "assets/img/jaboncarbonactivado-dccbffe6.jpg",
+      "hoverImage": "assets/img/5bf6613a2dca4fcfa20e9f734be2661e-thumbnail-00-897985d0.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/jaboncarbonactivado.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/preview_images/5bf6613a2dca4fcfa20e9f734be2661e.thumbnail.0000000000.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/jaboncarbonactivado.jpg?v=1694647237"
+        "assets/img/jaboncarbonactivado-dccbffe6.jpg",
+        "assets/img/5bf6613a2dca4fcfa20e9f734be2661e-thumbnail-00-897985d0.jpg",
+        "assets/img/jaboncarbonactivado-9c58d3a0.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1344,12 +1344,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/jabonmenta.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/preview_images/5bf6613a2dca4fcfa20e9f734be2661e.thumbnail.0000000000.jpg",
+      "image": "assets/img/jabonmenta-e154390f.jpg",
+      "hoverImage": "assets/img/5bf6613a2dca4fcfa20e9f734be2661e-thumbnail-00-897985d0.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/jabonmenta.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/preview_images/5bf6613a2dca4fcfa20e9f734be2661e.thumbnail.0000000000.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/jabonmenta.jpg?v=1694647600"
+        "assets/img/jabonmenta-e154390f.jpg",
+        "assets/img/5bf6613a2dca4fcfa20e9f734be2661e-thumbnail-00-897985d0.jpg",
+        "assets/img/jabonmenta-6ed64b30.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1372,12 +1372,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/jabonrosas.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/GVL.png",
+      "image": "assets/img/jabonrosas-93387b73.jpg",
+      "hoverImage": "assets/img/GVL-e2e029f8.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/jabonrosas.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/GVL.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/jabonrosas.jpg?v=1694647903"
+        "assets/img/jabonrosas-93387b73.jpg",
+        "assets/img/GVL-e2e029f8.png",
+        "assets/img/jabonrosas-2441fe86.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1400,12 +1400,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/8.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2025-06-16at10.51.31.jpg",
+      "image": "assets/img/8-52b4208f.jpg",
+      "hoverImage": "assets/img/WhatsAppImage2025-06-16at10-51-31-ad98e720.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/8.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2025-06-16at10.51.31.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/8.jpg?v=1750095882"
+        "assets/img/8-52b4208f.jpg",
+        "assets/img/WhatsAppImage2025-06-16at10-51-31-ad98e720.jpg",
+        "assets/img/8-10eae776.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1428,12 +1428,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/7.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2025-06-16at10.51.18.jpg",
+      "image": "assets/img/7-70ba9b0b.jpg",
+      "hoverImage": "assets/img/WhatsAppImage2025-06-16at10-51-18-0d842cca.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/7.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2025-06-16at10.51.18.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/7.jpg?v=1750095853"
+        "assets/img/7-70ba9b0b.jpg",
+        "assets/img/WhatsAppImage2025-06-16at10-51-18-0d842cca.jpg",
+        "assets/img/7-0ed54642.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1456,12 +1456,12 @@ window.PANACEA_DATA = {
       "badge": "Capilar Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/9.jpg",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2025-06-16at10.51.55.jpg",
+      "image": "assets/img/9-c1168e65.jpg",
+      "hoverImage": "assets/img/WhatsAppImage2025-06-16at10-51-55-35bf3d48.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/9.jpg",
-        "https://panacea-cosmeticos.com/cdn/shop/files/WhatsAppImage2025-06-16at10.51.55.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/9.jpg?v=1750095810"
+        "assets/img/9-c1168e65.jpg",
+        "assets/img/WhatsAppImage2025-06-16at10-51-55-35bf3d48.jpg",
+        "assets/img/9-5f383b05.jpg"
       ],
       "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
       "accordions": {},
@@ -1484,12 +1484,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Envase_de_crema_descontracturante_PANACEA_de53c4e5-00ab-4250-8c5d-f7f62791c88c.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Crema_venotonica_Panacea_en_lata.png",
+      "image": "assets/img/Envase_de_crema_descontracturante_PANACEA_de5-1beaccdc.png",
+      "hoverImage": "assets/img/Crema_venotonica_Panacea_en_lata-08736d1a.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Envase_de_crema_descontracturante_PANACEA_de53c4e5-00ab-4250-8c5d-f7f62791c88c.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Crema_venotonica_Panacea_en_lata.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Envase_de_crema_descontracturante_PANACEA_de53c4e5-00ab-4250-8c5d-f7f62791c88c.png?v=1776459391"
+        "assets/img/Envase_de_crema_descontracturante_PANACEA_de5-1beaccdc.png",
+        "assets/img/Crema_venotonica_Panacea_en_lata-08736d1a.png",
+        "assets/img/Envase_de_crema_descontracturante_PANACEA_de5-06f5c77f.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1512,12 +1512,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Crema_detoxificante_PANACEA_en_envase_metalico.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Crema_desintoxicante_en_envase_metalico.png",
+      "image": "assets/img/Crema_detoxificante_PANACEA_en_envase_metalic-78dd5e04.png",
+      "hoverImage": "assets/img/Crema_desintoxicante_en_envase_metalico-f0707291.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Crema_detoxificante_PANACEA_en_envase_metalico.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Crema_desintoxicante_en_envase_metalico.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Crema_detoxificante_PANACEA_en_envase_metalico.png?v=1776459354"
+        "assets/img/Crema_detoxificante_PANACEA_en_envase_metalic-78dd5e04.png",
+        "assets/img/Crema_desintoxicante_en_envase_metalico-f0707291.png",
+        "assets/img/Crema_detoxificante_PANACEA_en_envase_metalic-41e9439e.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1540,12 +1540,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/Envase_de_crema_descontracturante_PANACEA.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/Crema_relajante_para_musculos_y_articulaciones.png",
+      "image": "assets/img/Envase_de_crema_descontracturante_PANACEA-4b9fd0ed.png",
+      "hoverImage": "assets/img/Crema_relajante_para_musculos_y_articulacione-671917b7.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/Envase_de_crema_descontracturante_PANACEA.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/Crema_relajante_para_musculos_y_articulaciones.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/Envase_de_crema_descontracturante_PANACEA.png?v=1776458357"
+        "assets/img/Envase_de_crema_descontracturante_PANACEA-4b9fd0ed.png",
+        "assets/img/Crema_relajante_para_musculos_y_articulacione-671917b7.png",
+        "assets/img/Envase_de_crema_descontracturante_PANACEA-125a8f40.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1568,12 +1568,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/2_b020e288-cae6-40c0-826d-d6abb02c077c.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080.jpg",
+      "image": "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-30b32094.png",
+      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080-49c08e71.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/2_b020e288-cae6-40c0-826d-d6abb02c077c.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/2_b020e288-cae6-40c0-826d-d6abb02c077c.png?v=1682002858"
+        "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-30b32094.png",
+        "assets/img/61jeeSc6c9L-_AC_SL1080-49c08e71.jpg",
+        "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-4f63206b.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1596,12 +1596,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0.png?v=1682002940&width=1920",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0.png",
+      "image": "assets/img/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0-0c315353.png",
+      "hoverImage": "assets/img/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0-580cd1a9.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0.png?v=1682002940&width=1920",
-        "https://panacea-cosmeticos.com/cdn/shop/products/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0_grande.png"
+        "assets/img/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0-0c315353.png",
+        "assets/img/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0-580cd1a9.png",
+        "assets/img/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0_grande-77629a3a.png"
       ],
       "description": "El Aceite Corporal de Aromaterapia Voluntad está diseñado para acompañar momentos en los que se requiere mayor enfoque, claridad mental y concentración. Su aroma intenso y estimulante ayuda a crear un ambiente propicio para la meditación, el estudio o actividades que requieren atención y disciplina mental.",
       "accordions": {
@@ -1631,12 +1631,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/3_d8219332-b9cb-496a-9260-83e4ffdeb15a.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080_68cf83ee-95eb-41c5-9d0b-b6fe92483626.jpg",
+      "image": "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-5a711b82.png",
+      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080_68cf83ee-95eb-41c5-9d0-9deefed3.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/3_d8219332-b9cb-496a-9260-83e4ffdeb15a.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080_68cf83ee-95eb-41c5-9d0b-b6fe92483626.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/3_d8219332-b9cb-496a-9260-83e4ffdeb15a.png?v=1682002900"
+        "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-5a711b82.png",
+        "assets/img/61jeeSc6c9L-_AC_SL1080_68cf83ee-95eb-41c5-9d0-9deefed3.jpg",
+        "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-1d3cba52.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1659,12 +1659,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/5_699eb7dc-65bd-4a56-80e8-20225e2e607d.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080_8e840f79-bd1e-4c0f-983f-7b823d6d86d6.jpg",
+      "image": "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-6cbbb59c.png",
+      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080_8e840f79-bd1e-4c0f-983-fe6fd2e4.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/5_699eb7dc-65bd-4a56-80e8-20225e2e607d.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/61jeeSc6c9L._AC_SL1080_8e840f79-bd1e-4c0f-983f-7b823d6d86d6.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/5_699eb7dc-65bd-4a56-80e8-20225e2e607d.png?v=1682003218"
+        "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-6cbbb59c.png",
+        "assets/img/61jeeSc6c9L-_AC_SL1080_8e840f79-bd1e-4c0f-983-fe6fd2e4.jpg",
+        "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-5857dca4.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1687,12 +1687,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/16_af181b85-194b-46e5-b7de-59c04c07dffb.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/17_ba70199d-dced-41e9-a017-baa49624199a.png",
+      "image": "assets/img/16_af181b85-194b-46e5-b7de-59c04c07dffb-470df03a.png",
+      "hoverImage": "assets/img/17_ba70199d-dced-41e9-a017-baa49624199a-7d6b0448.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/16_af181b85-194b-46e5-b7de-59c04c07dffb.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/17_ba70199d-dced-41e9-a017-baa49624199a.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/16_af181b85-194b-46e5-b7de-59c04c07dffb.png?v=1776472053"
+        "assets/img/16_af181b85-194b-46e5-b7de-59c04c07dffb-470df03a.png",
+        "assets/img/17_ba70199d-dced-41e9-a017-baa49624199a-7d6b0448.png",
+        "assets/img/16_af181b85-194b-46e5-b7de-59c04c07dffb-c6cb355c.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1715,12 +1715,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/28.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/29.png",
+      "image": "assets/img/28-a6586bd1.png",
+      "hoverImage": "assets/img/29-53281431.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/28.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/29.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/28.png?v=1776472294"
+        "assets/img/28-a6586bd1.png",
+        "assets/img/29-53281431.png",
+        "assets/img/28-4f4baf26.png"
       ],
       "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
       "accordions": {},
@@ -1743,12 +1743,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/SOLAR-1.png?v=1706902622&width=1920",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/SOLAR-1.png",
+      "image": "assets/img/SOLAR-1-5b87d910.png",
+      "hoverImage": "assets/img/SOLAR-1-5344593d.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/SOLAR-1.png?v=1706902622&width=1920",
-        "https://panacea-cosmeticos.com/cdn/shop/products/SOLAR-1.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/SOLAR-1_grande.png"
+        "assets/img/SOLAR-1-5b87d910.png",
+        "assets/img/SOLAR-1-5344593d.png",
+        "assets/img/SOLAR-1_grande-42fa1a28.png"
       ],
       "description": "El Protector Solar es una pantalla solar de amplio espectro que ayuda a proteger la piel de los rayos UVA y UVB, previniendo el daño causado por la exposición al sol y temperaturas extremas. Su fórmula ayuda a cuidar la piel durante la exposición solar, manteniéndola protegida, hidratada y con una sensación ligera para el uso diario.\nSabías que los protectores químicos son absorbidos por la piel y tienen múltiples efectos dañinos a corto y largo plazo en el organismo, por esta razón es importante buscar productos naturales que te den la misma protección.",
       "accordions": {
@@ -1778,12 +1778,12 @@ window.PANACEA_DATA = {
       "badge": "Bebé & Mamá",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/BEBE.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/61G61A8JBhL._AC_SL1080.jpg",
+      "image": "assets/img/BEBE-53316474.png",
+      "hoverImage": "assets/img/61G61A8JBhL-_AC_SL1080-e939643f.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/BEBE.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/61G61A8JBhL._AC_SL1080.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/BEBE.png?v=1660775733"
+        "assets/img/BEBE-53316474.png",
+        "assets/img/61G61A8JBhL-_AC_SL1080-e939643f.jpg",
+        "assets/img/BEBE-87f27019.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
       "accordions": {},
@@ -1806,12 +1806,12 @@ window.PANACEA_DATA = {
       "badge": "Bebé & Mamá",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/TALCO-1.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002624-1.jpg",
+      "image": "assets/img/TALCO-1-cb600845.png",
+      "hoverImage": "assets/img/B0002624-1-475097a6.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/TALCO-1.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002624-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/TALCO-1.png?v=1660775740"
+        "assets/img/TALCO-1-cb600845.png",
+        "assets/img/B0002624-1-475097a6.jpg",
+        "assets/img/TALCO-1-947448f5.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
       "accordions": {},
@@ -1834,12 +1834,12 @@ window.PANACEA_DATA = {
       "badge": "Bebé & Mamá",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/BEBE-SOLAR-2.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/IMG_1378.jpg",
+      "image": "assets/img/BEBE-SOLAR-2-40cda9ef.png",
+      "hoverImage": "assets/img/IMG_1378-f34f904f.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/BEBE-SOLAR-2.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/IMG_1378.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/BEBE-SOLAR-2.png?v=1706902643"
+        "assets/img/BEBE-SOLAR-2-40cda9ef.png",
+        "assets/img/IMG_1378-f34f904f.jpg",
+        "assets/img/BEBE-SOLAR-2-868a3298.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
       "accordions": {},
@@ -1862,12 +1862,12 @@ window.PANACEA_DATA = {
       "badge": "Bebé & Mamá",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/LANOLINA-4.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/LANOLINA-3.png",
+      "image": "assets/img/LANOLINA-4-9a8ec3d0.png",
+      "hoverImage": "assets/img/LANOLINA-3-a20820d7.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/LANOLINA-4.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/LANOLINA-3.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/LANOLINA-4.png?v=1660775741"
+        "assets/img/LANOLINA-4-9a8ec3d0.png",
+        "assets/img/LANOLINA-3-a20820d7.png",
+        "assets/img/LANOLINA-4-29e25b6b.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
       "accordions": {},
@@ -1890,12 +1890,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/10.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/11_0e083bca-2fb2-46e1-8b85-2f5ef8f54d4d.png",
+      "image": "assets/img/10-a8ee0e68.png",
+      "hoverImage": "assets/img/11_0e083bca-2fb2-46e1-8b85-2f5ef8f54d4d-38f16a22.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/10.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/11_0e083bca-2fb2-46e1-8b85-2f5ef8f54d4d.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/10.png?v=1776472115"
+        "assets/img/10-a8ee0e68.png",
+        "assets/img/11_0e083bca-2fb2-46e1-8b85-2f5ef8f54d4d-38f16a22.png",
+        "assets/img/10-5e25df9a.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -1918,12 +1918,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/files/25.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/files/27.png",
+      "image": "assets/img/25-5321be01.png",
+      "hoverImage": "assets/img/27-924bc36c.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/files/25.png",
-        "https://panacea-cosmeticos.com/cdn/shop/files/27.png",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/files/25.png?v=1776472454"
+        "assets/img/25-5321be01.png",
+        "assets/img/27-924bc36c.png",
+        "assets/img/25-396a0509.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -1946,12 +1946,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LEMONGRASS-1.png?v=1706902680&width=1920",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LEMONGRASS-1.png",
+      "image": "assets/img/DESODORANTE-LEMONGRASS-1-0898416c.png",
+      "hoverImage": "assets/img/DESODORANTE-LEMONGRASS-1-2573adef.png",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LEMONGRASS-1.png?v=1706902680&width=1920",
-        "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LEMONGRASS-1.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/DESODORANTE-LEMONGRASS-1_grande.png"
+        "assets/img/DESODORANTE-LEMONGRASS-1-0898416c.png",
+        "assets/img/DESODORANTE-LEMONGRASS-1-2573adef.png",
+        "assets/img/DESODORANTE-LEMONGRASS-1_grande-25ba65a9.png"
       ],
       "description": "El Desodorante de Lemongrass untable de potente acción, es un auxiliar para el cuidado e higiene diaria de las axilas. Ayuda a neutralizar los olores de forma natural mientras cuida la piel, brindando una sensación de frescura y bienestar durante el día. Su fórmula está diseñada para controlar el mal olor sin irritar la piel.\nIngredientes 100% naturales sin químicos, desodorante LIBRE DE ALUMINIO y parabenos, bueno para la piel, controla el olor sin efectos secundarios.",
       "accordions": {
@@ -1981,12 +1981,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/BARBA-1.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002880-1.jpg",
+      "image": "assets/img/BARBA-1-7642ef3f.png",
+      "hoverImage": "assets/img/B0002880-1-3b1b94ec.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/BARBA-1.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002880-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/BARBA-1.png?v=1706887084"
+        "assets/img/BARBA-1-7642ef3f.png",
+        "assets/img/B0002880-1-3b1b94ec.jpg",
+        "assets/img/BARBA-1-b5ee69a6.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -2009,12 +2009,12 @@ window.PANACEA_DATA = {
       "badge": "100% Natural",
       "rating": 4.9,
       "reviews": 0,
-      "image": "https://panacea-cosmeticos.com/cdn/shop/products/KARITE-3.png",
-      "hoverImage": "https://panacea-cosmeticos.com/cdn/shop/products/B0002591-1.jpg",
+      "image": "assets/img/KARITE-3-27d0d68d.png",
+      "hoverImage": "assets/img/B0002591-1-c55ca417.jpg",
       "gallery": [
-        "https://panacea-cosmeticos.com/cdn/shop/products/KARITE-3.png",
-        "https://panacea-cosmeticos.com/cdn/shop/products/B0002591-1.jpg",
-        "https://cdn.shopify.com/s/files/1/0661/2864/2266/products/KARITE-3.png?v=1706903584"
+        "assets/img/KARITE-3-27d0d68d.png",
+        "assets/img/B0002591-1-c55ca417.jpg",
+        "assets/img/KARITE-3-2e3d52c5.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
       "accordions": {},
@@ -2027,7 +2027,7 @@ window.PANACEA_DATA = {
       "slug": "el-impacto-de-la-calendula-en-tu-piel",
       "title": "El impacto de la CALÉNDULA en tu piel...",
       "date": "2025-06-25",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/CALENDULA-1_55a3efad-2950-4af2-972d-3ec707898bc4.jpg?v=1750882139",
+      "image": "assets/img/CALENDULA-1_55a3efad-2950-4af2-972d-3ec707898-5456e9b1.jpg",
       "excerpt": "Guía de botica Panacea sobre El impacto de la CALÉNDULA en tu piel...: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "El impacto de la CALÉNDULA en tu piel...\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-25).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2035,7 +2035,7 @@ window.PANACEA_DATA = {
       "slug": "shampoos-solidos",
       "title": "¿Shampoos Sólidos?",
       "date": "2025-06-17",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/WhatsAppImage2025-06-16at10.51.38.jpg?v=1750189407",
+      "image": "assets/img/WhatsAppImage2025-06-16at10-51-38-f3d30e3b.jpg",
       "excerpt": "Guía de botica Panacea sobre ¿Shampoos Sólidos?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "¿Shampoos Sólidos?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-17).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2043,7 +2043,7 @@ window.PANACEA_DATA = {
       "slug": "hamamelis-la-pureza-que-transforma-tu-piel",
       "title": "Hamamelis: La pureza que transforma tu piel.",
       "date": "2025-06-10",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/B0002916-1_jpg.webp?v=1749584119",
+      "image": "assets/img/B0002916-1_jpg-bee1a8f2.webp",
       "excerpt": "Guía de botica Panacea sobre Hamamelis: La pureza que transforma tu piel.: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Hamamelis: La pureza que transforma tu piel.\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-10).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2051,7 +2051,7 @@ window.PANACEA_DATA = {
       "slug": "azufre",
       "title": "AZUFRE ¿Para la piel?",
       "date": "2025-03-12",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0555.jpg?v=1741801443",
+      "image": "assets/img/IMG_0555-37d96c1e.jpg",
       "excerpt": "Guía de botica Panacea sobre AZUFRE ¿Para la piel?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "AZUFRE ¿Para la piel?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2059,7 +2059,7 @@ window.PANACEA_DATA = {
       "slug": "serum-de-vitamina-c",
       "title": "¿sérum de Vitamina C?",
       "date": "2025-03-12",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/img_0592.jpg?v=1741801269",
+      "image": "assets/img/img_0592-a086302d.jpg",
       "excerpt": "Guía de botica Panacea sobre ¿sérum de Vitamina C?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "¿sérum de Vitamina C?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2067,7 +2067,7 @@ window.PANACEA_DATA = {
       "slug": "serum-de-niacida-que",
       "title": "Sérum de Niacina...¿qué?",
       "date": "2025-03-12",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0598.jpg?v=1741801416",
+      "image": "assets/img/IMG_0598-4d6956a2.jpg",
       "excerpt": "Guía de botica Panacea sobre Sérum de Niacina...¿qué?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Sérum de Niacina...¿qué?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2075,7 +2075,7 @@ window.PANACEA_DATA = {
       "slug": "desodorante-natural-vs-comercial",
       "title": "Desodorante Natural Vs Comercial",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0640.webp?v=1705678452",
+      "image": "assets/img/IMG_0640-6347a19d.webp",
       "excerpt": "Guía de botica Panacea sobre Desodorante Natural Vs Comercial: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Desodorante Natural Vs Comercial\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2083,7 +2083,7 @@ window.PANACEA_DATA = {
       "slug": "cuida-tus-manos",
       "title": "Cuida Tus Manos",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0641.jpg?v=1705678630",
+      "image": "assets/img/IMG_0641-c3d91e1d.jpg",
       "excerpt": "Guía de botica Panacea sobre Cuida Tus Manos: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Cuida Tus Manos\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2091,7 +2091,7 @@ window.PANACEA_DATA = {
       "slug": "combate-el-acne-y-el-enrojecimiento-con-el-poder-de-la-niacinamida",
       "title": "Combate el acné y el enrojecimiento con el poder de la NIACINAMIDA",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0642.webp?v=1705678909",
+      "image": "assets/img/IMG_0642-94a07d74.webp",
       "excerpt": "Guía de botica Panacea sobre Combate el acné y el enrojecimiento con el poder de la NIACINAMIDA: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Combate el acné y el enrojecimiento con el poder de la NIACINAMIDA\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2099,7 +2099,7 @@ window.PANACEA_DATA = {
       "slug": "el-poder-de-la-calendula-para-la-piel-sensible",
       "title": "El poder de la CALÉNDULA para la piel sensible",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0643.png?v=1705679548",
+      "image": "assets/img/IMG_0643-c8000409.png",
       "excerpt": "Guía de botica Panacea sobre El poder de la CALÉNDULA para la piel sensible: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "El poder de la CALÉNDULA para la piel sensible\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2107,7 +2107,7 @@ window.PANACEA_DATA = {
       "slug": "beneficios-del-aloe-vera-para-tu-piel",
       "title": "Beneficios del ALOE VERA para tu piel",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0644.webp?v=1705679888",
+      "image": "assets/img/IMG_0644-ad8f8310.webp",
       "excerpt": "Guía de botica Panacea sobre Beneficios del ALOE VERA para tu piel: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Beneficios del ALOE VERA para tu piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2115,7 +2115,7 @@ window.PANACEA_DATA = {
       "slug": "aceite-de-coco",
       "title": "ACEITE DE COCO ¿Amigo o Enemigo ?",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0645.jpg?v=1705680399",
+      "image": "assets/img/IMG_0645-3b1bf8b3.jpg",
       "excerpt": "Guía de botica Panacea sobre ACEITE DE COCO ¿Amigo o Enemigo ?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "ACEITE DE COCO ¿Amigo o Enemigo ?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2123,7 +2123,7 @@ window.PANACEA_DATA = {
       "slug": "arrugas-del-sueno",
       "title": "Arrugas del Sueño",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0646.jpg?v=1705680794",
+      "image": "assets/img/IMG_0646-f4912efc.jpg",
       "excerpt": "Guía de botica Panacea sobre Arrugas del Sueño: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Arrugas del Sueño\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2131,7 +2131,7 @@ window.PANACEA_DATA = {
       "slug": "el-alcohol-y-sus-efectos-negativos-en-la-piel",
       "title": "El Alcohol y Sus Efectos Negativos en la Piel",
       "date": "2024-01-19",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0647.png?v=1705681055",
+      "image": "assets/img/IMG_0647-6778975b.png",
       "excerpt": "Guía de botica Panacea sobre El Alcohol y Sus Efectos Negativos en la Piel: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "El Alcohol y Sus Efectos Negativos en la Piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2139,7 +2139,7 @@ window.PANACEA_DATA = {
       "slug": "colageno",
       "title": "Colágeno",
       "date": "2024-01-14",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0618.jpg?v=1705278039",
+      "image": "assets/img/IMG_0618-3c0926dc.jpg",
       "excerpt": "Guía de botica Panacea sobre Colágeno: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Colágeno\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2147,7 +2147,7 @@ window.PANACEA_DATA = {
       "slug": "manchas-en-la-piel",
       "title": "¿Manchas en la piel?",
       "date": "2024-01-14",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0615.jpg?v=1705277503",
+      "image": "assets/img/IMG_0615-7e818c1a.jpg",
       "excerpt": "Guía de botica Panacea sobre ¿Manchas en la piel?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "¿Manchas en la piel?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
@@ -2155,7 +2155,7 @@ window.PANACEA_DATA = {
       "slug": "dulces-suenos-con-melatonina",
       "title": "Dulces sueños con…MELATONINA",
       "date": "2024-01-14",
-      "image": "https://cdn.shopify.com/s/files/1/0661/2864/2266/articles/IMG_0623.jpg?v=1705280754",
+      "image": "assets/img/IMG_0623-d67168d8.jpg",
       "excerpt": "Guía de botica Panacea sobre Dulces sueños con…MELATONINA: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
       "content": "Dulces sueños con…MELATONINA\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     }

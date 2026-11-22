@@ -1,6 +1,13 @@
 (() => {
   const LS_KEY = "panacea_catalog_override_v1";
+  const LS_ORDERS_KEY = "panacea_orders_v1";
   const PIN_KEY = "panacea_admin_pin_v1";
+  const ORDER_FLOW = {
+    nuevo: { label: "🟡 Nuevo", next: "pagado", nextBtn: "💚 Marcar como Pagado" },
+    pagado: { label: "💚 Pagado", next: "enviado", nextBtn: "🚚 Marcar como Enviado" },
+    enviado: { label: "🚚 Enviado", next: "entregado", nextBtn: "✅ Marcar Entregado" },
+    entregado: { label: "✅ Entregado", next: null, nextBtn: null }
+  };
   const CAT_LABELS = {
     kits: "🎁 Kits y Rituales",
     facial: "🧴 Facial",
@@ -12,6 +19,8 @@
   };
 
   let catalog = null;
+  let orders = [];
+  let orderFilter = "all";
   let undoStack = [];
   let storageMode = "local"; // "api" | "browser"
   let prodFilterStatus = "all";
@@ -642,6 +651,11 @@
     $("#bannerPreview").textContent = catalog.announcementText || "(Sin texto)";
     $("#settingShipping").value = catalog.freeShippingThreshold ?? 799;
     $("#settingWhatsapp").value = catalog.whatsappNumber || "528110188422";
+    const integ = catalog.integrations || {};
+    if ($("#settingGa4")) $("#settingGa4").value = integ.ga4Id || "G-WTJDDNZHX2";
+    if ($("#settingKlaviyo")) $("#settingKlaviyo").value = integ.klaviyoId || "XnsDsN";
+    if ($("#settingMetaPixel")) $("#settingMetaPixel").value = integ.metaPixelId || "";
+    if ($("#settingTiktokPixel")) $("#settingTiktokPixel").value = integ.tiktokPixelId || "";
 
     const revWrap = $("#reviewsAdminList");
     revWrap.innerHTML = (catalog.testimonials || [])
@@ -672,6 +686,12 @@
     catalog.announcementText = $("#settingAnnouncement").value.trim();
     catalog.freeShippingThreshold = Math.max(0, Number($("#settingShipping").value || 799));
     catalog.whatsappNumber = $("#settingWhatsapp").value.replace(/\D/g, "") || "528110188422";
+    catalog.integrations = {
+      ga4Id: ($("#settingGa4")?.value || "G-WTJDDNZHX2").trim(),
+      klaviyoId: ($("#settingKlaviyo")?.value || "XnsDsN").trim(),
+      metaPixelId: ($("#settingMetaPixel")?.value || "").trim(),
+      tiktokPixelId: ($("#settingTiktokPixel")?.value || "").trim()
+    };
     saveCatalog("📢 Configuración de tu tienda guardada");
   });
 
@@ -861,8 +881,151 @@
     }
   });
 
+  /* ---------- Orders (Load, Save, Render) ---------- */
+  async function loadOrders() {
+    let loaded = null;
+    if (storageMode === "api") {
+      try {
+        const headers = {};
+        const pin = sessionStorage.getItem(PIN_KEY);
+        if (pin) headers["X-Admin-Pin"] = pin;
+        const r = await fetch("/api/orders", { headers, cache: "no-store" });
+        if (r.ok) {
+          const j = await r.json();
+          if (Array.isArray(j.orders)) loaded = j.orders;
+        }
+      } catch (_) {}
+    }
+    if (!loaded) {
+      try {
+        loaded = JSON.parse(localStorage.getItem(LS_ORDERS_KEY) || "[]");
+      } catch (_) {
+        loaded = [];
+      }
+    }
+    orders = Array.isArray(loaded) ? loaded : [];
+  }
+
+  async function saveOrders(msg = "📦 Pedidos actualizados") {
+    localStorage.setItem(LS_ORDERS_KEY, JSON.stringify(orders));
+    if (storageMode === "api") {
+      try {
+        const headers = { "Content-Type": "application/json" };
+        const pin = sessionStorage.getItem(PIN_KEY);
+        if (pin) headers["X-Admin-Pin"] = pin;
+        await fetch("/api/orders", {
+          method: "PUT",
+          headers,
+          body: JSON.stringify({ orders })
+        });
+      } catch (_) {}
+    }
+    toast(msg);
+    renderOrders();
+  }
+
+  function renderOrders() {
+    const pendingCount = orders.filter((o) => o.status !== "entregado").length;
+    const badge = $("#navOrdersCount");
+    if (badge) badge.textContent = pendingCount;
+
+    const list = orderFilter === "all" ? orders : orders.filter((o) => o.status === orderFilter);
+    const wrap = $("#ordersList");
+    if (!wrap) return;
+
+    if (!list.length) {
+      wrap.innerHTML = `<div class="card" style="text-align:center;padding:38px;">
+        <p style="font-size:1.15rem;font-weight:800;">${orders.length ? "No hay pedidos en esta pestaña" : "Todavía no hay pedidos registrados"}</p>
+        <p class="hint" style="margin:6px 0 16px;">Cuando alguien haga un pedido en tu tienda aparecerá aquí solito, o puedes anotar uno de WhatsApp arriba.</p>
+      </div>`;
+      return;
+    }
+
+    wrap.innerHTML = list
+      .map((o) => {
+        const st = ORDER_FLOW[o.status] || ORDER_FLOW.nuevo;
+        const dateStr = o.createdAt ? new Date(o.createdAt).toLocaleString("es-MX", { dateStyle: "medium", timeStyle: "short" }) : "";
+        const itemsHtml = (o.items || []).map((i) => `${i.qty || 1}× ${esc(i.title || i)}`).join(" · ") || esc(o.notes || "Pedido");
+        const cleanPhone = String(o.phone || "").replace(/\D/g, "");
+        const waPhone = cleanPhone.length === 10 ? "52" + cleanPhone : cleanPhone;
+        const waMsg = encodeURIComponent(`Hola ${o.customerName}, te escribimos de Panacea Cosméticos sobre tu pedido ${o.id} (${st.label}).`);
+        return `
+        <article class="order-card">
+          <div class="order-head">
+            <div>
+              <strong style="font-size:1.15rem;">${esc(o.customerName)}</strong>
+              <span class="hint" style="margin-left:8px;">${esc(o.id)} · ${esc(dateStr)}</span>
+            </div>
+            <span class="order-badge ${esc(o.status || "nuevo")}">${st.label}</span>
+          </div>
+          <div class="order-items">
+            <strong>${mxn(o.total)} MXN</strong> — ${itemsHtml}
+            ${o.delivery ? `<div class="hint" style="margin-top:4px;">🚚 ${esc(o.delivery)} ${o.payment ? "· 💳 " + esc(o.payment) : ""}</div>` : ""}
+            ${o.notes ? `<div class="hint" style="margin-top:4px;">📝 ${esc(o.notes)}</div>` : ""}
+          </div>
+          <div class="order-actions">
+            ${st.next ? `<button type="button" class="big-btn btn-green btn-sm" data-next-order="${esc(o.id)}" data-next-st="${st.next}">${st.nextBtn}</button>` : ""}
+            ${waPhone ? `<a class="big-btn btn-outline btn-sm" href="https://wa.me/${waPhone}?text=${waMsg}" target="_blank" rel="noopener">💬 Escribir por WhatsApp</a>` : ""}
+            <button type="button" class="big-btn btn-danger btn-sm" data-del-order="${esc(o.id)}" style="margin-left:auto;">🗑️ Borrar</button>
+          </div>
+        </article>`;
+      })
+      .join("");
+
+    $$("[data-next-order]").forEach((b) =>
+      b.addEventListener("click", () => {
+        const o = orders.find((x) => x.id === b.dataset.nextOrder);
+        if (!o) return;
+        o.status = b.dataset.nextSt;
+        saveOrders(`Pedido ${o.id} cambiado a ${ORDER_FLOW[o.status].label}`);
+      })
+    );
+    $$("[data-del-order]").forEach((b) =>
+      b.addEventListener("click", () => {
+        if (!confirm("¿Borrar este pedido de la lista?")) return;
+        orders = orders.filter((x) => x.id !== b.dataset.delOrder);
+        saveOrders("🗑️ Pedido eliminado");
+      })
+    );
+  }
+
+  $$("#orderStatusPills .pill").forEach((b) =>
+    b.addEventListener("click", () => {
+      orderFilter = b.dataset.ostatus;
+      $$("#orderStatusPills .pill").forEach((x) => x.classList.toggle("active", x === b));
+      renderOrders();
+    })
+  );
+
+  const closeOrderModal = () => $("#orderModal").classList.add("hidden");
+  $("#addOrderBtn").addEventListener("click", () => $("#orderModal").classList.remove("hidden"));
+  $("#closeOrderModal").addEventListener("click", closeOrderModal);
+  $("#cancelOrderBtn").addEventListener("click", closeOrderModal);
+
+  $("#orderForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const order = {
+      id: "PED-" + String(Date.now()).slice(-6),
+      createdAt: new Date().toISOString(),
+      status: "nuevo",
+      customerName: $("#ofName").value.trim(),
+      phone: $("#ofPhone").value.trim(),
+      delivery: $("#ofDelivery").value.trim(),
+      payment: "WhatsApp / Directo",
+      total: Number($("#ofTotal").value || 0),
+      items: [{ qty: 1, title: $("#ofItems").value.trim() }],
+      notes: $("#ofNotes").value.trim()
+    };
+    orders.unshift(order);
+    e.target.reset();
+    $("#ofDelivery").value = "Envío Nacional";
+    closeOrderModal();
+    saveOrders(`📦 Pedido de ${order.customerName} anotado`);
+  });
+
   function renderAll() {
     renderHome();
+    renderOrders();
     renderProducts();
     renderCoupons();
     renderStoreSettings();
@@ -871,6 +1034,7 @@
 
   (async () => {
     await loadCatalog();
+    await loadOrders();
     renderAll();
   })();
 })();

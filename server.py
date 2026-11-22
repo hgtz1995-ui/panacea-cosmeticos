@@ -15,9 +15,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA_JS = ROOT / "data.js"
+ORDERS_JSON = ROOT / "orders.json"
 BACKUPS_DIR = ROOT / ".backups"
 UPLOADS_DIR = ROOT / "assets" / "uploads"
 ADMIN_PIN = os.environ.get("ADMIN_PIN", "")
+
+
+def read_orders():
+    if not ORDERS_JSON.exists():
+        return []
+    try:
+        return json.loads(ORDERS_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+
+def write_orders(orders):
+    tmp = ORDERS_JSON.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(orders[:500], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp.replace(ORDERS_JSON)
 
 
 def read_catalog():
@@ -70,12 +86,17 @@ class PanaceaHandler(SimpleHTTPRequestHandler):
         return json.loads(raw.decode("utf-8"))
 
     def do_GET(self):
-        if self.path.split("?")[0] == "/api/catalog":
+        path = self.path.split("?")[0]
+        if path == "/api/catalog":
             return self.send_json({
                 "catalog": read_catalog(),
                 "requiresPin": bool(ADMIN_PIN),
                 "backend": "Servidor local Panacea (guarda directo en data.js + respaldos automáticos)",
             })
+        if path == "/api/orders":
+            if ADMIN_PIN and self.headers.get("X-Admin-Pin", "") != ADMIN_PIN:
+                return self.send_json({"error": "No autorizado"}, 401)
+            return self.send_json({"orders": read_orders()})
         return super().do_GET()
 
     def do_POST(self):
@@ -85,6 +106,25 @@ class PanaceaHandler(SimpleHTTPRequestHandler):
             if not ADMIN_PIN or str(body.get("pin", "")) == ADMIN_PIN:
                 return self.send_json({"ok": True})
             return self.send_json({"ok": False}, 401)
+
+        if path == "/api/orders":
+            orders = read_orders()
+            order = {
+                "id": body.get("id") or ("PED-" + datetime.now().strftime("%H%M%S")),
+                "createdAt": body.get("createdAt") or datetime.now().isoformat(),
+                "status": body.get("status") or "nuevo",
+                "customerName": str(body.get("customerName", "")).strip(),
+                "phone": str(body.get("phone", "")).strip(),
+                "delivery": str(body.get("delivery", "")).strip(),
+                "payment": str(body.get("payment", "")).strip(),
+                "coupon": str(body.get("coupon", "")).strip(),
+                "total": float(body.get("total", 0) or 0),
+                "items": body.get("items") if isinstance(body.get("items"), list) else [],
+                "notes": str(body.get("notes", "")).strip(),
+            }
+            orders.insert(0, order)
+            write_orders(orders)
+            return self.send_json({"ok": True, "order": order}, 201)
 
         if path == "/api/upload":
             if ADMIN_PIN and self.headers.get("X-Admin-Pin", "") != ADMIN_PIN:
@@ -103,11 +143,17 @@ class PanaceaHandler(SimpleHTTPRequestHandler):
         return self.send_json({"error": "No encontrado"}, 404)
 
     def do_PUT(self):
-        if self.path.split("?")[0] != "/api/catalog":
-            return self.send_json({"error": "No encontrado"}, 404)
+        path = self.path.split("?")[0]
         if ADMIN_PIN and self.headers.get("X-Admin-Pin", "") != ADMIN_PIN:
             return self.send_json({"error": "No autorizado"}, 401)
         data = self.read_json_body()
+        if path == "/api/orders":
+            if not isinstance(data, dict) or not isinstance(data.get("orders"), list):
+                return self.send_json({"error": "Pedidos inválidos"}, 400)
+            write_orders(data["orders"])
+            return self.send_json({"ok": True})
+        if path != "/api/catalog":
+            return self.send_json({"error": "No encontrado"}, 404)
         if not isinstance(data, dict) or not isinstance(data.get("products"), list):
             return self.send_json({"error": "Catálogo inválido"}, 400)
         write_catalog(data)

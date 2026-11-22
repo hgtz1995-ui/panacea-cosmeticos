@@ -1,5 +1,5 @@
 (() => {
-  let { products = [], concerns = [], testimonials = [], articles = [], freeShippingThreshold, whatsappNumber, coupons, announcementText = "" } = window.PANACEA_DATA;
+  let { products = [], concerns = [], testimonials = [], articles = [], freeShippingThreshold, whatsappNumber, coupons, announcementText = "", integrations = {} } = window.PANACEA_DATA;
 
   async function hydrateLiveCatalog() {
     let live = null;
@@ -28,6 +28,7 @@
     if (live.whatsappNumber) whatsappNumber = live.whatsappNumber;
     if (live.coupons && typeof live.coupons === "object") coupons = live.coupons;
     if (typeof live.announcementText === "string" && live.announcementText.trim()) announcementText = live.announcementText.trim();
+    if (live.integrations && typeof live.integrations === "object") integrations = live.integrations;
   }
 
   function applyStoreSettings() {
@@ -40,6 +41,64 @@
         a.href = a.href.replace(/wa\.me\/\d+/, `wa.me/${whatsappNumber}`);
       });
     }
+    // Cargar Meta Pixel si está configurado desde el Backoffice
+    const metaId = integrations && integrations.metaPixelId ? String(integrations.metaPixelId).trim() : "";
+    if (metaId && !window.fbq) {
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
+        t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      window.fbq("init", metaId);
+      window.fbq("track", "PageView");
+    }
+    // Cargar TikTok Pixel si está configurado desde el Backoffice
+    const ttId = integrations && integrations.tiktokPixelId ? String(integrations.tiktokPixelId).trim() : "";
+    if (ttId && !window.ttq) {
+      const s = document.createElement("script");
+      s.async = true;
+      s.src = `https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=${encodeURIComponent(ttId)}&lib=ttq`;
+      document.head.appendChild(s);
+    }
+  }
+
+  function renderInstaStrip() {
+    const grid = document.querySelector("#instaGrid");
+    if (!grid) return;
+    const picks = [
+      ...concerns.slice(0, 4).map((c) => ({ img: c.image, label: c.title })),
+      ...products.filter((p) => p.bestSeller && p.image).slice(0, 2).map((p) => ({ img: p.image, label: p.title }))
+    ].slice(0, 6);
+    grid.innerHTML = picks
+      .map(
+        (it) => `
+      <a class="insta-tile" href="https://www.instagram.com/panacea_mexico" target="_blank" rel="noopener">
+        <img src="${it.img}" alt="${escapeHtml(it.label)} — @panacea_mexico" loading="lazy" />
+        <span>@panacea_mexico · ${escapeHtml(it.label)}</span>
+      </a>`
+      )
+      .join("");
+  }
+
+  function setupStickyAtc() {
+    const bar = document.querySelector("#stickyAtcBar");
+    if (!bar || !products.length) return;
+    const star = products.find((p) => p.available !== false && p.bestSeller) || products.find((p) => p.available !== false) || products[0];
+    if (!star) return;
+    bar.innerHTML = `
+      <img src="${star.image}" alt="${escapeHtml(star.title)}" />
+      <div class="sticky-atc-info">
+        <strong>${escapeHtml(star.title)}</strong>
+        <small>${mxn(star.price)} MXN · Envío gratis +${mxn(freeShippingThreshold)}</small>
+      </div>
+      <button class="btn btn-primary btn-sm" id="stickyAtcBtn">Agregar</button>
+    `;
+    bar.querySelector("#stickyAtcBtn").addEventListener("click", () => addToCart(star.id, false));
+    window.addEventListener("scroll", () => {
+      const show = window.scrollY > 700 && !document.querySelector(".modal.open") && !document.querySelector(".cart-drawer.open");
+      bar.classList.toggle("visible", show);
+    }, { passive: true });
   }
 
   const state = {
@@ -828,8 +887,31 @@
     $("#checkoutForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const fd = new FormData(e.target);
+      const orderPayload = {
+        id: "PED-" + String(Date.now()).slice(-6),
+        createdAt: new Date().toISOString(),
+        status: "nuevo",
+        customerName: String(fd.get("name") || "").trim(),
+        phone: String(fd.get("phone") || "").trim(),
+        delivery: String(fd.get("delivery") || ""),
+        payment: String(fd.get("payment") || ""),
+        coupon: state.coupon || "",
+        total,
+        items: state.cart.map((i) => ({ title: i.title, qty: i.qty, price: i.price }))
+      };
+      try {
+        const localOrders = JSON.parse(localStorage.getItem("panacea_orders_v1") || "[]");
+        localOrders.unshift(orderPayload);
+        localStorage.setItem("panacea_orders_v1", JSON.stringify(localOrders.slice(0, 200)));
+      } catch (_) {}
+      fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderPayload)
+      }).catch(() => {});
+
       const lines = [
-        `Hola Panacea, quiero confirmar mi pedido:`,
+        `Hola Panacea, quiero confirmar mi pedido (${orderPayload.id}):`,
         ...state.cart.map((i) => `• ${i.qty}x ${i.title} (${mxn(i.price * i.qty)} MXN)`),
         state.coupon ? `Cupón: ${state.coupon}` : "",
         `Total: ${mxn(total)} MXN`,
@@ -840,7 +922,7 @@
       ].filter(Boolean);
       const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
       window.open(waUrl, "_blank", "noopener");
-      showToast("Pedido estructurado listo en WhatsApp");
+      showToast("Pedido registrado y listo en WhatsApp");
     });
   }
 
@@ -887,6 +969,8 @@
     renderProducts();
     renderReviews();
     renderBlog();
+    renderInstaStrip();
+    setupStickyAtc();
     renderCart();
     handleHashRoute();
 

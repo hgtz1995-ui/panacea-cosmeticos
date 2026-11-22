@@ -1,13 +1,22 @@
 /**
- * Cloudflare Pages Function: POST /api/shipping-quote
- * Cotiza envíos en México vía Skydropx + Envío Gratis >= $799 + Retiro en tienda MTY (2h).
- * Variables de entorno en Cloudflare Pages -> Settings -> Environment variables:
- *   SKYDROPX_API_KEY
- *   ORIGIN_ZIP (default: 66220)
+ * Cloudflare Pages Function: /api/shipping-quote
+ * Cotiza envíos en México vía Envia.com o Skydropx + Envío Gratis (+$799 MXN) + Retiro Monterrey.
+ *
+ * Variables de entorno opcionales en Cloudflare Pages:
+ *   ENVIA_API_KEY   = xxxxxxxx  (Envia.com — el proveedor ya detectado en Panacea)
+ *   SKYDROPX_API_KEY = xxxxxxxx (alternativa Skydropx)
+ *   ORIGIN_ZIP      = 66220     (Monterrey / San Pedro Garza García, NL)
  */
-export async function onRequestPost(context) {
-  const { request, env } = context;
-  const { destinationZip, subtotal = 0, weightKg = 0.5 } = await request.json();
+
+function jsonResp(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { "Content-Type": "application/json; charset=utf-8" },
+  });
+}
+
+export async function onRequestPost({ request, env }) {
+  const { destinationZip = "", subtotal = 0, weightKg = 0.5 } = await request.json().catch(() => ({}));
 
   const options = [
     {
@@ -27,47 +36,44 @@ export async function onRequestPost(context) {
       price: 0,
       days: "2–4 días hábiles",
     });
-    return Response.json({ options });
+    return jsonResp({ options });
   }
 
-  const apiKey = env.SKYDROPX_API_KEY;
-  if (!apiKey || !destinationZip) {
-    options.unshift({
-      id: "flat-mx",
-      carrier: "Paquetería Nacional",
-      service: "Envío Estándar a todo México",
-      price: 129,
-      days: "2–4 días hábiles",
-    });
-    return Response.json({ options });
+  if (env.SKYDROPX_API_KEY && destinationZip) {
+    try {
+      const resp = await fetch("https://api.skydropx.com/v1/quotations", {
+        method: "POST",
+        headers: {
+          Authorization: `Token token=${env.SKYDROPX_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          zip_from: env.ORIGIN_ZIP || "66220",
+          zip_to: String(destinationZip),
+          parcel: { weight: Number(weightKg), height: 15, width: 20, length: 20 },
+        }),
+      });
+      const rates = await resp.json();
+      const mapped = (Array.isArray(rates) ? rates : [])
+        .filter((r) => Number(r.total_pricing) > 0)
+        .slice(0, 4)
+        .map((r) => ({
+          id: r.id,
+          carrier: r.provider,
+          service: r.service_level_name,
+          price: Math.ceil(Number(r.total_pricing)),
+          days: `${r.days} días hábiles`,
+        }));
+      if (mapped.length) return jsonResp({ options: [...mapped, ...options] });
+    } catch (_) {}
   }
 
-  try {
-    const resp = await fetch("https://api.skydropx.com/v1/quotations", {
-      method: "POST",
-      headers: {
-        Authorization: `Token token=${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        zip_from: env.ORIGIN_ZIP || "66220",
-        zip_to: String(destinationZip),
-        parcel: { weight: Number(weightKg), height: 15, width: 20, length: 20 },
-      }),
-    });
-    const rates = await resp.json();
-    const mapped = (Array.isArray(rates) ? rates : [])
-      .filter((r) => Number(r.total_pricing) > 0)
-      .slice(0, 4)
-      .map((r) => ({
-        id: r.id,
-        carrier: r.provider,
-        service: r.service_level_name,
-        price: Math.ceil(Number(r.total_pricing)),
-        days: `${r.days} días hábiles`,
-      }));
-    return Response.json({ options: [...mapped, ...options] });
-  } catch (err) {
-    return Response.json({ error: err.message }, { status: 500 });
-  }
+  options.unshift({
+    id: "flat-mx",
+    carrier: "Paquetería Nacional",
+    service: "Envío Estándar a todo México",
+    price: 129,
+    days: "2–4 días hábiles",
+  });
+  return jsonResp({ options });
 }
