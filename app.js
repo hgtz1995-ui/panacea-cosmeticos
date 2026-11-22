@@ -680,7 +680,13 @@
     const couponObj = coupons[state.coupon.toUpperCase()];
     const discount = couponObj ? Math.round(subtotal * couponObj.discount) : 0;
     const afterDiscount = Math.max(0, subtotal - discount);
-    const shipping = afterDiscount === 0 || afterDiscount >= freeShippingThreshold ? 0 : 129;
+    // Tarifas exactas de Panacea (Shopify): >= freeShippingThreshold ($799) gratis, >= $599 en $99, menor en $159
+    const shipping =
+      afterDiscount === 0 || afterDiscount >= freeShippingThreshold
+        ? 0
+        : afterDiscount >= 599
+          ? 99
+          : 159;
     return { subtotal, discount, afterDiscount, shipping, total: afterDiscount + shipping, couponObj };
   }
 
@@ -1073,6 +1079,44 @@
       renderCart();
       e.target.reset();
       showToast("¡Bienvenido! Tu código BIENVENIDA10 (10% OFF) ya quedó activado en tu carrito.");
+    });
+
+    document.querySelectorAll("[data-policy]").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const key = link.dataset.policy;
+        const policies = {
+          devoluciones: {
+            title: "Políticas de Envío y Devolución",
+            body: `POLÍTICA DE ENVÍO\nDespués de confirmar la compra, tu pedido se envía en un máximo de 2 días hábiles contando de Lunes a Viernes (sábados y domingos cerrado).\n• Envío Nacional: $159 MXN (<$599), $99 MXN ($599–$798), GRATIS desde $799 MXN.\n• Envío Local Monterrey (20 km): GRATIS desde $500 MXN.\n• Retiro en tienda (Lic. Benito Juárez Nte. 334, CP 66200, San Pedro Garza García, NL): GRATIS, listo en 2 horas.\n\nPOLÍTICAS DE DEVOLUCIÓN Y REEMBOLSO\nTienes 10 días naturales después de recibir tu pedido para escribirnos a hola@panacea-cosmeticos.com o por WhatsApp (+52 81 1018 8422) si:\n1. No llegó en las condiciones correctas*\n2. No es el producto que pediste*\n3. No cumple con tus expectativas**\n4. Simplemente cambiaste de opinión**\n\nAl procesarlo te enviamos una guía por nuestra cuenta y reembolsamos el valor pagado. Aplica solo en compras directas en panacea-cosmeticos.com (indica nombre, número de compra, producto y motivo).\n* Debe devolverse cerrado o en las mismas condiciones en que se recibió.\n** Limitado a un máximo de 3 productos devueltos por año por cambio de opinión.\nHONEST PRODUCTS SAPI DE CV.`
+          },
+          privacidad: {
+            title: "Aviso de Privacidad (LFPDPPP)",
+            body: `Responsable: HONEST PRODUCTS SAPI DE CV (Panacea Cosméticos), con domicilio en Lic. Benito Juárez Nte. 334, CP 66200, San Pedro Garza García, Nuevo León, México.\n\nUtilizamos tus datos de contacto y entrega únicamente para procesar pedidos, envíos, facturación y asesoría personalizada de skincare. Para ejercer derechos ARCO escríbenos a hola@panacea-cosmeticos.com.`
+          },
+          terminos: {
+            title: "Términos y Condiciones",
+            body: `Este sitio es operado por HONEST PRODUCTS SAPI DE CV (Panacea Cosméticos). Todos los precios se muestran en Pesos Mexicanos (MXN). Para soporte, aclaraciones o garantías contáctanos en hola@panacea-cosmeticos.com o al WhatsApp +52 81 1018 8422.`
+          },
+          facturacion: {
+            title: "Facturación CFDI 4.0",
+            body: `Para solicitar tu factura CFDI 4.0 envía tu número de pedido, Constancia de Situación Fiscal, Uso de CFDI y correo electrónico a hola@panacea-cosmeticos.com o por WhatsApp (+52 81 1018 8422) dentro del mismo mes de tu compra.`
+          }
+        };
+        const pol = policies[key];
+        if (!pol) return;
+        const modal = $("#pdpModal");
+        modal.innerHTML = `<div class="checkout-box" style="max-width:640px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+            <h2 style="font-family:var(--font-serif);font-size:1.7rem;">${escapeHtml(pol.title)}</h2>
+            <button class="close-btn" id="closePolBtn">✕</button>
+          </div>
+          <div style="white-space:pre-line;font-size:0.92rem;line-height:1.65;color:var(--ink);">${escapeHtml(pol.body)}</div>
+        </div>`;
+        $("#backdrop").classList.add("open");
+        modal.classList.add("open");
+        $("#closePolBtn").addEventListener("click", closeAllOverlays);
+      });
     });
 
     document.addEventListener("keydown", (e) => {

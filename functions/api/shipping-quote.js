@@ -17,24 +17,35 @@ function jsonResp(data, status = 200) {
 
 export async function onRequestPost({ request, env }) {
   const { destinationZip = "", subtotal = 0, weightKg = 0.5 } = await request.json().catch(() => ({}));
+  const sub = Number(subtotal || 0);
 
   const options = [
     {
       id: "pickup-mty",
-      carrier: "Panacea Monterrey",
-      service: "Retiro en tienda (listo en 2 horas)",
+      carrier: "Panacea San Pedro (Lic. Benito Juárez Nte. 334, CP 66200)",
+      service: "Retiro en tienda (listo en 2 horas — confirma por WhatsApp)",
       price: 0,
       days: "Hoy mismo",
     },
   ];
 
-  if (Number(subtotal) >= 799) {
+  if (sub >= 500) {
+    options.unshift({
+      id: "local-mty-free",
+      carrier: "Envío Local Monterrey (radio 20 km)",
+      service: "Entrega Local Gratis (+$500 MXN)",
+      price: 0,
+      days: "1–2 días hábiles",
+    });
+  }
+
+  if (sub >= 799) {
     options.unshift({
       id: "free-mx",
-      carrier: "Envío Estándar México",
+      carrier: "Envío Nacional México",
       service: "Envío Gratis (+$799 MXN)",
       price: 0,
-      days: "2–4 días hábiles",
+      days: "Despacho en máx. 2 días hábiles (L–V)",
     });
     return jsonResp({ options });
   }
@@ -48,7 +59,7 @@ export async function onRequestPost({ request, env }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          zip_from: env.ORIGIN_ZIP || "66220",
+          zip_from: env.ORIGIN_ZIP || "66200",
           zip_to: String(destinationZip),
           parcel: { weight: Number(weightKg), height: 15, width: 20, length: 20 },
         }),
@@ -68,12 +79,13 @@ export async function onRequestPost({ request, env }) {
     } catch (_) {}
   }
 
+  const tierPrice = sub >= 599 ? 99 : 159;
   options.unshift({
-    id: "flat-mx",
-    carrier: "Paquetería Nacional",
-    service: "Envío Estándar a todo México",
-    price: 129,
-    days: "2–4 días hábiles",
+    id: sub >= 599 ? "tier-599" : "tier-base",
+    carrier: "Paquetería Nacional México",
+    service: sub >= 599 ? "Envío Nacional ($599–$798 MXN)" : "Envío Estándar Nacional",
+    price: tierPrice,
+    days: "Despacho en máx. 2 días hábiles (L–V)",
   });
   return jsonResp({ options });
 }
