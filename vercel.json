@@ -1,0 +1,104 @@
+{
+  "redirects": [
+    {
+      "source": "/products/:handle",
+      "destination": "/#producto=:handle",
+      "permanent": true
+    },
+    {
+      "source": "/collections/bebes-1",
+      "destination": "/#categoria=bebe",
+      "permanent": true
+    },
+    {
+      "source": "/collections/bebes",
+      "destination": "/#categoria=bebe",
+      "permanent": true
+    },
+    {
+      "source": "/collections/rostro",
+      "destination": "/#categoria=facial",
+      "permanent": true
+    },
+    {
+      "source": "/collections/facial",
+      "destination": "/#categoria=facial",
+      "permanent": true
+    },
+    {
+      "source": "/collections/cuerpo",
+      "destination": "/#categoria=corporal",
+      "permanent": true
+    },
+    {
+      "source": "/collections/corporal",
+      "destination": "/#categoria=corporal",
+      "permanent": true
+    },
+    {
+      "source": "/collections/kits",
+      "destination": "/#categoria=kits",
+      "permanent": true
+    },
+    {
+      "source": "/collections/best-sellers",
+      "destination": "/#categoria=best",
+      "permanent": true
+    },
+    {
+      "source": "/collections/acne",
+      "destination": "/#necesidad=acne",
+      "permanent": true
+    },
+    {
+      "source": "/collections/arrugas-y-textura",
+      "destination": "/#necesidad=antiedad",
+      "permanent": true
+    },
+    {
+      "source": "/collections/hidratacion-y-manchas",
+      "destination": "/#necesidad=manchas",
+      "permanent": true
+    },
+    {
+      "source": "/collections/seca-o-sensible",
+      "destination": "/#necesidad=sensible",
+      "permanent": true
+    },
+    {
+      "source": "/collections/:slug",
+      "destination": "/#catalogo",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news/:slug",
+      "destination": "/#blog=:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/news",
+      "destination": "/#diario",
+      "permanent": true
+    },
+    {
+      "source": "/pages/nosotros",
+      "destination": "/#historia",
+      "permanent": true
+    },
+    {
+      "source": "/pages/diosa",
+      "destination": "/#historia",
+      "permanent": true
+    },
+    {
+      "source": "/pages/contact",
+      "destination": "/#contacto",
+      "permanent": true
+    },
+    {
+      "source": "/pages/catalogo-productos",
+      "destination": "/#catalogo",
+      "permanent": true
+    }
+  ]
+}

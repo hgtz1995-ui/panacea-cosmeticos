@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Tienda Panacea — Panel Fácil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <!-- Pantalla de clave (solo aparece si hay PIN configurado en producción) -->
+  <div class="pin-screen hidden" id="pinScreen">
+    <div class="pin-card">
+      <div class="pin-logo">PANACEA</div>
+      <h1>Entrar a Mi Tienda</h1>
+      <p>Escribe tu clave secreta para editar tus productos y precios.</p>
+      <form id="pinForm">
+        <input type="password" id="pinInput" placeholder="Tu clave..." autocomplete="current-password" required />
+        <button type="submit" class="big-btn btn-green btn-full">Entrar</button>
+      </form>
+      <p class="pin-error hidden" id="pinError">Clave incorrecta. Intenta de nuevo.</p>
+    </div>
+  </div>
+
+  <!-- Barra superior fija -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="brand-badge">PANACEA</span>
+      <span class="brand-title">Mi Tienda Fácil</span>
+      <span class="save-pill saved" id="savePill">✅ Todo guardado</span>
+    </div>
+    <div class="topbar-actions">
+      <button class="top-btn" id="undoBtn" disabled title="Deshacer el último cambio">
+        ↩️ <span>Deshacer</span>
+      </button>
+      <a class="top-btn btn-view-store" href="index.html" target="_blank" rel="noopener">
+        👀 <span>Ver mi tienda</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <!-- Menú lateral (desktop) / inferior (móvil) -->
+    <aside class="sidebar" aria-label="Menú principal">
+      <nav class="nav-list">
+        <button class="nav-item active" data-tab="inicio">
+          <span class="nav-ico">🏠</span>
+          <span class="nav-txt">Inicio</span>
+        </button>
+        <button class="nav-item" data-tab="productos">
+          <span class="nav-ico">🧴</span>
+          <span class="nav-txt">Mis Productos</span>
+          <span class="nav-count" id="navProdCount">0</span>
+        </button>
+        <button class="nav-item" data-tab="cupones">
+          <span class="nav-ico">🏷️</span>
+          <span class="nav-txt">Cupones</span>
+          <span class="nav-count" id="navCouponCount">0</span>
+        </button>
+        <button class="nav-item" data-tab="tienda">
+          <span class="nav-ico">📢</span>
+          <span class="nav-txt">Avisos y Envíos</span>
+        </button>
+        <button class="nav-item" data-tab="blog">
+          <span class="nav-ico">📰</span>
+          <span class="nav-txt">Blog</span>
+        </button>
+        <button class="nav-item" data-tab="ayuda">
+          <span class="nav-ico">🛟</span>
+          <span class="nav-txt">Respaldo y Ayuda</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-area">
+      <!-- ==================== TAB: INICIO ==================== -->
+      <section class="tab-panel active" id="tab-inicio">
+        <div class="page-head">
+          <div>
+            <h1>¡Hola! Así está tu tienda hoy</h1>
+            <p class="lead">Toca cualquier botón grande para hacer un cambio. Todo se guarda automáticamente.</p>
+          </div>
+        </div>
+
+        <div class="stats-grid" id="homeStats"></div>
+
+        <h2 class="section-title">¿Qué quieres hacer ahorita?</h2>
+        <div class="quick-actions">
+          <button class="quick-card" id="qaNewProduct">
+            <span class="quick-ico">➕</span>
+            <strong>Agregar producto nuevo</strong>
+            <small>Sube foto, pon precio y listo</small>
+          </button>
+          <button class="quick-card" id="qaEditProducts">
+            <span class="quick-ico">💰</span>
+            <strong>Cambiar precios o agotados</strong>
+            <small>Apaga o enciende productos en 1 clic</small>
+          </button>
+          <button class="quick-card" id="qaCoupons">
+            <span class="quick-ico">🏷️</span>
+            <strong>Crear un cupón de descuento</strong>
+            <small>Ej. 10% o 15% para tus clientas</small>
+          </button>
+          <button class="quick-card" id="qaBanner">
+            <span class="quick-ico">📢</span>
+            <strong>Cambiar el aviso de arriba</strong>
+            <small>Envío gratis, promociones o WhatsApp</small>
+          </button>
+        </div>
+
+        <div class="guide-box">
+          <h3>¿Cómo funciona? (3 pasos súper fáciles)</h3>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <span class="step-num">1</span>
+              <div>
+                <strong>Cambia lo que necesites</strong>
+                <p>Precios, fotos, si un producto se agotó, cupones o textos.</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">2</span>
+              <div>
+                <strong>Se guarda solo (sin miedo)</strong>
+                <p>Si te equivocas, toca el botón <b>↩️ Deshacer</b> arriba y todo regresa.</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">3</span>
+              <div>
+                <strong>Revísalo como clienta</strong>
+                <p>Toca <b>👀 Ver mi tienda</b> arriba para ver el cambio al instante.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB: MIS PRODUCTOS ==================== -->
+      <section class="tab-panel" id="tab-productos">
+        <div class="page-head">
+          <div>
+            <h1>Mis Productos</h1>
+            <p class="lead">Toca el botón verde para marcar si está disponible o agotado, cambia el precio directo o toca <b>Editar</b>.</p>
+          </div>
+          <button class="big-btn btn-green" id="addProductBtn">➕ Agregar producto nuevo</button>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-wrap">
+            <span class="search-ico">🔍</span>
+            <input type="search" id="prodSearch" placeholder="Busca un producto... (ej. Vitamina C, Romero, Kit, Bebé)" />
+          </div>
+          <select id="prodCatFilter" aria-label="Filtrar por sección">
+            <option value="all">Todas las secciones</option>
+            <option value="kits">🎁 Kits y Rituales</option>
+            <option value="facial">🧴 Facial y Sérums</option>
+            <option value="tonicos">💧 Tónicos</option>
+            <option value="capilar">🌿 Capilar</option>
+            <option value="corporal">✨ Corporal</option>
+            <option value="bebe">👶 Bebés</option>
+            <option value="higienicos">🧼 Higiénicos</option>
+          </select>
+        </div>
+
+        <div class="filter-pills" id="prodStatusPills">
+          <button class="pill active" data-filter="all">Todos</button>
+          <button class="pill" data-filter="available">✅ Disponibles</button>
+          <button class="pill" data-filter="soldout">⛔ Agotados</button>
+          <button class="pill" data-filter="best">⭐ Más vendidos</button>
+        </div>
+
+        <div class="products-list" id="productsList"></div>
+      </section>
+
+      <!-- ==================== TAB: CUPONES ==================== -->
+      <section class="tab-panel" id="tab-cupones">
+        <div class="page-head">
+          <div>
+            <h1>Cupones y Descuentos</h1>
+            <p class="lead">Crea códigos fáciles para que tus clientas obtengan descuento en su carrito.</p>
+          </div>
+        </div>
+
+        <div class="card form-card">
+          <h3>➕ Crear un cupón nuevo</h3>
+          <form id="couponForm" class="coupon-grid">
+            <div class="field">
+              <label for="couponCode">Palabra del cupón</label>
+              <input type="text" id="couponCode" placeholder="Ej. MAMA15 o VERANO20" required />
+              <small>Sin espacios. Se pone solo en mayúsculas.</small>
+            </div>
+            <div class="field">
+              <label for="couponPct">¿Cuánto descuenta? (%)</label>
+              <div class="pct-row">
+                <input type="number" id="couponPct" min="1" max="90" value="10" required />
+                <div class="quick-pcts">
+                  <button type="button" class="mini-chip" data-pct="10">10%</button>
+                  <button type="button" class="mini-chip" data-pct="15">15%</button>
+                  <button type="button" class="mini-chip" data-pct="20">20%</button>
+                  <button type="button" class="mini-chip" data-pct="25">25%</button>
+                </div>
+              </div>
+            </div>
+            <div class="field field-wide">
+              <label for="couponLabel">Texto bonito para la clienta</label>
+              <input type="text" id="couponLabel" placeholder="Ej. 15% OFF Especial del Mes" />
+              <small>Si lo dejas vacío, se llena automáticamente.</small>
+            </div>
+            <div class="field-actions">
+              <button type="submit" class="big-btn btn-green">💾 Guardar cupón</button>
+            </div>
+          </form>
+        </div>
+
+        <h2 class="section-title">Cupones activos ahorita</h2>
+        <div class="coupons-list" id="couponsList"></div>
+      </section>
+
+      <!-- ==================== TAB: AVISOS Y ENVÍOS ==================== -->
+      <section class="tab-panel" id="tab-tienda">
+        <div class="page-head">
+          <div>
+            <h1>Avisos, Envíos y WhatsApp</h1>
+            <p class="lead">Cambia el mensaje principal de arriba, el envío gratis y tu número de WhatsApp.</p>
+          </div>
+        </div>
+
+        <form id="storeSettingsForm" class="stack-gap">
+          <div class="card">
+            <h3>📢 Barra de anuncio (la franja oscura hasta arriba de tu tienda)</h3>
+            <p class="hint">Así se ve ahorita para tus clientas:</p>
+            <div class="live-banner-preview" id="bannerPreview"></div>
+            <div class="field" style="margin-top:14px;">
+              <label for="settingAnnouncement">Texto del anuncio</label>
+              <input type="text" id="settingAnnouncement" placeholder="Ej. Envío gratis a todo México desde $799 MXN · Código BIENVENIDA10" />
+            </div>
+          </div>
+
+          <div class="card two-col">
+            <div class="field">
+              <label for="settingShipping">🚚 ¿Desde cuánto el envío es GRATIS? ($ MXN)</label>
+              <input type="number" id="settingShipping" min="0" step="1" required />
+              <small>Si la clienta compra esta cantidad o más, el envío sale en $0.</small>
+            </div>
+            <div class="field">
+              <label for="settingWhatsapp">💬 Número de WhatsApp de pedidos</label>
+              <input type="text" id="settingWhatsapp" placeholder="528110188422" required />
+              <small>Con lada de país sin signos (ej. <code>528110188422</code>).</small>
+            </div>
+          </div>
+
+          <div>
+            <button type="submit" class="big-btn btn-green">💾 Guardar cambios de mi tienda</button>
+          </div>
+        </form>
+
+        <div class="card" style="margin-top:28px;">
+          <div class="card-head-row">
+            <div>
+              <h3>💬 Opiniones de clientas (Testimonios)</h3>
+              <p class="hint">Aparecen en tu página principal para dar confianza.</p>
+            </div>
+            <button type="button" class="big-btn btn-outline" id="addReviewBtn">➕ Agregar opinión</button>
+          </div>
+          <div class="reviews-admin-list" id="reviewsAdminList"></div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB: BLOG ==================== -->
+      <section class="tab-panel" id="tab-blog">
+        <div class="page-head">
+          <div>
+            <h1>Diario de Botica (Blog)</h1>
+            <p class="lead">Edita tus artículos o escribe uno nuevo para explicar beneficios de tus productos.</p>
+          </div>
+          <button class="big-btn btn-green" id="addArticleBtn">➕ Escribir artículo nuevo</button>
+        </div>
+        <div class="articles-admin-list" id="articlesAdminList"></div>
+      </section>
+
+      <!-- ==================== TAB: RESPALDO Y AYUDA ==================== -->
+      <section class="tab-panel" id="tab-ayuda">
+        <div class="page-head">
+          <div>
+            <h1>Respaldo y Ayuda</h1>
+            <p class="lead">Guarda una copia de seguridad de toda tu tienda cuando quieras, o restaura una copia anterior.</p>
+          </div>
+        </div>
+
+        <div class="card two-col">
+          <div>
+            <h3>💾 Guardar copia de seguridad</h3>
+            <p class="hint">Descarga un archivo con todos tus productos, precios, cupones y textos.</p>
+            <button type="button" class="big-btn btn-green" id="exportBackupBtn" style="margin-top:12px;">
+              ⬇️ Descargar respaldo
+            </button>
+          </div>
+          <div>
+            <h3>📂 Restaurar una copia guardada</h3>
+            <p class="hint">Si alguna vez quieres regresar a un respaldo anterior, selecciónalo aquí.</p>
+            <label class="big-btn btn-outline file-label" style="margin-top:12px;">
+              ⬆️ Elegir archivo de respaldo
+              <input type="file" id="importBackupInput" accept="application/json,.json" hidden />
+            </label>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px;">
+          <h3>ℹ️ Estado de conexión</h3>
+          <p id="storageModeInfo" class="hint" style="margin-top:6px;">Comprobando...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ==================== MODAL: EDITOR DE PRODUCTO ==================== -->
+  <div class="modal-overlay hidden" id="productModal" role="dialog" aria-modal="true" aria-labelledby="prodModalTitle">
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <h2 id="prodModalTitle">Editar producto</h2>
+        <button class="icon-close" id="closeProductModal" aria-label="Cerrar">✕</button>
+      </div>
+      <form id="productForm" class="modal-body">
+        <input type="hidden" id="pfId" />
+
+        <!-- Bloque 1: Lo más importante -->
+        <div class="editor-group">
+          <div class="field">
+            <label for="pfTitle">¿Cómo se llama el producto?</label>
+            <input type="text" id="pfTitle" placeholder="Ej. Sérum de Vitamina C" required />
+          </div>
+
+          <div class="two-col">
+            <div class="field">
+              <label for="pfPrice">¿Cuánto cuesta? ($ MXN)</label>
+              <input type="number" id="pfPrice" min="0" step="1" placeholder="Ej. 450" required />
+            </div>
+            <div class="field">
+              <label for="pfComparePrice">Precio anterior (solo si está en oferta)</label>
+              <input type="number" id="pfComparePrice" min="0" step="1" placeholder="Déjalo vacío si no es oferta" />
+              <small>Si pones un número más alto, sale tachado como oferta.</small>
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <label class="big-switch">
+              <input type="checkbox" id="pfAvailable" checked />
+              <span class="switch-track"></span>
+              <span class="switch-label" id="pfAvailableLabel">✅ Disponible para vender</span>
+            </label>
+
+            <label class="big-switch">
+              <input type="checkbox" id="pfBestSeller" />
+              <span class="switch-track"></span>
+              <span class="switch-label">⭐ Mostrar en "Más vendidos"</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Bloque 2: Fotos -->
+        <div class="editor-group">
+          <h3>📷 Fotos del producto</h3>
+          <div class="photo-editor-grid">
+            <div class="photo-slot">
+              <span class="slot-title">Foto principal</span>
+              <div class="photo-preview-box">
+                <img id="pfImagePreview" alt="Vista previa" />
+              </div>
+              <label class="big-btn btn-outline btn-sm file-label">
+                📷 Subir foto desde aquí
+                <input type="file" id="pfImageFile" accept="image/*" hidden />
+              </label>
+              <input type="text" id="pfImage" placeholder="O pega un enlace de foto..." />
+            </div>
+
+            <div class="photo-slot">
+              <span class="slot-title">Segunda foto (opcional)</span>
+              <div class="photo-preview-box">
+                <img id="pfHoverPreview" alt="Segunda foto" />
+              </div>
+              <label class="big-btn btn-outline btn-sm file-label">
+                📷 Subir segunda foto
+                <input type="file" id="pfHoverFile" accept="image/*" hidden />
+              </label>
+              <input type="text" id="pfHoverImage" placeholder="O pega un enlace de foto..." />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque 3: Sección y tipo de piel -->
+        <div class="editor-group">
+          <h3>🗂️ ¿Dónde aparece en la tienda?</h3>
+          <div class="field">
+            <label>Elige una sección:</label>
+            <div class="choice-grid" id="pfCategoryChoices">
+              <button type="button" class="choice-btn" data-cat="facial">🧴 Facial</button>
+              <button type="button" class="choice-btn" data-cat="tonicos">💧 Tónicos</button>
+              <button type="button" class="choice-btn" data-cat="kits">🎁 Kits</button>
+              <button type="button" class="choice-btn" data-cat="capilar">🌿 Capilar</button>
+              <button type="button" class="choice-btn" data-cat="corporal">✨ Corporal</button>
+              <button type="button" class="choice-btn" data-cat="bebe">👶 Bebés</button>
+              <button type="button" class="choice-btn" data-cat="higienicos">🧼 Higiénicos</button>
+            </div>
+            <input type="hidden" id="pfCategory" value="facial" />
+          </div>
+
+          <div class="field">
+            <label>¿Para qué necesidad de piel ayuda? (puedes elegir varias)</label>
+            <div class="choice-grid" id="pfConcernChoices">
+              <button type="button" class="choice-btn" data-concern="acne">✨ Acné y poros</button>
+              <button type="button" class="choice-btn" data-concern="sensible">🌿 Piel sensible</button>
+              <button type="button" class="choice-btn" data-concern="antiedad">💎 Antiedad</button>
+              <button type="button" class="choice-btn" data-concern="manchas">☀️ Manchas</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="pfBadge">Etiqueta bonita arriba de la foto</label>
+            <input type="text" id="pfBadge" placeholder="Ej. 100% Natural, Más vendido, Nuevo, Fórmula Médica" />
+          </div>
+        </div>
+
+        <!-- Bloque 4: Textos -->
+        <div class="editor-group">
+          <h3>📝 Explicación del producto</h3>
+          <div class="field">
+            <label for="pfSubtitle">Frase corta (aparece debajo del nombre)</label>
+            <input type="text" id="pfSubtitle" placeholder="Ej. Ilumina, unifica el tono y protege tu piel" />
+          </div>
+          <div class="field">
+            <label for="pfDescription">Descripción completa</label>
+            <textarea id="pfDescription" rows="4" placeholder="Explica para qué sirve, sus ingredientes y cómo se usa..."></textarea>
+          </div>
+        </div>
+
+        <!-- Bloque 5: Tamaños / Presentaciones (opcional) -->
+        <div class="editor-group">
+          <div class="card-head-row">
+            <div>
+              <h3>📏 Tamaños o presentaciones (opcional)</h3>
+              <p class="hint">Solo úsalo si este producto viene en varios tamaños (ej. 30 ml y 60 ml).</p>
+            </div>
+            <button type="button" class="big-btn btn-outline btn-sm" id="addVariantBtn">➕ Agregar tamaño</button>
+          </div>
+          <div id="variantsContainer" class="variants-list"></div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-footer-left">
+            <button type="button" class="big-btn btn-outline btn-sm hidden" id="duplicateProductBtn">📋 Duplicar</button>
+            <button type="button" class="big-btn btn-danger btn-sm hidden" id="deleteProductBtn">🗑️ Borrar</button>
+          </div>
+          <div class="modal-footer-right">
+            <button type="button" class="big-btn btn-outline" id="cancelProductBtn">Cancelar</button>
+            <button type="submit" class="big-btn btn-green">💾 Guardar producto</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: EDITOR DE ARTÍCULO ==================== -->
+  <div class="modal-overlay hidden" id="articleModal" role="dialog" aria-modal="true">
+    <div class="modal-sheet">
+      <div class="modal-head">
+        <h2 id="artModalTitle">Editar artículo</h2>
+        <button class="icon-close" id="closeArticleModal" aria-label="Cerrar">✕</button>
+      </div>
+      <form id="articleForm" class="modal-body">
+        <input type="hidden" id="afSlug" />
+        <div class="field">
+          <label for="afTitle">Título del artículo</label>
+          <input type="text" id="afTitle" required placeholder="Ej. Beneficios de la caléndula" />
+        </div>
+        <div class="two-col">
+          <div class="field">
+            <label for="afDate">Fecha</label>
+            <input type="date" id="afDate" required />
+          </div>
+          <div class="field">
+            <label for="afImage">Foto del artículo</label>
+            <input type="text" id="afImage" placeholder="Enlace o sube una foto abajo" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="big-btn btn-outline btn-sm file-label" style="width:fit-content;">
+            📷 Subir foto para el artículo
+            <input type="file" id="afImageFile" accept="image/*" hidden />
+          </label>
+        </div>
+        <div class="field">
+          <label for="afExcerpt">Resumen corto (1 frase)</label>
+          <input type="text" id="afExcerpt" placeholder="Resumen breve que aparece en la tarjeta..." />
+        </div>
+        <div class="field">
+          <label for="afContent">Texto del artículo</label>
+          <textarea id="afContent" rows="8" required placeholder="Escribe aquí tu artículo..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-footer-left">
+            <button type="button" class="big-btn btn-danger btn-sm hidden" id="deleteArticleBtn">🗑️ Borrar</button>
+          </div>
+          <div class="modal-footer-right">
+            <button type="button" class="big-btn btn-outline" id="cancelArticleBtn">Cancelar</button>
+            <button type="submit" class="big-btn btn-green">💾 Guardar artículo</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: EDITOR DE OPINIÓN ==================== -->
+  <div class="modal-overlay hidden" id="reviewModal" role="dialog" aria-modal="true">
+    <div class="modal-sheet modal-sm">
+      <div class="modal-head">
+        <h2>Opinión de clienta</h2>
+        <button class="icon-close" id="closeReviewModal" aria-label="Cerrar">✕</button>
+      </div>
+      <form id="reviewForm" class="modal-body">
+        <input type="hidden" id="rfIdx" />
+        <div class="two-col">
+          <div class="field">
+            <label for="rfName">Nombre de la clienta</label>
+            <input type="text" id="rfName" required placeholder="Ej. Mariana G." />
+          </div>
+          <div class="field">
+            <label for="rfCity">Ciudad</label>
+            <input type="text" id="rfCity" required placeholder="Ej. Monterrey, NL" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="rfProduct">Producto que usó</label>
+          <input type="text" id="rfProduct" required placeholder="Ej. Crema Melatonina" />
+        </div>
+        <div class="field">
+          <label for="rfQuote">¿Qué dijo?</label>
+          <textarea id="rfQuote" rows="4" required placeholder="Escribe su comentario..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <div class="modal-footer-left">
+            <button type="button" class="big-btn btn-danger btn-sm hidden" id="deleteReviewBtn">🗑️ Borrar</button>
+          </div>
+          <div class="modal-footer-right">
+            <button type="button" class="big-btn btn-outline" id="cancelReviewBtn">Cancelar</button>
+            <button type="submit" class="big-btn btn-green">💾 Guardar opinión</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Aviso flotante -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

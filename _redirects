@@ -1,0 +1,21 @@
+# Panacea Cosméticos — Netlify / Cloudflare Pages 301 Redirects
+/products/* /#producto=:splat 301
+/collections/bebes-1 /#categoria=bebe 301
+/collections/bebes /#categoria=bebe 301
+/collections/rostro /#categoria=facial 301
+/collections/facial /#categoria=facial 301
+/collections/cuerpo /#categoria=corporal 301
+/collections/corporal /#categoria=corporal 301
+/collections/kits /#categoria=kits 301
+/collections/best-sellers /#categoria=best 301
+/collections/acne /#necesidad=acne 301
+/collections/arrugas-y-textura /#necesidad=antiedad 301
+/collections/hidratacion-y-manchas /#necesidad=manchas 301
+/collections/seca-o-sensible /#necesidad=sensible 301
+/collections/* /#catalogo 301
+/blogs/news/* /#blog=:splat 301
+/blogs/news /#diario 301
+/pages/nosotros /#historia 301
+/pages/diosa /#historia 301
+/pages/contact /#contacto 301
+/pages/catalogo-productos /#catalogo 301
