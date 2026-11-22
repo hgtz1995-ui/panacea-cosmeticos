@@ -844,11 +844,11 @@
           </div>
 
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <button type="submit" class="btn btn-primary" style="flex:1;">Confirmar y enviar pedido por WhatsApp</button>
-            <button type="button" class="btn btn-outline" id="demoPayBtn">Simular pago con Mercado Pago / Stripe</button>
+            <button type="button" class="btn btn-primary" id="demoPayBtn" style="flex:1;">Pagar en línea (Tarjeta / MSI / OXXO / SPEI)</button>
+            <button type="submit" class="btn btn-outline">Confirmar pedido por WhatsApp</button>
           </div>
           <p style="font-size:0.74rem;color:var(--ink-muted);margin-top:10px;">
-            * En producción este formulario conecta directo con API de Mercado Pago / Stripe (0% comisión Shopify) + Skydropx para guía automática.
+            🔒 Pagos 100% protegidos en México vía Mercado Pago (3 y 6 MSI, OXXO, SPEI) · Envíos rastreados a todo México y retiro en 2h en Monterrey.
           </p>
         </form>
       </div>`;
@@ -860,9 +860,34 @@
 
     $("#demoPayBtn").addEventListener("click", async () => {
       const form = $("#checkoutForm");
+      if (!form.reportValidity()) return;
       const fd = new FormData(form);
       const { shipping } = getTotals();
+      const btn = $("#demoPayBtn");
+      const origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Conectando pago seguro…";
+
+      const orderPayload = {
+        id: "PED-" + String(Date.now()).slice(-6),
+        createdAt: new Date().toISOString(),
+        status: "pendiente_pago",
+        customerName: String(fd.get("name") || "").trim(),
+        phone: String(fd.get("phone") || "").trim(),
+        delivery: String(fd.get("delivery") || ""),
+        payment: String(fd.get("payment") || "Mercado Pago"),
+        coupon: state.coupon || "",
+        total,
+        items: state.cart.map((i) => ({ title: i.title, qty: i.qty, price: i.price }))
+      };
+
       try {
+        fetch("/api/orders", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(orderPayload)
+        }).catch(() => {});
+
         const res = await fetch("/api/create-checkout", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -878,9 +903,12 @@
           window.location.href = data.checkoutUrl;
           return;
         }
-        showToast(data.error || "Conecta MERCADOPAGO_ACCESS_TOKEN en Vercel para cobrar en vivo.");
+        showToast(data.error || "Configura MERCADOPAGO_ACCESS_TOKEN en Cloudflare Pages para cobrar en línea.");
       } catch {
-        showToast("Modo local: al desplegar en Vercel conecta directo con Mercado Pago (MSI, OXXO y SPEI).");
+        showToast("Conecta el repo en Cloudflare Pages + MERCADOPAGO_ACCESS_TOKEN para cobrar en línea, o usa WhatsApp.");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = origText;
       }
     });
 
@@ -1050,6 +1078,24 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeAllOverlays();
     });
+
+    // Manejo de retorno desde Mercado Pago Checkout Pro (?pago=aprobado|pendiente|error)
+    const params = new URLSearchParams(window.location.search);
+    const pago = params.get("pago");
+    if (pago === "aprobado") {
+      state.cart = [];
+      state.coupon = "";
+      saveCart();
+      renderCart();
+      showToast("¡Gracias por tu compra! Tu pago en Panacea fue aprobado.");
+      history.replaceState({}, "", window.location.pathname + window.location.hash);
+    } else if (pago === "pendiente") {
+      showToast("Tu pago quedó pendiente (OXXO/SPEI). En cuanto se acredite preparamos tu pedido.");
+      history.replaceState({}, "", window.location.pathname + window.location.hash);
+    } else if (pago === "error") {
+      showToast("No se completó el pago. Tu carrito sigue guardado para intentarlo de nuevo.");
+      history.replaceState({}, "", window.location.pathname + window.location.hash);
+    }
   }
 
   init();
