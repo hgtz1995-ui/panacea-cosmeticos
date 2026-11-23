@@ -5,14 +5,16 @@
     // GitHub Pages es la demo editorial. No reemplazar su catálogo revisado con datos ajenos.
     if (location.hostname.endsWith(".github.io")) return;
     let live = null;
+    let hasBackend = false;
     try {
       const resp = await fetch("/api/catalog", { cache: "no-store" });
       if (resp.ok) {
         const json = await resp.json();
+        hasBackend = Boolean(json?.backend);
         if (json && json.catalog && Array.isArray(json.catalog.products)) live = json.catalog;
       }
     } catch (_) {}
-    if (!live) {
+    if (!live && !hasBackend) {
       try {
         const raw = localStorage.getItem("panacea_catalog_override_v1");
         if (raw) {
@@ -658,6 +660,7 @@
         id: p.id,
         title: variantName ? `${p.title} (${variantName})` : p.title,
         image: p.image,
+        variant: variantName,
         subscribe,
         price: subscribe ? Math.round(base * 0.9) : base,
         qty: 1
@@ -800,7 +803,7 @@
   /* ---------- Checkout Independiente México ---------- */
   function openCheckout() {
     if (!state.cart.length) return;
-    const { total, shipping } = getTotals();
+    const { afterDiscount, shipping } = getTotals();
     const modal = $("#checkoutModal");
     $("#cartDrawer").classList.remove("open");
 
@@ -827,14 +830,14 @@
             <div class="field-group">
               <label>Tipo de entrega</label>
               <select name="delivery">
-                <option value="Envío Nacional (Skydropx)">Envío Nacional México (${shipping === 0 ? "GRATIS" : mxn(shipping)})</option>
+                <option value="Envío Nacional México" data-checkout="national">Envío Nacional México (${shipping === 0 ? "GRATIS" : mxn(shipping)})</option>
                 <option value="Mensajería Local Monterrey / San Pedro">Mensajería Local Monterrey / San Pedro</option>
                 <option value="Mensajería Local CDMX">Mensajería Local CDMX</option>
-                <option value="Retiro en Tienda Panacea MTY (2 horas)">Retiro gratis en tienda Panacea MTY (listo en 2h)</option>
+                <option value="Retiro en Tienda Panacea MTY (2 horas)" data-checkout="pickup">Retiro gratis en tienda Panacea MTY (listo en 2h)</option>
               </select>
             </div>
             <div class="field-group">
-              <label>Método de pago</label>
+              <label>Preferencia de pago por WhatsApp</label>
               <select name="payment">
                 <option value="Tarjeta / 3 y 6 MSI (Mercado Pago / Stripe)">Tarjeta Crédito/Débito o 3 y 6 MSI</option>
                 <option value="OXXO / Transferencia SPEI">OXXO o Transferencia SPEI</option>
@@ -848,15 +851,15 @@
           <div style="background:var(--ivory);border:1px solid var(--border);border-radius:10px;padding:14px;margin:14px 0;font-size:0.86rem;">
             <strong>Resumen (${state.cart.reduce((a, i) => a + i.qty, 0)} artículos):</strong>
             ${state.cart.map((i) => `${i.qty}× ${escapeHtml(i.title)}`).join(" · ")}
-            <div style="margin-top:6px;font-size:1rem;"><strong>Total a pagar: ${mxn(total)} MXN</strong></div>
+            <div style="margin-top:6px;font-size:1rem;"><strong id="checkoutTotal"></strong></div>
           </div>
 
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
-            <button type="button" class="btn btn-primary" id="demoPayBtn" style="flex:1;">Pagar en línea (Tarjeta / MSI / OXXO / SPEI)</button>
+            <button type="button" class="btn btn-primary" id="onlinePayBtn" style="display:none;flex:1;">Pagar en línea</button>
             <button type="submit" class="btn btn-outline">Confirmar pedido por WhatsApp</button>
           </div>
           <p style="font-size:0.74rem;color:var(--ink-muted);margin-top:10px;">
-            🔒 Pagos 100% protegidos en México vía Mercado Pago (3 y 6 MSI, OXXO, SPEI) · Envíos rastreados a todo México y retiro en 2h en Monterrey.
+            Envíos a todo México y retiro en tienda en Monterrey.
           </p>
         </form>
       </div>`;
@@ -866,44 +869,50 @@
 
     $("#closeCheckoutBtn").addEventListener("click", closeAllOverlays);
 
-    $("#demoPayBtn").addEventListener("click", async () => {
-      const form = $("#checkoutForm");
+    const form = $("#checkoutForm");
+    const deliverySelect = form.elements.delivery;
+    const payButton = $("#onlinePayBtn");
+    const deliveryCode = () => deliverySelect.selectedOptions[0].dataset.checkout;
+    const checkoutTotal = () => afterDiscount + (deliveryCode() === "national" ? shipping : 0);
+    let onlineAvailable = false;
+    const updateCheckout = () => {
+      $("#checkoutTotal").textContent = deliveryCode()
+        ? `Total: ${mxn(checkoutTotal())} MXN`
+        : `Productos: ${mxn(afterDiscount)} MXN · Envío por confirmar`;
+      payButton.style.display = onlineAvailable && deliveryCode() && !state.cart.some(item => item.subscribe) ? "" : "none";
+    };
+    deliverySelect.addEventListener("change", updateCheckout);
+    updateCheckout();
+    fetch("/api/create-checkout", { cache: "no-store" })
+      .then(response => response.ok ? response.json() : null)
+      .then(data => {
+        onlineAvailable = Boolean(data?.mercadopago || data?.stripe);
+        if (modal.contains(form)) updateCheckout();
+      })
+      .catch(() => {});
+
+    payButton.addEventListener("click", async () => {
       if (!form.reportValidity()) return;
       const fd = new FormData(form);
-      const { shipping } = getTotals();
-      const btn = $("#demoPayBtn");
-      const origText = btn.textContent;
-      btn.disabled = true;
-      btn.textContent = "Conectando pago seguro…";
-
-      const orderPayload = {
-        id: "PED-" + String(Date.now()).slice(-6),
-        createdAt: new Date().toISOString(),
-        status: "pendiente_pago",
-        customerName: String(fd.get("name") || "").trim(),
-        phone: String(fd.get("phone") || "").trim(),
-        delivery: String(fd.get("delivery") || ""),
-        payment: String(fd.get("payment") || "Mercado Pago"),
-        coupon: state.coupon || "",
-        total,
-        items: state.cart.map((i) => ({ title: i.title, qty: i.qty, price: i.price }))
-      };
-
+      payButton.disabled = true;
+      payButton.textContent = "Conectando pago seguro…";
       try {
-        fetch("/api/orders", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(orderPayload)
-        }).catch(() => {});
-
         const res = await fetch("/api/create-checkout", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            items: state.cart,
-            shippingCost: shipping,
+            items: state.cart.map(({ id, key, variant, qty, subscribe }) => ({
+              id,
+              variant: variant ?? products.find(product => product.id === id)?.variants?.find(
+                option => key === `${id}:${option.name}:${subscribe ? "sub" : "once"}`
+              )?.name,
+              qty,
+              subscribe,
+            })),
+            delivery: deliveryCode(),
+            expectedTotal: checkoutTotal(),
             coupon: state.coupon,
-            customer: { name: fd.get("name") || "", phone: fd.get("phone") || "" }
+            customer: { name: fd.get("name"), phone: fd.get("phone") }
           })
         });
         const data = await res.json();
@@ -911,12 +920,12 @@
           window.location.href = data.checkoutUrl;
           return;
         }
-        showToast(data.error || "Configura MERCADOPAGO_ACCESS_TOKEN en Cloudflare Pages para cobrar en línea.");
+        showToast(data.error || "No se pudo abrir el pago. Puedes continuar por WhatsApp.");
       } catch {
-        showToast("Conecta el repo en Cloudflare Pages + MERCADOPAGO_ACCESS_TOKEN para cobrar en línea, o usa WhatsApp.");
+        showToast("No se pudo abrir el pago. Puedes continuar por WhatsApp.");
       } finally {
-        btn.disabled = false;
-        btn.textContent = origText;
+        payButton.disabled = false;
+        payButton.textContent = "Pagar en línea";
       }
     });
 
@@ -932,7 +941,7 @@
         delivery: String(fd.get("delivery") || ""),
         payment: String(fd.get("payment") || ""),
         coupon: state.coupon || "",
-        total,
+        total: checkoutTotal(),
         items: state.cart.map((i) => ({ title: i.title, qty: i.qty, price: i.price }))
       };
       try {
@@ -950,7 +959,7 @@
         `Hola Panacea, quiero confirmar mi pedido (${orderPayload.id}):`,
         ...state.cart.map((i) => `• ${i.qty}x ${i.title} (${mxn(i.price * i.qty)} MXN)`),
         state.coupon ? `Cupón: ${state.coupon}` : "",
-        `Total: ${mxn(total)} MXN`,
+        deliveryCode() ? `Total: ${mxn(checkoutTotal())} MXN` : `Productos: ${mxn(afterDiscount)} MXN · Envío por confirmar`,
         `Nombre: ${fd.get("name")}`,
         `Tel: ${fd.get("phone")}`,
         `Entrega: ${fd.get("delivery")}`,
@@ -958,7 +967,7 @@
       ].filter(Boolean);
       const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
       window.open(waUrl, "_blank", "noopener");
-      showToast("Pedido registrado y listo en WhatsApp");
+      showToast("Revisa y envía tu pedido en WhatsApp.");
     });
   }
 
@@ -1128,17 +1137,13 @@
     // Manejo de retorno desde Mercado Pago Checkout Pro (?pago=aprobado|pendiente|error)
     const params = new URLSearchParams(window.location.search);
     const pago = params.get("pago");
-    if (pago === "aprobado") {
-      state.cart = [];
-      state.coupon = "";
-      saveCart();
-      renderCart();
-      showToast("¡Gracias por tu compra! Tu pago en Panacea fue aprobado.");
+    if (pago === "enviado" || pago === "aprobado") {
+      showToast("Revisa tu comprobante del proveedor. Panacea confirmará la recepción del pago.");
       history.replaceState({}, "", window.location.pathname + window.location.hash);
     } else if (pago === "pendiente") {
       showToast("Tu pago quedó pendiente (OXXO/SPEI). En cuanto se acredite preparamos tu pedido.");
       history.replaceState({}, "", window.location.pathname + window.location.hash);
-    } else if (pago === "error") {
+    } else if (pago === "error" || pago === "cancelado") {
       showToast("No se completó el pago. Tu carrito sigue guardado para intentarlo de nuevo.");
       history.replaceState({}, "", window.location.pathname + window.location.hash);
     }

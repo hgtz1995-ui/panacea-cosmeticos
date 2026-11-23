@@ -3,6 +3,7 @@
   const LS_ORDERS_KEY = "panacea_orders_v1";
   const PIN_KEY = "panacea_admin_pin_v1";
   const ORDER_FLOW = {
+    pendiente_pago: { label: "Pago pendiente", next: "pagado", nextBtn: "Marcar como pagado" },
     nuevo: { label: "🟡 Nuevo", next: "pagado", nextBtn: "💚 Marcar como Pagado" },
     pagado: { label: "💚 Pagado", next: "enviado", nextBtn: "🚚 Marcar como Enviado" },
     enviado: { label: "🚚 Enviado", next: "entregado", nextBtn: "✅ Marcar Entregado" },
