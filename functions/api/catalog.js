@@ -4,7 +4,7 @@
  *
  * Configuración en Cloudflare Pages (Settings -> Functions / Environment Variables):
  *   1. KV Namespace Binding: PANACEA_KV
- *   2. Secret / Env var:     ADMIN_PIN  (ej. una clave fácil para tu tía)
+ *   2. Secret:              ADMIN_PIN
  */
 
 const KV_KEY = "panacea_catalog_v1";
@@ -20,7 +20,7 @@ function jsonResp(data, status = 200) {
 }
 
 export async function onRequestGet({ env }) {
-  const requiresPin = Boolean(env.ADMIN_PIN);
+  const requiresPin = true;
   if (!env.PANACEA_KV) {
     return jsonResp({
       catalog: null,
@@ -37,9 +37,12 @@ export async function onRequestGet({ env }) {
 }
 
 export async function onRequestPost({ request, env }) {
-  const body = await request.json().catch(() => ({}));
-  if (body.action === "verifyPin") {
-    if (!env.ADMIN_PIN || String(body.pin) === String(env.ADMIN_PIN)) {
+  if (!env.ADMIN_PIN) {
+    return jsonResp({ error: "Configura el acceso administrativo en Cloudflare Pages" }, 503);
+  }
+  const body = await request.json().catch(() => null);
+  if (body?.action === "verifyPin") {
+    if (String(body.pin) === String(env.ADMIN_PIN)) {
       return jsonResp({ ok: true });
     }
     return jsonResp({ ok: false, error: "PIN incorrecto" }, 401);
@@ -48,16 +51,16 @@ export async function onRequestPost({ request, env }) {
 }
 
 export async function onRequestPut({ request, env }) {
-  if (env.ADMIN_PIN) {
-    const sent = request.headers.get("X-Admin-Pin") || "";
-    if (sent !== String(env.ADMIN_PIN)) {
-      return jsonResp({ error: "No autorizado" }, 401);
-    }
+  if (!env.ADMIN_PIN) {
+    return jsonResp({ error: "Configura el acceso administrativo en Cloudflare Pages" }, 503);
+  }
+  if (request.headers.get("X-Admin-Pin") !== String(env.ADMIN_PIN)) {
+    return jsonResp({ error: "No autorizado" }, 401);
   }
   if (!env.PANACEA_KV) {
     return jsonResp({ error: "Falta configurar PANACEA_KV en Cloudflare Pages" }, 500);
   }
-  const data = await request.json();
+  const data = await request.json().catch(() => null);
   if (!data || !Array.isArray(data.products)) {
     return jsonResp({ error: "Catálogo inválido" }, 400);
   }

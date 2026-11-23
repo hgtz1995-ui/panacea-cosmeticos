@@ -17,9 +17,7 @@ function jsonResp(data, status = 200) {
 }
 
 function isAuthorized(request, env) {
-  if (!env.ADMIN_PIN) return true;
-  const sent = request.headers.get("X-Admin-Pin") || "";
-  return sent === String(env.ADMIN_PIN);
+  return Boolean(env.ADMIN_PIN) && request.headers.get("X-Admin-Pin") === String(env.ADMIN_PIN);
 }
 
 export async function onRequestGet({ request, env }) {
