@@ -1,6 +1,6 @@
 # Panacea Cosméticos — Nueva Tienda Independiente (0% Shopify)
 
-Tienda web independiente, rápida y 100% adaptable (móvil y desktop) construida con todo el catálogo, artículos del blog e historia oficial de **Panacea Cosméticos** bajo dirección de arte *Botica Médica Mexicana*.
+Tienda web independiente, rápida y 100% adaptable (móvil y desktop) construida con todo el catálogo, artículos del blog e historia oficial de **Panacea Cosméticos** bajo dirección de arte *Cuidado Artesanal de la Piel*.
 
 ## Contenido del proyecto
 - `index.html`, `styles.css`, `app.js` — Storefront completo con Quiz "Arma tu Rutina en 45 seg", filtros por necesidad de piel y categoría, PDP con galería/variantes/acordeones/suscripción (-10%), Diario de Botica (17 artículos SEO), carrito con barra de envío gratis ($799 MXN), upsells, cupones y checkout directo México.

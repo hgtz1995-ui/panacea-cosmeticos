@@ -1,4 +1,4 @@
-// Generado automáticamente desde Shopify (panacea-cosmeticos.com)
+// Catálogo editorial de la demo Panacea.
 window.PANACEA_DATA = {
   "freeShippingThreshold": 799,
   "whatsappNumber": "528110188422",
@@ -16,30 +16,30 @@ window.PANACEA_DATA = {
   "concerns": [
     {
       "id": "acne",
-      "title": "Piel con Acné",
-      "subtitle": "Control de sebo, poros y brotes sin resecar",
-      "image": "assets/img/mj-ba679cc2.jpg",
+      "title": "Poros y Brillo",
+      "subtitle": "Opciones de cuidado facial para tu rutina",
+      "image": "assets/img/Disenosintitulo-c12992cd.png",
       "badge": "Purificante"
     },
     {
       "id": "sensible",
       "title": "Piel Seca o Sensible",
-      "subtitle": "Calma rojeces, dermatitis y repara la barrera",
-      "image": "assets/img/pau-f4900b85.jpg",
+      "subtitle": "Explora opciones de cuidado diario",
+      "image": "assets/img/IMG_0679-520344f0.jpg",
       "badge": "Calmante"
     },
     {
       "id": "antiedad",
-      "title": "Arrugas y Textura",
-      "subtitle": "Firmeza, colágeno y regeneración nocturna",
-      "image": "assets/img/katia-9d802919.jpg",
-      "badge": "Regenerador"
+      "title": "Líneas de Expresión y Textura",
+      "subtitle": "Cuidado facial para tu rutina",
+      "image": "assets/img/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c-848079ec.jpg",
+      "badge": "Cuidado facial"
     },
     {
       "id": "manchas",
-      "title": "Hidratación y Manchas",
-      "subtitle": "Luminosidad, tono uniforme y antioxidantes",
-      "image": "assets/img/chava-a22c4c2a.jpg",
+      "title": "Hidratación y Tono",
+      "subtitle": "Ideas para tu rutina de cuidado facial",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-52-33-6bf0710d.jpg",
       "badge": "Iluminador"
     }
   ],
@@ -61,14 +61,12 @@ window.PANACEA_DATA = {
       "badge": "Kit Ritual",
       "rating": 4.9,
       "reviews": 0,
-      "image": "assets/img/img_0740-7d5b3c60.jpg",
+      "image": "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A-90b9e36a.png",
       "hoverImage": "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A-90b9e36a.png",
       "gallery": [
-        "assets/img/img_0740-7d5b3c60.jpg",
-        "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A-90b9e36a.png",
-        "assets/img/img_0740-3c212ccc.jpg"
+        "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A-90b9e36a.png"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-ritual-anti-edad"
@@ -95,7 +93,7 @@ window.PANACEA_DATA = {
         "assets/img/img_0667-f3723fc6.jpg",
         "assets/img/img_0667-abeb444b.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-anti-acne"
@@ -103,7 +101,7 @@ window.PANACEA_DATA = {
     {
       "id": "serum-vitamina-c",
       "title": "Sérum Vitamina C 50ml",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -125,7 +123,7 @@ window.PANACEA_DATA = {
         "assets/img/serums-af9e5eda.png",
         "assets/img/3_b6c6207f-879f-4b44-b726-8a9ffdbddce9-9ee981db.jpg"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/serum-vitamina-c"
@@ -133,7 +131,7 @@ window.PANACEA_DATA = {
     {
       "id": "serum-niacinamida",
       "title": "Sérum de Niacinamida 50ml",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -156,7 +154,7 @@ window.PANACEA_DATA = {
         "assets/img/IMG_0679-520344f0.jpg",
         "assets/img/2_96fd43a8-99be-4e00-982d-7ca58b6afb50-cd6e5132.jpg"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/serum-niacinamida"
@@ -192,7 +190,7 @@ window.PANACEA_DATA = {
         "Beneficios": "VITAMINA C , estimula la producción del colágeno brindando firmeza a la piel.\nÁCIDO HIALURÓNICO , tiene la función de atraer moléculas de agua 500x su peso molecular lo que da el efecto de hidratación máxima en la piel.\nVITAMINA E , tiene función reestructurante. Ayuda a unificar la textura de las capas de la piel, difuminando cicatrices y descamación de la piel. \n¿QUIÉN NECESITA ESTA CREMA?\n Piel con líneas de expresión y arrugas.\nPiel deshidratada y con falta de luminosidad\nPiel con manchas oscuras, opaca o con tono no uniforme\nPiel flácida que busca firmeza\nPiel con cicatrices o textura no uniforme",
         "Uso": "Indicaciones de uso:\nToma una pequeña cantidad de tu crema y distribúyela en todo tu rostro y cuello.\nExtiendela en tu rostro haciendo un masaje ascendente hasta que absorba.",
         "Para mejores resultados te recomendamos agregar": "Te recomendamos armar tu KIT ANTI-EDAD para obtener mejores resultados:\nAGUA ENZIMÁTICA: Tónico facial microexfoliante, antioxidante con ENZIMAS naturales de piña y papaya, remueve células muertas y limpia a profundidad.\nPUFFY:Espara el contorno de ojos, desinflama, mejora la coloración oscura y drena líquidos retenidos. \nCREMA DE AMINOÁCIDOS: Crema hidratante anti-envejecimiento. Promueve la producción de colágeno naturalmente, antioxidante y la firmeza de la piel. \nSOLAR FACIAL:Protégete del sol con nuestro solar facial es de origen mineral, seguro para la piel y se adapta a diferentes tonalidades, logrando una cobertura con apariencia muy natural.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos con fórmulas originales inspiradas en la homeopatía para ser aplicadas en la piel. Estamos convencidos que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -201,7 +199,7 @@ window.PANACEA_DATA = {
     {
       "id": "regaliz-b3",
       "title": "Crema de REGALIZ+B3",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -223,7 +221,7 @@ window.PANACEA_DATA = {
         "assets/img/REGALIZ-1-58fdc5c8.png",
         "assets/img/Caja_de_cuidado_facial_PANACEA-35a81bd9.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/regaliz-b3"
@@ -231,7 +229,7 @@ window.PANACEA_DATA = {
     {
       "id": "puffy",
       "title": "Puffy Eyes",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -253,7 +251,7 @@ window.PANACEA_DATA = {
         "assets/img/36-26216167.png",
         "assets/img/35-663505e6.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/puffy"
@@ -261,7 +259,7 @@ window.PANACEA_DATA = {
     {
       "id": "sos",
       "title": "Crema para ACNÉ SOS",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -281,7 +279,7 @@ window.PANACEA_DATA = {
         "assets/img/Msos-5413a0d5.jpg",
         "assets/img/SOS-3-b9da32c2.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/sos"
@@ -289,7 +287,7 @@ window.PANACEA_DATA = {
     {
       "id": "solar-facial",
       "title": "Protector SOLAR FACIAL con tintado natural",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -311,7 +309,7 @@ window.PANACEA_DATA = {
         "assets/img/39-a5934dfd.png",
         "assets/img/38-3bfdb73a.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/solar-facial"
@@ -333,13 +331,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/ANTIS_C3_89PTICO-2-5b37b107.png",
-      "hoverImage": "assets/img/B0002506-74fef9e5.jpg",
+      "hoverImage": "assets/img/ANTIS_C3_89PTICO-2-7eab86f1.png",
       "gallery": [
         "assets/img/ANTIS_C3_89PTICO-2-5b37b107.png",
-        "assets/img/B0002506-74fef9e5.jpg",
         "assets/img/ANTIS_C3_89PTICO-2-7eab86f1.png"
       ],
-      "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/tonico-antiseptico"
@@ -361,13 +358,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/AGUA-DE-HAMMAMELIS-2-b9a87e59.png",
-      "hoverImage": "assets/img/B0002919-bfe5a45b.jpg",
+      "hoverImage": "assets/img/AGUA-DE-HAMMAMELIS-2-9e36c3e4.png",
       "gallery": [
         "assets/img/AGUA-DE-HAMMAMELIS-2-b9a87e59.png",
-        "assets/img/B0002919-bfe5a45b.jpg",
         "assets/img/AGUA-DE-HAMMAMELIS-2-9e36c3e4.png"
       ],
-      "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/agua-de-hammamelis"
@@ -391,13 +387,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/AGUA-DE-CAL_C3_89NDULA-2-8e3ec32b.png",
-      "hoverImage": "assets/img/B0002551-1-0e98c299.jpg",
+      "hoverImage": "assets/img/AGUA-DE-CAL_C3_89NDULA-2-4db6312e.png",
       "gallery": [
         "assets/img/AGUA-DE-CAL_C3_89NDULA-2-8e3ec32b.png",
-        "assets/img/B0002551-1-0e98c299.jpg",
         "assets/img/AGUA-DE-CAL_C3_89NDULA-2-4db6312e.png"
       ],
-      "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/agua-de-calendula"
@@ -419,21 +414,20 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/AGUA-AZUFRADA-2-44e2a327.png",
-      "hoverImage": "assets/img/B0002553-1-060f43a9.jpg",
+      "hoverImage": "assets/img/AGUA-AZUFRADA-2-861108c6.png",
       "gallery": [
         "assets/img/AGUA-AZUFRADA-2-44e2a327.png",
-        "assets/img/B0002553-1-060f43a9.jpg",
         "assets/img/AGUA-AZUFRADA-2-861108c6.png"
       ],
-      "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/agua-azufrada"
     },
     {
       "id": "tonico-capilar-para-caida-y-crecimiento-de-cabello-ingredientes-naturales-activos-para-el-fortalecimiento-del-foliculo-capilar-sin-quimicos",
-      "title": "TÓNICO CAPILAR, para caída y crecimiento de cabello",
-      "subtitle": "El Tónico Capilar para Caída y Crecimiento es un tratamiento diseñado para…",
+      "title": "Tónico capilar Panacea",
+      "subtitle": "Producto Panacea para tu rutina de cuidado personal.",
       "category": "capilar",
       "productType": "pending",
       "concerns": [
@@ -453,13 +447,12 @@ window.PANACEA_DATA = {
         "assets/img/IMG_4550-a94b07e9.jpg",
         "assets/img/IMG_4550_grande-dd04eec6.jpg"
       ],
-      "description": "El Tónico Capilar para Caída y Crecimiento es un tratamiento diseñado para fortalecer el cuero cabelludo y estimular el crecimiento del cabello. Su fórmula ayuda a combatir la caída y el adelgazamiento capilar al actuar directamente sobre el folículo piloso, favoreciendo un cabello más fuerte, resistente y saludable.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {
         "Ingredientes": "Thuja y Arginina.",
-        "Beneficios": "Previene el daño al folículo piloso y acelera el crecimiento del cabello a través de los siguientes mecanismos:\nMejora la circulación del cuero cabelludo, promoviendo que lleguen mayor cantidad de nutrientes y oxigenación al folículo piloso para mantenerlo sano y fortalecido. Esto se refleja con cabello de mejor calidad.\nMantiene al margen las infecciones provocadas por los hongos, de esta manera el cuero cabelludo está sano y libre de infecciones que puedan dañar al folículo piloso.\nControla el exceso de DHT en el cuero cabelludo, hormona que debilita el folículo piloso.\nMantiene niveles adecuados de grasa en el cuero cabelludo, el exceso de grasa aumenta los niveles de DHT.\nIdeal para: \nPersonas que están perdiendo cabello.\nCuero cabelludo grasoso\nCuero cabelludo con caspa u otras bacterias. \nCon el uso constante contribuye a mejorar la calidad del cabello y a mantener el cuero cabelludo equilibrado.",
         "Uso": "Aplicar directamente sobre el cuero cabelludo limpio utilizando el atomizador o con las yemas de los dedos. Distribuir en las zonas donde se desee fortalecer el crecimiento del cabello y realizar un masaje suave durante unos minutos para favorecer la absorción del producto. No es necesario enjuagar. Puede utilizarse diariamente, preferentemente después del baño o sobre el cuero cabelludo limpio.",
         "Para mejores resultados te recomendamos agregar": "Te recomendamos adquirir el KIT CAIDA Y CUIDADO DE CABELLO.\nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos con fórmulas originales inspiradas en la homeopatía para ser aplicadas en la piel. Estamos convencidos que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -482,13 +475,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/jabonromero-3dcaea95.jpg",
-      "hoverImage": "assets/img/Capturadepantalla2023-09-13alas1-57-26p-m-_2c-3f5c74da.jpg",
+      "hoverImage": "assets/img/jabonromero-2bb584d2.jpg",
       "gallery": [
         "assets/img/jabonromero-3dcaea95.jpg",
-        "assets/img/Capturadepantalla2023-09-13alas1-57-26p-m-_2c-3f5c74da.jpg",
         "assets/img/jabonromero-2bb584d2.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-para-caida-de-romero"
@@ -496,7 +488,7 @@ window.PANACEA_DATA = {
     {
       "id": "stretch-marks",
       "title": "Crema corporal · STRETCH MARKS",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -516,7 +508,7 @@ window.PANACEA_DATA = {
         "assets/img/Crema_para_estrias_Panacea-3c6fa55a.png",
         "assets/img/Crema_Panacea_para_estrias-2b38d11b.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/stretch-marks"
@@ -524,7 +516,7 @@ window.PANACEA_DATA = {
     {
       "id": "aceite-corporal-de-aromaterapia-pasion-para-momentos-de-intimidad-contiene-nuez-moscada-patchouli-y-geranio-ingredientes-100-naturales",
       "title": "Aceite corporal de aromaterapia PASIÓN",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -538,13 +530,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-1b408ae0.png",
-      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080_f8b7970b-7e95-4637-856-0a24df58.jpg",
+      "hoverImage": "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-70956c06.png",
       "gallery": [
         "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-1b408ae0.png",
-        "assets/img/61jeeSc6c9L-_AC_SL1080_f8b7970b-7e95-4637-856-0a24df58.jpg",
         "assets/img/1_00591567-13cd-4392-8e0a-4f600e741294-70956c06.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/aceite-corporal-de-aromaterapia-pasion-para-momentos-de-intimidad-contiene-nuez-moscada-patchouli-y-geranio-ingredientes-100-naturales"
@@ -597,10 +588,9 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/ROZADURAS-1-200865a2.png",
-      "hoverImage": "assets/img/625ad823853a477694b1fd01991fe532-thumbnail-00-7b88e7ae.jpg",
+      "hoverImage": "assets/img/ROZADURAS-1-4364eb31.png",
       "gallery": [
         "assets/img/ROZADURAS-1-200865a2.png",
-        "assets/img/625ad823853a477694b1fd01991fe532-thumbnail-00-7b88e7ae.jpg",
         "assets/img/ROZADURAS-1-4364eb31.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
@@ -681,10 +671,9 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/DESODORANTE-LAVANDA-1-c97e80b3.png",
-      "hoverImage": "assets/img/B0002617-1-3801582d.jpg",
+      "hoverImage": "assets/img/DESODORANTE-LAVANDA-1-ba180830.png",
       "gallery": [
         "assets/img/DESODORANTE-LAVANDA-1-c97e80b3.png",
-        "assets/img/B0002617-1-3801582d.jpg",
         "assets/img/DESODORANTE-LAVANDA-1-ba180830.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
@@ -714,7 +703,7 @@ window.PANACEA_DATA = {
         "assets/img/WhatsAppImage2026-07-30at09-54-30-e850881f.jpg",
         "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-regenerador"
@@ -742,7 +731,7 @@ window.PANACEA_DATA = {
         "assets/img/9B7AC3A2-D5CE-442E-9DFD-CBC7986F22A8-57272705.png",
         "assets/img/img_0819-6b71dd34.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-de-regeneracion-celular-50"
@@ -772,14 +761,14 @@ window.PANACEA_DATA = {
         "assets/img/6F5373D1-3153-4267-B859-799AD5B25C5A_f6be95ed-2c4aac95.png",
         "assets/img/img_0770-aa969a52.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-ritual-para-manchas"
     },
     {
       "id": "kit-cicatrizante-para-piel-quemada-por-el-sol",
-      "title": "Kit Cicatrizante para Piel Quemada por el Sol",
+      "title": "Kit de cuidado para después del sol",
       "subtitle": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu…",
       "category": "kits",
       "productType": "",
@@ -799,14 +788,14 @@ window.PANACEA_DATA = {
         "assets/img/WhatsAppImage2026-07-30at09-52-33-6bf0710d.jpg",
         "assets/img/WhatsAppImage2026-07-30at09-52-33-d39bb9e3.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-cicatrizante-para-piel-quemada-por-el-sol"
     },
     {
       "id": "kit-pieles-atopicas-auxiliar-en-rosacea-eczema-psoriasis-y-otras-dermatitis",
-      "title": "Ritual Pieles Atópicas: Sensibilidad y Dermatitis",
+      "title": "Ritual de hidratación para piel sensible",
       "subtitle": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu…",
       "category": "kits",
       "productType": "pending",
@@ -826,12 +815,11 @@ window.PANACEA_DATA = {
         "assets/img/img_0683-97b2d22f.jpg",
         "assets/img/img_0683_grande-865fb181.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {
-        "¿Qué contiene este kit?": "El Kit Hidratación Pieles Atópicas contiene:\nAGUA AZUFRADA : Tónico con acción limpiadora, calmante y antiinflamatoria. Regula los desequilibrios de pieles con padecimientos atópicos.\nCREMA AZUFRE: Crema terapéutica auxiliar en el tratamiento de dermatitis atópica, rosácea, psoriasis y/o eczema. Calmante y antiinflamatorio.\nCREMA DE CALÉNDULA: Crema facial hidratante, calmante y cicatrizante para piel irritada y enrojecida. Contiene caléndula, sábila y centella asiática.\n SOLAR FACIAL : De origen mineral, seguro para la piel, se adapta a diferentes tonalidades, logrando una cobertura con apariencia natural.\n *** El kit incluye el SOLAR FACIAL original, si deseas cambiar el tono, asegúrate de seleccionarlo en la parte superior . ***",
-        "Uso": "Indicaciones de uso:\nPaso 1. Aplique AGUA AZUFRADA  en el área irritada.  \nPaso 2. Aplica crema de  AZUFRE , auxiliar en el tratamiento de dermatitis atópica, rosácea, psoriasis y/o eczema. Extiéndela por toda el área rostro, nuca, cuerpo. \nPaso 3. Aplique crema de CALÉNDULA en el área del rostro.\nPaso 4. Aplica  SOLAR FACIAL  en todo el rostro ara proteger tu piel de los rayos UV.",
+        "¿Qué contiene este kit?": "Agua azufrada, crema de azufre, crema de caléndula y Solar Facial.",
         "Para mejores resultados te recomendamos agregar": "Se constante con el uso de tu rutina.\nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos de que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros de que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -860,12 +848,12 @@ window.PANACEA_DATA = {
         "assets/img/img_0791-305789c8.jpg",
         "assets/img/img_0791_grande-b8ca8142.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {
         "¿Qué contiene este kit?": "El Kit 30+ contiene:\nAGUA ENZIMÁTICA: Tónico facial microexfoliante, antioxidante con ENZIMAS naturales de piña y papaya, remueve células muertas y limpia a profundidad.\n CREMA DE VITAMINA C: Altamente hidratante y antioxidante, reafirmante, da luminosidad, unifica tono y textura, protege la piel de radicales libres. Estimula la producción del colágeno brindando firmeza a la piel.  \n SOLAR FACIAL: De origen mineral, seguro para la piel y se adapta a diferentes tonalidades, logrando una cobertura con apariencia muy natural.  \n***El kit incluye el SOLAR FACIAL original, si deseas cambiar el tono, asegúrate de seleccionarlo en la parte superior .***",
         "Uso": "Indicaciones de uso:\nLava tu rostro con un jabón natural o neutro.\nAplica tu TÓNICO (uso día y noche)  en todo el rostro, con ayuda de un atomizador (no enjuagar)\nToma una pequeña cantidad de la crema de VITAMINA C  (uso día y noche)  , extiéndela en tu rostro y cuello haciendo un masaje profundo, hasta que se absorba por completo.\nPor último protege tu piel de los radicales libres con SOLAR FACIAL , aplicando una capa ligera, cubriendo todo el rostro.",
         "Para mejores resultados te recomendamos agregar": "Para mejores resultados pon -SÍ- agregar PUFFY, tu crema para contorno de ojos, se agregará a tu kit a un precio especial.  \n Si deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos de que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros de que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -893,12 +881,12 @@ window.PANACEA_DATA = {
         "assets/img/img_0697-e2ea4cc1.jpg",
         "assets/img/img_0697_grande-dfeb36ea.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {
         "¿Qué contiene este kit?": "El Kit Piel Grasa contiene:\nAGUA DE HAMMAMELIS : Controla la producción excesiva de grasa en la piel, favorece los poros más limpios y de aspecto más pequeño.\nCREMA B-COMPLEX: Crema ligera de alta hidratación, para piel grasa que unifica el tono y la textura de la piel haciéndola visiblemente más luminosa y radiante.\nSOLAR FACIAL : De origen mineral, seguro para la piel y se adapta a diferentes tonalidades, logrando una cobertura con apariencia muy natural.\n** El kit incluye el SOLAR FACIAL original, si deseas cambiar el tono, asegúrate de seleccionarlo en la parte superior . **",
         "Uso": "Indicaciones de uso:\nLava tu rostro con un jabón natural o neutro.\nAplica tu TÓNICO (uso de día y noche) en todo el rostro, con ayuda de un algodón o atomizador (no enjuagar)\nToma una pequeña cantidad de la crema de B-COMPLEX (uso de día y noche) , 1/2 de la yema de tu dedo, extiéndela en tus mejillas, frente, cuello y escote haciendo un movimiento ascendente, hasta que se absorba por completo. . . . . . . . .\n\nPor último protege tu piel de los radicales libres con SOLAR FACIAL , aplicando una capa ligera, cubriendo todo el rostro.",
         "Para mejores resultados te recomendamos agregar": "Para mejores resultados pon - SÍ - agregar PUFFY , tu crema para contorno de ojos, se agregará a tu kit a un precio especial.  \nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos de que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros de que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -926,12 +914,11 @@ window.PANACEA_DATA = {
         "assets/img/Disenosintitulo-c12992cd.png",
         "assets/img/Disenosintitulo_grande-1e32ff53.png"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {
-        "¿Qué contiene este kit?": "El Kit Hidratación Profunda contiene:\nAGUA DE ROSAS : Calmante, hidratante, regulador de pH y antiinflamatorio. Ideal para piel seca y con desequilibrio.\nCREMA DE VITAMINA C: Altamente hidratante y antioxidante, reafirmante, da luminosidad, unifica tono y textura, protege la piel de radicales libres. Estimula la producción del colágeno brindando firmeza a la piel. \nFACIAL SOLAR: De origen mineral, seguro para la piel y se adapta a diferentes tonalidades, logrando una cobertura con apariencia muy natural.\n *** El kit incluye el SOLAR FACIAL original, si deseas cambiar el tono, asegúrate de seleccionarlo en la parte superior . ***",
         "Uso": "Indicaciones de uso:\nLava tu rostro con un jabón natural o neutro.\nAplica tu TÓNICO (uso día y noche)  en todo el rostro, con ayuda de un atomizador (no enjuagar)\nToma una pequeña cantidad de la crema de VITAMINA C  (uso día y noche)  , 1/2 de la yema de tu dedo, extiéndela en tus mejillas, frente, cuello y escote haciendo un movimiento ascendente, hasta que se absorba por completo.\n\nPor último protege tu piel de los radicales libres con SOLAR FACIAL , aplicando una capa ligera, cubriendo todo el rostro.",
         "Para mejores resultados te recomendamos agregar": "Para mejores resultados pon - SÍ - agregar PUFFY , tu crema para contorno de ojos, se agregará a tu kit a un precio especial.  \nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos de que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros de que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -960,12 +947,11 @@ window.PANACEA_DATA = {
         "assets/img/img_0801-19f65ec5.jpg",
         "assets/img/img_0801_grande-495a0577.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {
-        "¿Qué contiene este kit?": "El kit 20+ contiene:\nAGUA DE CALÉNDULA: Tónico Limpiador, calmante, antiinflamatorio y cicatrizante, para piel irritada y enrojecida.\nCREMA DE CALÉNDULA: Crema facial hidratante, calmante y cicatrizante para piel irritada y enrojecida. Contiene caléndula, sábila y centella asiática.\n FACIAL SOLAR:  De origen mineral, seguro para la piel, se adapta a diferentes tonalidades, logrando una cobertura con apariencia muy natural. Este kit incluye el tono original, si quieres cambiar por alguno de los tonos nuevos que tenemos disponibles, al finalizar tu compra envíanos un mensaje.\n** El kit incluye el SOLAR FACIAL original, si deseas cambiar el tono, asegúrate de seleccionarlo en la parte superior . ***",
         "Uso": "Indicaciones de uso:\nLava tu rostro con un jabón natural o neutro.\nAplica tu TÓNICO (uso día y noche)  en todo el rostro, con ayuda de un atomizador (no enjuagar)\nToma una pequeña cantidad de la crema de VITAMINA C  (uso día y noche)  , extiéndela en tu rostro y cuello haciendo un masaje profundo, hasta que se absorba por completo.\n\nPor último protege tu piel de los radicales libres con SOLAR FACIAL , aplicando una capa ligera, cubriendo todo el rostro.",
         "Para mejores resultados te recomendamos agregar": "Para mejores resultados pon - SÍ - agregar PUFFY , tu crema para contorno de ojos, se agregará a tu kit a un precio especial.  \nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos de que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros de que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -997,7 +983,7 @@ window.PANACEA_DATA = {
       "description": "Devuélvele a tu piel la calma, hidratación y protección que necesita. Nuestro Kit Calmante para Piel Irritada está formulado para aliviar el enrojecimiento, la sensibilidad y la irritación, ayudando a fortalecer la barrera natural de la piel mientras la mantiene protegida durante el día.",
       "accordions": {
         "Uso": "Indicaciones de uso:\nLava tu rostro con un jabón natural o neutro.\nAplica tu TÓNICO (uso día y noche)  en todo el rostro, con ayuda de un atomizador (no enjuagar)\nToma una pequeña cantidad de la crema de CALÉNDULA  (uso día y noche)  , extiéndela en tu rostro y cuello haciendo un masaje profundo, hasta que se absorba por completo.\n\nPor último protege tu piel de los radicales libres con SOLAR FACIAL , aplicando una capa ligera, cubriendo todo el rostro.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos de que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros de que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -1026,14 +1012,14 @@ window.PANACEA_DATA = {
         "assets/img/ChatGPTImage16feb2026_12_46_51p-m-bcacc073.png",
         "assets/img/ChatGPTImage16feb2026_12_32_07p-m-1fe71090.png"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-bebe"
     },
     {
       "id": "kit-caida-y-cuidado-de-cabello-tonico-proteina-shampoo-con-ingredientes-naturales-activos-sin-quimicos",
-      "title": "Kit Caída y Cuidado de Cabello",
+      "title": "Kit de cuidado del cabello",
       "subtitle": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu…",
       "category": "kits",
       "productType": "",
@@ -1054,7 +1040,7 @@ window.PANACEA_DATA = {
         "assets/img/img_0841-a43403b4.jpg",
         "assets/img/img_0829-ff37516b.jpg"
       ],
-      "description": "Ritual botánico completo de Panacea Cosméticos formulado en Monterrey para atacar tu necesidad de piel de forma integral con activos 100% naturales.",
+      "description": "Selección de productos Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/kit-caida-y-cuidado-de-cabello-tonico-proteina-shampoo-con-ingredientes-naturales-activos-sin-quimicos"
@@ -1062,7 +1048,7 @@ window.PANACEA_DATA = {
     {
       "id": "melatonina",
       "title": "Crema Melatonina",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -1073,7 +1059,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "Fórmula Médica",
+      "badge": "Cuidado facial",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Caja_de_melatonina_Panacea_con_sello-d9532f69.png",
@@ -1083,7 +1069,7 @@ window.PANACEA_DATA = {
         "assets/img/MELATONINA-1-07d2c7f9.png",
         "assets/img/Caja_de_melatonina_Panacea_con_sello-35d39c1f.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/melatonina"
@@ -1091,7 +1077,7 @@ window.PANACEA_DATA = {
     {
       "id": "aminoacidos",
       "title": "Crema de Aminoácidos",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -1103,7 +1089,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado facial",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Caja_de_producto_PANACEA_en_primer_plano-af7a971f.png",
@@ -1113,7 +1099,7 @@ window.PANACEA_DATA = {
         "assets/img/AMINOACIDOS-2-74fd467c.png",
         "assets/img/Caja_de_producto_PANACEA_en_primer_plano-be0c8278.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/aminoacidos"
@@ -1121,7 +1107,7 @@ window.PANACEA_DATA = {
     {
       "id": "b-complex",
       "title": "Crema B-complex",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -1134,7 +1120,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado facial",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Caja_de_producto_B-COMPLEX_PANACEA-171f69ee.png",
@@ -1144,7 +1130,7 @@ window.PANACEA_DATA = {
         "assets/img/b-complex1-5a05b3f1.jpg",
         "assets/img/Caja_de_producto_B-COMPLEX_PANACEA-98508855.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/b-complex"
@@ -1152,7 +1138,7 @@ window.PANACEA_DATA = {
     {
       "id": "enzimas",
       "title": "Crema de ENZIMAS",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -1165,7 +1151,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado facial",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Caja_con_sello_de_cera_y_enzimas-da0be226.png",
@@ -1175,7 +1161,7 @@ window.PANACEA_DATA = {
         "assets/img/ENZIMAS-1-8aae77db.png",
         "assets/img/Caja_con_sello_de_cera_y_enzimas-5c156c57.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/enzimas"
@@ -1183,7 +1169,7 @@ window.PANACEA_DATA = {
     {
       "id": "calendula",
       "title": "Crema de CALÉNDULA",
-      "subtitle": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía…",
+      "subtitle": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "category": "facial",
       "productType": "",
       "concerns": [
@@ -1195,7 +1181,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado facial",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Caja_de_crema_de_calendula_PANACEA-dde6fe1e.png",
@@ -1205,7 +1191,7 @@ window.PANACEA_DATA = {
         "assets/img/CALENDULA-1_214566da-9c47-455b-a1bc-b8c1cc27e-a73d71a3.png",
         "assets/img/Caja_de_crema_de_calendula_PANACEA-f267c7b4.png"
       ],
-      "description": "Tratamiento facial 100% natural formulado bajo principios de herbolaria, homeopatía y dermocosmética sin químicos agresivos.",
+      "description": "Producto de cuidado facial Panacea para tu rutina diaria.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/calendula"
@@ -1230,13 +1216,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/AGUA-ENZIM_C3_81TICA-2-2778b7d7.png",
-      "hoverImage": "assets/img/B0002692-1-8aa19f87.jpg",
+      "hoverImage": "assets/img/AGUA-ENZIM_C3_81TICA-2-e7b1a769.png",
       "gallery": [
         "assets/img/AGUA-ENZIM_C3_81TICA-2-2778b7d7.png",
-        "assets/img/B0002692-1-8aa19f87.jpg",
         "assets/img/AGUA-ENZIM_C3_81TICA-2-e7b1a769.png"
       ],
-      "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/agua-enzimatica"
@@ -1261,13 +1246,12 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/AGUA-DE-ROSAS-2-a3bb3d94.png",
-      "hoverImage": "assets/img/B0002804-1-77595733.jpg",
+      "hoverImage": "assets/img/AGUA-DE-ROSAS-2-61ae01a8.png",
       "gallery": [
         "assets/img/AGUA-DE-ROSAS-2-a3bb3d94.png",
-        "assets/img/B0002804-1-77595733.jpg",
         "assets/img/AGUA-DE-ROSAS-2-61ae01a8.png"
       ],
-      "description": "Tónico botánico en botella de vidrio ámbar de 240ml que equilibra el pH, refresca y prepara tu piel para absorber mejor tus tratamientos.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/agua-de-rosas"
@@ -1295,7 +1279,7 @@ window.PANACEA_DATA = {
         "assets/img/img_0611-71ea7434.jpg",
         "assets/img/337b8e75-90af-4735-82a4-eafc57b6e405_1_105_c-848079ec.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/proteina-capilar"
@@ -1323,7 +1307,7 @@ window.PANACEA_DATA = {
         "assets/img/5bf6613a2dca4fcfa20e9f734be2661e-thumbnail-00-897985d0.jpg",
         "assets/img/jaboncarbonactivado-9c58d3a0.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-detox-de-carbon-activado"
@@ -1351,7 +1335,7 @@ window.PANACEA_DATA = {
         "assets/img/5bf6613a2dca4fcfa20e9f734be2661e-thumbnail-00-897985d0.jpg",
         "assets/img/jabonmenta-6ed64b30.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-exfoliante-de-menta"
@@ -1379,7 +1363,7 @@ window.PANACEA_DATA = {
         "assets/img/GVL-e2e029f8.png",
         "assets/img/jabonrosas-2441fe86.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-super-hidratante-de-rosas"
@@ -1407,7 +1391,7 @@ window.PANACEA_DATA = {
         "assets/img/WhatsAppImage2025-06-16at10-51-31-ad98e720.jpg",
         "assets/img/8-10eae776.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-calmante-de-calendula"
@@ -1435,7 +1419,7 @@ window.PANACEA_DATA = {
         "assets/img/WhatsAppImage2025-06-16at10-51-18-0d842cca.jpg",
         "assets/img/7-0ed54642.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-relajante-de-lavanda"
@@ -1463,7 +1447,7 @@ window.PANACEA_DATA = {
         "assets/img/WhatsAppImage2025-06-16at10-51-55-35bf3d48.jpg",
         "assets/img/9-5f383b05.jpg"
       ],
-      "description": "Fórmula capilar botánica sin sulfatos, parabenos ni siliconas para fortalecer el folículo y nutrir el cabello de forma natural.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/shampoo-solido-aclarante-de-manzanillaa"
@@ -1471,7 +1455,7 @@ window.PANACEA_DATA = {
     {
       "id": "venotonica",
       "title": "Crema corporal · VENOTÓNICA",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1481,7 +1465,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Envase_de_crema_descontracturante_PANACEA_de5-1beaccdc.png",
@@ -1491,7 +1475,7 @@ window.PANACEA_DATA = {
         "assets/img/Crema_venotonica_Panacea_en_lata-08736d1a.png",
         "assets/img/Envase_de_crema_descontracturante_PANACEA_de5-06f5c77f.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/venotonica"
@@ -1499,7 +1483,7 @@ window.PANACEA_DATA = {
     {
       "id": "desintoxicante",
       "title": "Crema corporal · DESINTOXICANTE",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1509,7 +1493,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Crema_detoxificante_PANACEA_en_envase_metalic-78dd5e04.png",
@@ -1519,7 +1503,7 @@ window.PANACEA_DATA = {
         "assets/img/Crema_desintoxicante_en_envase_metalico-f0707291.png",
         "assets/img/Crema_detoxificante_PANACEA_en_envase_metalic-41e9439e.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/desintoxicante"
@@ -1527,7 +1511,7 @@ window.PANACEA_DATA = {
     {
       "id": "descontracturante",
       "title": "Crema · Descontracturante",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1537,7 +1521,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/Envase_de_crema_descontracturante_PANACEA-4b9fd0ed.png",
@@ -1547,7 +1531,7 @@ window.PANACEA_DATA = {
         "assets/img/Crema_relajante_para_musculos_y_articulacione-671917b7.png",
         "assets/img/Envase_de_crema_descontracturante_PANACEA-125a8f40.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/descontracturante"
@@ -1555,7 +1539,7 @@ window.PANACEA_DATA = {
     {
       "id": "aceite-corporal-de-aromaterapia-balance-enfocado-al-balance-hormonal-contiene-salvia-geranio-y-bergamota-ingredientes-100-naturales",
       "title": "Aceite corporal de aromaterapia BALANCE",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1565,17 +1549,16 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-30b32094.png",
-      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080-49c08e71.jpg",
+      "hoverImage": "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-4f63206b.png",
       "gallery": [
         "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-30b32094.png",
-        "assets/img/61jeeSc6c9L-_AC_SL1080-49c08e71.jpg",
         "assets/img/2_b020e288-cae6-40c0-826d-d6abb02c077c-4f63206b.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/aceite-corporal-de-aromaterapia-balance-enfocado-al-balance-hormonal-contiene-salvia-geranio-y-bergamota-ingredientes-100-naturales"
@@ -1593,7 +1576,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": true,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/4_fc14c587-d9d6-409e-9cd6-9f78b28a43d0-0c315353.png",
@@ -1605,11 +1588,9 @@ window.PANACEA_DATA = {
       ],
       "description": "El Aceite Corporal de Aromaterapia Voluntad está diseñado para acompañar momentos en los que se requiere mayor enfoque, claridad mental y concentración. Su aroma intenso y estimulante ayuda a crear un ambiente propicio para la meditación, el estudio o actividades que requieren atención y disciplina mental.",
       "accordions": {
-        "Ingredientes": "Incienso, Pimienta y Clavo. Ingredientes 100% Naturales.",
         "Beneficios": "Ayuda a estimular la mente y favorecer estados de mayor concentración y enfoque. Contribuye a promover la claridad mental durante actividades que requieren atención, estudio o trabajo intelectual. Favorece la sensación de determinación y energía mental durante momentos de meditación o reflexión personal. También apoya la creación de un ambiente aromático que estimula la memoria, la atención y la disciplina mental, ayudando a mantener la mente centrada en objetivos o tareas específicas.",
-        "Uso": "Aplicar una pequeña cantidad sobre la piel y realizar un masaje suave hasta que el aceite se absorba. Puede utilizarse como aceite corporal durante masajes relajantes o terapéuticos. También puede aplicarse en puntos como sienes, cuello o nuca para percibir su aroma, o utilizarse en difusor como parte de una sesión de aromaterapia o meditación.",
         "Para mejores resultados te recomendamos agregar": "Conoce nuestra línea de CREMAS CORPORALES AQUÍ.\nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos con fórmulas originales inspiradas en la homeopatía para ser aplicadas en la piel. Estamos convencidos que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -1618,7 +1599,7 @@ window.PANACEA_DATA = {
     {
       "id": "aceite-corporal-de-aromaterapia-energia-enfocado-a-estimular-la-energia-contiene-cardamomo-lemongrass-y-romero-ingredientes-100-naturales",
       "title": "Aceite corporal de aromaterapia ENERGÍA",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1628,17 +1609,16 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-5a711b82.png",
-      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080_68cf83ee-95eb-41c5-9d0-9deefed3.jpg",
+      "hoverImage": "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-1d3cba52.png",
       "gallery": [
         "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-5a711b82.png",
-        "assets/img/61jeeSc6c9L-_AC_SL1080_68cf83ee-95eb-41c5-9d0-9deefed3.jpg",
         "assets/img/3_d8219332-b9cb-496a-9260-83e4ffdeb15a-1d3cba52.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/aceite-corporal-de-aromaterapia-energia-enfocado-a-estimular-la-energia-contiene-cardamomo-lemongrass-y-romero-ingredientes-100-naturales"
@@ -1646,7 +1626,7 @@ window.PANACEA_DATA = {
     {
       "id": "aceite-corporal-de-aromaterapia-armonia-para-relajar-y-reducir-estres-contiene-lavanda-bergamota-y-cipres-ingredientes-100-naturales",
       "title": "Aceite corporal de aromaterapia ARMONIA",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1656,17 +1636,16 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-6cbbb59c.png",
-      "hoverImage": "assets/img/61jeeSc6c9L-_AC_SL1080_8e840f79-bd1e-4c0f-983-fe6fd2e4.jpg",
+      "hoverImage": "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-5857dca4.png",
       "gallery": [
         "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-6cbbb59c.png",
-        "assets/img/61jeeSc6c9L-_AC_SL1080_8e840f79-bd1e-4c0f-983-fe6fd2e4.jpg",
         "assets/img/5_699eb7dc-65bd-4a56-80e8-20225e2e607d-5857dca4.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/aceite-corporal-de-aromaterapia-armonia-para-relajar-y-reducir-estres-contiene-lavanda-bergamota-y-cipres-ingredientes-100-naturales"
@@ -1674,7 +1653,7 @@ window.PANACEA_DATA = {
     {
       "id": "lavanda",
       "title": "Ultra Deep (Lavanda)",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1684,7 +1663,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/16_af181b85-194b-46e5-b7de-59c04c07dffb-470df03a.png",
@@ -1694,7 +1673,7 @@ window.PANACEA_DATA = {
         "assets/img/17_ba70199d-dced-41e9-a017-baa49624199a-7d6b0448.png",
         "assets/img/16_af181b85-194b-46e5-b7de-59c04c07dffb-c6cb355c.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/lavanda"
@@ -1702,7 +1681,7 @@ window.PANACEA_DATA = {
     {
       "id": "acne",
       "title": "Crema para ACNÉ",
-      "subtitle": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos…",
+      "subtitle": "Producto Panacea para tu rutina de cuidado corporal.",
       "category": "corporal",
       "productType": "",
       "concerns": [
@@ -1712,7 +1691,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/28-a6586bd1.png",
@@ -1722,7 +1701,7 @@ window.PANACEA_DATA = {
         "assets/img/29-53281431.png",
         "assets/img/28-4f4baf26.png"
       ],
-      "description": "Fórmula corporal 100% natural con aceites vegetales y extractos botánicos concentrados para nutrir a través de la piel.",
+      "description": "Producto Panacea para tu rutina de cuidado corporal.",
       "accordions": {},
       "variants": [],
       "shopifyUrl": "https://panacea-cosmeticos.com/products/acne"
@@ -1740,7 +1719,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": true,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/SOLAR-1-5b87d910.png",
@@ -1755,8 +1734,7 @@ window.PANACEA_DATA = {
         "Ingredientes": "Óxido de Zinc, Vitamina E, Semilla de Zanahoria.",
         "Beneficios": "Ayuda a proteger la piel contra los rayos UVA y UVB. Contribuye a prevenir el daño solar y la aparición de manchas. Favorece el cuidado y la hidratación de la piel durante la exposición al sol. Es ideal para el uso diario como parte de la rutina de cuidado de la piel.",
         "Uso": "Aplica en cara y cuerpo dejando una capa blanca visible aplicar frecuentemente durante la exposición prolongada al sol, volver a aplicar después de nadar secando con toalla o cuando la capa blanca ya no sea visible, este es un protector de barrera. Su función es efectiva mientras la barrera blanca esté presente en la piel evite la exposición prolongada al. Sol, no se deje al alcance de los niños. Evite contacto con los ojos.",
-        "Para mejores resultados te recomendamos agregar": "Si deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.\nAplica crema de Aloe Vera después de la exposición al sol o a temperaturas extremas para calmar tu piel.\nConoce nuestra LINEA SOLAR\nSOLAR FACIAL, Pantalla solar de amplio espectro de uso facial con tintado mineral. Contiene óxido de zinc, dióxido de titaniop (no nano) protectores de barrera naturales que protegen el sol sin efectos secundarios y negativos para la piel. Contiene Vitamina E, ácido hialurónico y aloe vera para hidratar y proteger la piel.\nSOLAR BEBE, protección solar libre de químicos, segura para la piel del bebé y con protección total que brindan los protectores minerales como el óxido de zinc.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos con fórmulas originales inspiradas en la homeopatía para ser aplicadas en la piel. Estamos convencidos que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -1807,10 +1785,9 @@ window.PANACEA_DATA = {
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/TALCO-1-cb600845.png",
-      "hoverImage": "assets/img/B0002624-1-475097a6.jpg",
+      "hoverImage": "assets/img/TALCO-1-947448f5.png",
       "gallery": [
         "assets/img/TALCO-1-cb600845.png",
-        "assets/img/B0002624-1-475097a6.jpg",
         "assets/img/TALCO-1-947448f5.png"
       ],
       "description": "Cuidado ultra suave formulado con instinto protector para la piel delicada de bebés, mamás y pieles sensibles.",
@@ -1887,7 +1864,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/10-a8ee0e68.png",
@@ -1915,7 +1892,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/25-5321be01.png",
@@ -1943,7 +1920,7 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": true,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/DESODORANTE-LEMONGRASS-1-0898416c.png",
@@ -1953,13 +1930,13 @@ window.PANACEA_DATA = {
         "assets/img/DESODORANTE-LEMONGRASS-1-2573adef.png",
         "assets/img/DESODORANTE-LEMONGRASS-1_grande-25ba65a9.png"
       ],
-      "description": "El Desodorante de Lemongrass untable de potente acción, es un auxiliar para el cuidado e higiene diaria de las axilas. Ayuda a neutralizar los olores de forma natural mientras cuida la piel, brindando una sensación de frescura y bienestar durante el día. Su fórmula está diseñada para controlar el mal olor sin irritar la piel.\nIngredientes 100% naturales sin químicos, desodorante LIBRE DE ALUMINIO y parabenos, bueno para la piel, controla el olor sin efectos secundarios.",
+      "description": "Producto Panacea para tu rutina de cuidado personal.",
       "accordions": {
         "Ingredientes": "Lemongrass, Eucalipto, Bicarbonato, Vitamina E.",
         "Beneficios": "Neutraliza olores de manera natural, acción antiséptica. \nNuestro desodorante NO contiene ALUMINIO por lo que es totalmente seguro para ser usado por niños, embarazadas y personas con cáncer o enfermedades neurodegenerativas ligadas al exceso de aluminio en el organismo (Alzheimer, Parkinson, Esclerosis múltiple) \nBICARBONATO (Neutraliza los olores de las bacterias y tiene acción antiséptica). \nVITAMINA E (Función reestructurante, ayuda a unificar la textura de las capas de la piel, difuminando cicatrices y descamación de la piel).",
         "Uso": "Si eres de piel sensible, te rasuras o eres sensible al bicarbonato, te sugerimos que apliques tu desodorante con toques suaves evitando la fricción que el polvo puede tener sobre tu piel.",
         "Para mejores resultados te recomendamos agregar": "Puedes aplicar previamente una ligera capa de nuestra crema DERMA o TALCO untable para proteger tu piel de esta irritación, ya que el bicarbonato de sodio puede irritar en ocasiones.\nSi deseas ayuda personalizada para armar tu kit, elegir algún producto para tu tipo de piel o resolver alguna duda, da click AQUÍ y uno de nuestros asesores te atenderá.",
-        "Por qué usar PANACEA...": "Somos una marca mexicana libre de conservadores y químicos creando fórmulas originales inspiradas en la homeopatía. Estamos convencidos que la naturaleza tiene lo necesario para curarnos.",
+        "Por qué usar PANACEA...": "Panacea elabora sus productos a mano en pequeños lotes en Monterrey.",
         "Garantía": "Probar un nuevo producto para tu piel sabemos que no es decisión fácil pero estamos seguros que te encantarán nuestras cremas por eso te ofrecemos una garantía de 15 días. Si el producto no llegó en las condiciones correctas, no cumple con tus expectativas o simplemente te arrepentiste, eres libre de cambiar de opinión."
       },
       "variants": [],
@@ -1978,14 +1955,13 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/BARBA-1-7642ef3f.png",
-      "hoverImage": "assets/img/B0002880-1-3b1b94ec.jpg",
+      "hoverImage": "assets/img/BARBA-1-b5ee69a6.png",
       "gallery": [
         "assets/img/BARBA-1-7642ef3f.png",
-        "assets/img/B0002880-1-3b1b94ec.jpg",
         "assets/img/BARBA-1-b5ee69a6.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
@@ -2006,14 +1982,13 @@ window.PANACEA_DATA = {
       "comparePrice": null,
       "available": false,
       "bestSeller": false,
-      "badge": "100% Natural",
+      "badge": "Cuidado personal",
       "rating": 4.9,
       "reviews": 0,
       "image": "assets/img/KARITE-3-27d0d68d.png",
-      "hoverImage": "assets/img/B0002591-1-c55ca417.jpg",
+      "hoverImage": "assets/img/KARITE-3-2e3d52c5.png",
       "gallery": [
         "assets/img/KARITE-3-27d0d68d.png",
-        "assets/img/B0002591-1-c55ca417.jpg",
         "assets/img/KARITE-3-2e3d52c5.png"
       ],
       "description": "Fórmula de botica tradicional libre de aluminio, petrolatos y químicos sintéticos para el cuidado diario familiar.",
@@ -2027,9 +2002,9 @@ window.PANACEA_DATA = {
       "slug": "el-impacto-de-la-calendula-en-tu-piel",
       "title": "El impacto de la CALÉNDULA en tu piel...",
       "date": "2025-06-25",
-      "image": "assets/img/CALENDULA-1_55a3efad-2950-4af2-972d-3ec707898-5456e9b1.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre El impacto de la CALÉNDULA en tu piel...: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "El impacto de la CALÉNDULA en tu piel...\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-25).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "El impacto de la CALÉNDULA en tu piel...\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-25).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "shampoos-solidos",
@@ -2037,7 +2012,7 @@ window.PANACEA_DATA = {
       "date": "2025-06-17",
       "image": "assets/img/WhatsAppImage2025-06-16at10-51-38-f3d30e3b.jpg",
       "excerpt": "Guía de botica Panacea sobre ¿Shampoos Sólidos?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "¿Shampoos Sólidos?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-17).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "¿Shampoos Sólidos?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-17).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "hamamelis-la-pureza-que-transforma-tu-piel",
@@ -2045,7 +2020,7 @@ window.PANACEA_DATA = {
       "date": "2025-06-10",
       "image": "assets/img/B0002916-1_jpg-bee1a8f2.webp",
       "excerpt": "Guía de botica Panacea sobre Hamamelis: La pureza que transforma tu piel.: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Hamamelis: La pureza que transforma tu piel.\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-10).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Hamamelis: La pureza que transforma tu piel.\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-06-10).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "azufre",
@@ -2053,7 +2028,7 @@ window.PANACEA_DATA = {
       "date": "2025-03-12",
       "image": "assets/img/IMG_0555-37d96c1e.jpg",
       "excerpt": "Guía de botica Panacea sobre AZUFRE ¿Para la piel?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "AZUFRE ¿Para la piel?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "AZUFRE ¿Para la piel?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "serum-de-vitamina-c",
@@ -2061,7 +2036,7 @@ window.PANACEA_DATA = {
       "date": "2025-03-12",
       "image": "assets/img/img_0592-a086302d.jpg",
       "excerpt": "Guía de botica Panacea sobre ¿sérum de Vitamina C?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "¿sérum de Vitamina C?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "¿sérum de Vitamina C?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "serum-de-niacida-que",
@@ -2069,39 +2044,39 @@ window.PANACEA_DATA = {
       "date": "2025-03-12",
       "image": "assets/img/IMG_0598-4d6956a2.jpg",
       "excerpt": "Guía de botica Panacea sobre Sérum de Niacina...¿qué?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Sérum de Niacina...¿qué?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Sérum de Niacina...¿qué?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2025-03-12).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "desodorante-natural-vs-comercial",
       "title": "Desodorante Natural Vs Comercial",
       "date": "2024-01-19",
-      "image": "assets/img/IMG_0640-6347a19d.webp",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre Desodorante Natural Vs Comercial: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Desodorante Natural Vs Comercial\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Desodorante Natural Vs Comercial\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "cuida-tus-manos",
       "title": "Cuida Tus Manos",
       "date": "2024-01-19",
-      "image": "assets/img/IMG_0641-c3d91e1d.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre Cuida Tus Manos: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Cuida Tus Manos\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Cuida Tus Manos\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "combate-el-acne-y-el-enrojecimiento-con-el-poder-de-la-niacinamida",
-      "title": "Combate el acné y el enrojecimiento con el poder de la NIACINAMIDA",
+      "title": "Niacinamida en el cuidado de la piel",
       "date": "2024-01-19",
-      "image": "assets/img/IMG_0642-94a07d74.webp",
-      "excerpt": "Guía de botica Panacea sobre Combate el acné y el enrojecimiento con el poder de la NIACINAMIDA: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Combate el acné y el enrojecimiento con el poder de la NIACINAMIDA\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
+      "excerpt": "Guía de botica Panacea sobre Niacinamida en el cuidado de la piel: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
+      "content": "Niacinamida en el cuidado de la piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "el-poder-de-la-calendula-para-la-piel-sensible",
       "title": "El poder de la CALÉNDULA para la piel sensible",
       "date": "2024-01-19",
-      "image": "assets/img/IMG_0643-c8000409.png",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre El poder de la CALÉNDULA para la piel sensible: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "El poder de la CALÉNDULA para la piel sensible\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "El poder de la CALÉNDULA para la piel sensible\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "beneficios-del-aloe-vera-para-tu-piel",
@@ -2109,7 +2084,7 @@ window.PANACEA_DATA = {
       "date": "2024-01-19",
       "image": "assets/img/IMG_0644-ad8f8310.webp",
       "excerpt": "Guía de botica Panacea sobre Beneficios del ALOE VERA para tu piel: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Beneficios del ALOE VERA para tu piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Beneficios del ALOE VERA para tu piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "aceite-de-coco",
@@ -2117,82 +2092,53 @@ window.PANACEA_DATA = {
       "date": "2024-01-19",
       "image": "assets/img/IMG_0645-3b1bf8b3.jpg",
       "excerpt": "Guía de botica Panacea sobre ACEITE DE COCO ¿Amigo o Enemigo ?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "ACEITE DE COCO ¿Amigo o Enemigo ?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "ACEITE DE COCO ¿Amigo o Enemigo ?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "arrugas-del-sueno",
       "title": "Arrugas del Sueño",
       "date": "2024-01-19",
-      "image": "assets/img/IMG_0646-f4912efc.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre Arrugas del Sueño: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Arrugas del Sueño\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Arrugas del Sueño\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "el-alcohol-y-sus-efectos-negativos-en-la-piel",
       "title": "El Alcohol y Sus Efectos Negativos en la Piel",
       "date": "2024-01-19",
-      "image": "assets/img/IMG_0647-6778975b.png",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre El Alcohol y Sus Efectos Negativos en la Piel: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "El Alcohol y Sus Efectos Negativos en la Piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "El Alcohol y Sus Efectos Negativos en la Piel\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-19).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "colageno",
       "title": "Colágeno",
       "date": "2024-01-14",
-      "image": "assets/img/IMG_0618-3c0926dc.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre Colágeno: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Colágeno\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Colágeno\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "manchas-en-la-piel",
       "title": "¿Manchas en la piel?",
       "date": "2024-01-14",
-      "image": "assets/img/IMG_0615-7e818c1a.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre ¿Manchas en la piel?: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "¿Manchas en la piel?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "¿Manchas en la piel?\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     },
     {
       "slug": "dulces-suenos-con-melatonina",
       "title": "Dulces sueños con…MELATONINA",
       "date": "2024-01-14",
-      "image": "assets/img/IMG_0623-d67168d8.jpg",
+      "image": "assets/img/WhatsAppImage2026-07-30at09-54-30-0df06754.jpg",
       "excerpt": "Guía de botica Panacea sobre Dulces sueños con…MELATONINA: beneficios reales, activos naturales y cómo integrarlo a tu rutina diaria.",
-      "content": "Dulces sueños con…MELATONINA\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn Panacea creemos que la piel no es solo una barrera, sino un puente. Nuestras fórmulas unen la sabiduría de la herbolaria, la homeopatía y la ciencia dermatológica para nutrir tu piel a largo plazo.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
+      "content": "Dulces sueños con…MELATONINA\n\nArtículo preservado del Diario de Botica de Panacea Cosméticos (publicado originalmente el 2024-01-14).\n\nEn el Diario Panacea compartimos información sobre ingredientes y rutinas de cuidado personal.\n\nConsulta nuestra línea relacionada en la tienda o escríbenos por WhatsApp para asesoría personalizada."
     }
   ],
   "pages": {
-    "nosotros": "NOSOTRAS\n \n\n NUTRIR A TRAVÉS DE LA PIEL\n\n \n\n \n\n \n \n \n \n \n \n\n \n\n \n \n PANACEA ES LA RESPUESTA A LA NECESIDAD DE PROTEGER\n \n\n Termina una época donde nos vendieron la idea que lo industrial y lo manipulado por el hombre era mejor que lo natural. Al final de una generación completa nos hemos dado cuenta de los efectos nocivos del abuso de sustancias artificiales en nosotros y en el planeta.\n\nEstamos convencidas de que la naturaleza tiene lo necesario para nutrirnos y sanarnos, y que la mejor manera de cuidar el organismo a largo plazo, es a través los tratamientos naturales, la nutrición y el estilo de vida.\n\nVOLVER AL ORIGEN - NUTRICIÓN - SALUD DE LARGO PLAZO\n\n \n\n IR A LA TIENDA\n \n\n \n\n \n\n \n\n \n\n \n \n \n NUESTRA ESENCIA: PILAR 1\nNuestros productos reflejan nuestros valores más profundos que están centrados en la importancia de la honestidad. Hay claridad en el nombre, en los ingredientes, en su función y en los resultados que puedes obtener.\n\nHONESTIDAD - CLARIDAD - FUNCIONALIDAD - RESULTADO\n\n \n\n \n\n NUESTRA ESENCIA: PILAR 2\nComo mamás a lo largo de nuestra vida vamos desarrollando una consciencia que va fuera de nosotros, donde ya no ves sólo por ti, individuo, ves por las necesidades de otros: de tus hijos, tu familia, tus amigos. Ese instinto maternal es un motor que nos mueve a proteger.\n\nINSTINTO PROTECTOR - PROTEGER A NUESTROS HIJOS",
-    "diosa": "ORIGEN HISTÓRICO\n \n\n De la mitología griega, PANACEA es la diosa de la salud con el poder de curar todas las enfermedades.\n\nHija de Asclepio (representado por una serpiente) dios de la medicina, de ella se decía que tenía la capacidad de curar todos los males con sus hierbas y ungüentos y en especial con su cataplasma.\n\nPor eso ella, su padre, su abuelo Apolo y su hermana Higía, forman parte del juramento hipocrático recitado por todos aquellos que se convierten en médicos aún en la actualidad.\n\nPanacea viene del griego πανάκεια, panákeia, cuyo nombre a su vez proviene de panakos «que lo cura todo»: de la raíz pan, ‘todo’, y ákos, ‘remedio’. Luego se transformó en el latín panacea, que significa «remedio universal».\n\nEscogimos como nombre de marca PANACEA, porque para nosotros en la naturaleza encontramos todo lo que necesitamos para vivir saludables.\n\nPAN=TODO, AKOS=REMEDIO : REMEDIO UNIVERSAL\n\n \n\n \n\n \n\n \n\n \n\n \n \n \n \n LA ALQUIMIA\n \n\n Los alquimistas han sido grandes seguidores de Panacea, y si bien no hemos encontrado un sólo cataplasma que lo cure todo, volvemos los ojos a la naturaleza como el lugar donde creemos que podemos encontrar el remedio para todo. Por eso, para nosotros, la naturaleza es nuestra panacea.\n\n \nCONÓCENOS\n\n \n\n \n\n \n \n \n \n \n \n\n \n\n \n \n LA DIOSA Y NOSOTROS\n \n\n text-align: justify; Inspirados en la diosa Panacea —símbolo eterno de sanación y equilibrio— creamos fórmulas que no solo cuidan, sino que transforman. Cada preparación es una alquimia consciente que une lo mejor de dos mundos: la sabiduría ancestral de la botica, la herbolaria y la homeopatía, con el respaldo de la medicina moderna y la ciencia de vanguardia.\nCreemos que la piel no es solo una barrera: es un puente. Nuestro órgano más grande, sensible y receptivo, se convierte en una vía poderosa para nutrir el cuerpo, equilibrar emociones y activar procesos de bienestar profundo. Cada fórmula que desarrollamos honra esa conexión, llevando nutrición, calma y regeneración desde el exterior hacia el interior.\nUtilizamos ingredientes de origen natural, seleccionados con respeto y propósito. Plantas medicinales, aceites esenciales, minerales y extractos botánicos que trabajan en sinergia, ofreciendo resultados reales, sostenibles y sin efectos secundarios. Porque sanar no debería implicar sacrificar, y cuidar no debería contaminar.\nNo creemos en soluciones rápidas, sino en procesos conscientes. \nNo creemos en fórmulas agresivas, sino en ingredientes que respetan tu ritmo y el del planeta. \nNo creemos en estándares de belleza impuestos, sino en rituales que despiertan tu esencia.\nCada producto es una invitación a reconectar contigo misma. A convertir el cuidado personal en un acto espiritual. A transformar tu rutina en un ritual de amor propio.\nPorque cuando la naturaleza, la ciencia y la intención se unen… nace algo más que un cosmético: nace una experiencia de sanación.\n\n \n\n \n\n \n\n \n\n \n\n \n \n \n Para nosotros la naturaleza es nuestra panacea. Por eso tomamos a la diosa Panacea como nuestro Ícono de marca, acompañada por su padre en forma de serpiente, y su abuelo\n\n \n\n \n\n \n \n \n \n \n\n \n\n \n\n \n\n El Sol, sobre un jarrón de abundancia, que es la naturaleza, un plato con el cataplasma, que son las formulas originales que hemos preparado para ti, en un sello de confianza y de valores que son fundamento de nuestra empresa.",
-    "contact": "Contacto\n \n\n \n \n \n\n \n Formulario de contacto\n\n \n \n Nombre\n \n\n \n \n Correo electrónico\n *\n\n \n\n \n \n Número de teléfono\n \n\n \n \n Comentario\n \n\n \n \n Enviar\n \n \n\n \n \n Subscribe to our emails\n \n\n Be the first to know about new collections and exclusive offers.\n\n \n\n \n \n \n \n \n \n Correo electrónico"
+    "nosotros": "Panacea es un pequeño laboratorio de cuidado de la piel en Monterrey. Hacemos nuestros productos a mano, uno por uno, con ingredientes naturales elegidos con un propósito.",
+    "diosa": "Panacea es un pequeño laboratorio de cuidado de la piel en Monterrey. Hacemos nuestros productos a mano, uno por uno, con ingredientes naturales elegidos con un propósito.",
+    "contact": "Panacea es un pequeño laboratorio de cuidado de la piel en Monterrey. Hacemos nuestros productos a mano, uno por uno, con ingredientes naturales elegidos con un propósito."
   },
-  "testimonials": [
-    {
-      "name": "Oscar D.",
-      "city": "Monterrey, NL",
-      "product": "Puffy Eyes",
-      "productId": "puffy",
-      "quote": "Muy buen producto, se nota la calidad en ingredientes naturales, es concentrado, por lo tanto cumple la función de hidratar, muy recomendado."
-    },
-    {
-      "name": "Eva M.",
-      "city": "Guadalajara, JAL",
-      "product": "Tónico · Agua de Rosas",
-      "productId": "agua-de-rosas",
-      "quote": "Me gustó mucho el aroma y la sensación de frescor. Apenas comencé a usarlos, pero ya me convenció."
-    },
-    {
-      "name": "Mariana G.",
-      "city": "San Pedro Garza García, NL",
-      "product": "Crema Melatonina",
-      "productId": "melatonina",
-      "quote": "Se nota el respaldo médico desde la primera semana. Amaneces con la piel descansada y luminosa sin sentirla grasosa."
-    },
-    {
-      "name": "Sofía R.",
-      "city": "Ciudad de México",
-      "product": "Ritual Control Acné",
-      "productId": "kit-anti-acne",
-      "quote": "El azufre con caléndula me calmó los brotes sin quemar la barrera de mi piel. El envío llegó rapidísimo."
-    }
-  ]
+  "testimonials": []
 };

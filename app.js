@@ -2,6 +2,8 @@
   let { products = [], concerns = [], testimonials = [], articles = [], freeShippingThreshold, whatsappNumber, coupons, announcementText = "", integrations = {} } = window.PANACEA_DATA;
 
   async function hydrateLiveCatalog() {
+    // GitHub Pages es la demo editorial. No reemplazar su catálogo revisado con datos ajenos.
+    if (location.hostname.endsWith(".github.io")) return;
     let live = null;
     try {
       const resp = await fetch("/api/catalog", { cache: "no-store" });
@@ -266,7 +268,7 @@
 
     grid.innerHTML = visible
       .map((p) => {
-        const badgeClass = p.category === "kits" ? "badge-red" : p.badge === "Fórmula Médica" ? "badge-sage" : "";
+        const badgeClass = p.category === "kits" ? "badge-red" : p.badge === "Cuidado facial" ? "badge-sage" : "";
         const msiText = p.price >= 1000 ? `o 6 MSI de ${mxn(p.price / 6)} sin intereses` : "";
         const hasVariants = p.variants && p.variants.length > 1;
         const ratingLine = p.reviews > 0
@@ -350,7 +352,7 @@
           <button class="quiz-opt" data-q="concern" data-v="acne">Acné, poros o grasa<small>Brotes, brillo y marquitas</small></button>
           <button class="quiz-opt" data-q="concern" data-v="antiedad">Firmeza y líneas finas<small>Prevención o piel madura</small></button>
           <button class="quiz-opt" data-q="concern" data-v="manchas">Manchas o tono apagado<small>Sol, paño y luminosidad</small></button>
-          <button class="quiz-opt" data-q="concern" data-v="sensible">Piel sensible o atópica<small>Rojeces, resequedad o dermatitis</small></button>
+          <button class="quiz-opt" data-q="concern" data-v="sensible">Piel seca o sensible<small>Rutina de cuidado diario</small></button>
         </div>`;
     } else if (state.quizStep === 1) {
       panel.innerHTML = `
@@ -420,7 +422,9 @@
 
   /* ---------- Reviews ---------- */
   function renderReviews() {
-    $("#reviewsGrid").innerHTML = testimonials
+    const grid = $("#reviewsGrid");
+    if (!grid) return;
+    grid.innerHTML = testimonials
       .map(
         (t) => `
       <article class="review-card">
@@ -546,9 +550,7 @@
           <div>
             <span class="eyebrow" style="margin-bottom:6px;">${escapeHtml(p.badge || "Botica Panacea")}</span>
             <h2 style="font-family:var(--font-serif);font-size:1.95rem;line-height:1.1;">${escapeHtml(p.title)}</h2>
-            <div class="product-rating" style="margin:6px 0 10px;">
-              ★★★★★ <span>${p.reviews > 0 ? `${Number(p.rating || 5).toFixed(1)} · ${p.reviews} reseñas verificadas` : "Fórmula 100% natural verificada"}</span>
-            </div>
+            ${p.reviews > 0 ? `<div class="product-rating" style="margin:6px 0 10px;">★★★★★ <span>${Number(p.rating || 5).toFixed(1)} · ${p.reviews} reseñas</span></div>` : ""}
             <div class="product-price-row">
               <span class="price-current" style="font-size:1.35rem;">${mxn(unitPrice)} MXN</span>
               ${subscribe ? `<span class="price-compare">${mxn(basePrice)} MXN</span>` : p.comparePrice ? `<span class="price-compare">${mxn(p.comparePrice)} MXN</span>` : ""}
