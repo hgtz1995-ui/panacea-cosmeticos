@@ -19,21 +19,25 @@ function jsonResp(data, status = 200) {
   });
 }
 
-export async function onRequestGet({ env }) {
-  const requiresPin = true;
-  if (!env.PANACEA_KV) {
+export async function loadCatalog({ request, env }) {
+  const asset = await env.ASSETS.fetch(new URL("/data.js", request.url));
+  if (!asset.ok) throw new Error("Catálogo base no disponible");
+  const source = (await asset.text()).match(/window\.PANACEA_DATA\s*=\s*([\s\S]*);\s*$/);
+  const base = JSON.parse(source?.[1] ?? "");
+  const override = await env.PANACEA_KV?.get(KV_KEY, { type: "json" });
+  return { ...base, ...override };
+}
+
+export async function onRequestGet(context) {
+  try {
     return jsonResp({
-      catalog: null,
-      requiresPin,
-      backend: "Cloudflare Pages (falta enlazar KV PANACEA_KV)",
+      catalog: await loadCatalog(context),
+      requiresPin: true,
+      backend: context.env.PANACEA_KV ? "Cloudflare Pages + KV en vivo" : "Cloudflare Pages (falta enlazar KV PANACEA_KV)",
     });
+  } catch {
+    return jsonResp({ error: "Catálogo no disponible" }, 503);
   }
-  const raw = await env.PANACEA_KV.get(KV_KEY);
-  return jsonResp({
-    catalog: raw ? JSON.parse(raw) : null,
-    requiresPin,
-    backend: "Cloudflare Pages + KV en vivo",
-  });
 }
 
 export async function onRequestPost({ request, env }) {

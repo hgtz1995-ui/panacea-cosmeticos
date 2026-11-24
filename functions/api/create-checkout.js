@@ -1,6 +1,6 @@
-import { onRequestPost as recordOrder } from "./orders.js";
+import { saveOrder } from "./orders.js";
+import { loadCatalog } from "./catalog.js";
 
-const CATALOG_KEY = "panacea_catalog_v1";
 const NATIONAL = "national";
 const PICKUP = "pickup";
 
@@ -13,23 +13,13 @@ function json(data, status = 200) {
 
 function enabledProviders(env) {
   return {
-    mercadopago: Boolean(env.PANACEA_KV && env.MERCADOPAGO_ACCESS_TOKEN),
-    stripe: Boolean(env.PANACEA_KV && env.STRIPE_SECRET_KEY),
+    mercadopago: Boolean(env.PANACEA_KV && env.ADMIN_PIN && env.MERCADOPAGO_ACCESS_TOKEN),
+    stripe: Boolean(env.PANACEA_KV && env.ADMIN_PIN && env.STRIPE_SECRET_KEY),
   };
 }
 
 export function onRequestGet({ env }) {
   return json(enabledProviders(env));
-}
-
-async function loadCatalog(request, env) {
-  const asset = await env.ASSETS.fetch(new Request(new URL("/data.js", request.url)));
-  if (!asset.ok) throw new Error("Catálogo base no disponible");
-  // data.js assigns a JSON object to window.PANACEA_DATA.
-  const source = (await asset.text()).match(/window\.PANACEA_DATA\s*=\s*([\s\S]*);\s*$/);
-  const base = JSON.parse(source?.[1] ?? "");
-  const override = await env.PANACEA_KV?.get(CATALOG_KEY, { type: "json" });
-  return { ...base, ...override };
 }
 
 function priceOrder(catalog, items, coupon, delivery) {
@@ -76,6 +66,9 @@ export async function onRequestPost({ env, request }) {
     return json({ error: "Carrito inválido" }, 400);
   }
   const { items, coupon, customer, delivery, provider = "auto", expectedTotal } = input;
+  if (!["auto", "mercadopago", "stripe"].includes(provider)) {
+    return json({ error: "Proveedor de pago inválido." }, 400);
+  }
   const available = enabledProviders(env);
   const useStripe = provider === "stripe" || (provider === "auto" && !available.mercadopago);
   if (useStripe ? !available.stripe : !available.mercadopago) {
@@ -85,9 +78,18 @@ export async function onRequestPost({ env, request }) {
     return json({ error: "Confirma esta modalidad de entrega por WhatsApp." }, 400);
   }
 
+  const name = typeof customer?.name === "string" ? customer.name.trim().slice(0, 120) : "";
+  const phone = typeof customer?.phone === "string" ? customer.phone.trim().slice(0, 40) : "";
+  const address = typeof customer?.address === "string" ? customer.address.trim().slice(0, 400) : "";
+  const zip = typeof customer?.zip === "string" ? customer.zip.trim() : "";
+  if (!name || phone.replace(/\D/g, "").length < 10 ||
+      (delivery === NATIONAL && (!address || !/^\d{5}$/.test(zip)))) {
+    return json({ error: "Revisa los datos de contacto y de entrega." }, 400);
+  }
+
   let catalog;
   try {
-    catalog = await loadCatalog(request, env);
+    catalog = await loadCatalog({ request, env });
   } catch {
     return json({ error: "El catálogo no está disponible para verificar precios." }, 503);
   }
@@ -107,22 +109,20 @@ export async function onRequestPost({ env, request }) {
   const title = delivery === PICKUP ? "Pedido Panacea · Retiro en tienda" : "Pedido Panacea · Envío nacional";
   const description = quote.lines.map(({ qty, title }) => `${qty} × ${title}`).join(" · ").slice(0, 255);
   const saveCheckout = async (provider, id, checkoutUrl) => {
-    const order = new Request(request.url, {
-      method: "POST",
-      body: JSON.stringify({
-        id: reference,
-        status: "pendiente_pago",
-        customerName: customer?.name,
-        phone: customer?.phone,
-        delivery: delivery === PICKUP ? "Retiro en tienda" : "Envío nacional",
-        payment: provider === "mercadopago" ? "Mercado Pago" : "Stripe",
-        coupon,
-        total: quote.total / 100,
-        items: quote.lines.map(line => ({ ...line, price: line.price / 100 })),
-      }),
+    await saveOrder(env, {
+      id: reference,
+      status: "pendiente_pago",
+      customerName: name,
+      phone,
+      delivery: delivery === PICKUP ? "Retiro en tienda" : "Envío nacional",
+      address: delivery === NATIONAL ? address : "",
+      zip: delivery === NATIONAL ? zip : "",
+      payment: provider === "mercadopago" ? "Mercado Pago" : "Stripe",
+      providerReference: id,
+      coupon: String(coupon ?? "").slice(0, 40),
+      total: quote.total / 100,
+      items: quote.lines.map(line => ({ ...line, price: line.price / 100 })),
     });
-    const saved = await recordOrder({ request: order, env });
-    if (!saved.ok) throw new Error("No se pudo registrar el pedido");
     return json({ provider, id, reference, checkoutUrl });
   };
   try {
@@ -135,7 +135,7 @@ export async function onRequestPost({ env, request }) {
         },
         body: JSON.stringify({
           items: [{ id: reference, title, description, quantity: 1, unit_price: (quote.total - quote.shipping) / 100, currency_id: "MXN" }],
-          payer: { name: String(customer?.name ?? "").slice(0, 120) },
+          payer: { name: name },
           shipments: { cost: quote.shipping / 100, mode: "not_specified" },
           payment_methods: { installments: 6 },
           back_urls: {
@@ -149,7 +149,8 @@ export async function onRequestPost({ env, request }) {
         }),
       });
       const result = await response.json();
-      if (response.ok && result.init_point) return await saveCheckout("mercadopago", result.id, result.init_point);
+      const checkoutUrl = env.MERCADOPAGO_SANDBOX === "true" ? result.sandbox_init_point : result.init_point;
+      if (response.ok && result.id && checkoutUrl) return await saveCheckout("mercadopago", result.id, checkoutUrl);
     } else {
       const form = new URLSearchParams({
         mode: "payment",

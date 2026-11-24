@@ -1,11 +1,10 @@
 /**
  * Cloudflare Pages Function: /api/shipping-quote
- * Cotiza envíos en México vía Envia.com o Skydropx + Envío Gratis (+$799 MXN) + Retiro Monterrey.
+ * Cotiza envíos en México vía Skydropx + Envío Gratis (+$799 MXN) + Retiro Monterrey.
  *
  * Variables de entorno opcionales en Cloudflare Pages:
- *   ENVIA_API_KEY   = xxxxxxxx  (Envia.com — el proveedor ya detectado en Panacea)
  *   SKYDROPX_API_KEY = xxxxxxxx (alternativa Skydropx)
- *   ORIGIN_ZIP      = 66220     (Monterrey / San Pedro Garza García, NL)
+ *   ORIGIN_ZIP      = 66200     (Monterrey / San Pedro Garza García, NL)
  */
 
 function jsonResp(data, status = 200) {
@@ -16,8 +15,17 @@ function jsonResp(data, status = 200) {
 }
 
 export async function onRequestPost({ request, env }) {
-  const { destinationZip = "", subtotal = 0, weightKg = 0.5 } = await request.json().catch(() => ({}));
-  const sub = Number(subtotal || 0);
+  const body = await request.json().catch(() => null);
+  if (!body || typeof body !== "object" || Array.isArray(body)) {
+    return jsonResp({ error: "Solicitud de envío inválida" }, 400);
+  }
+  const { destinationZip = "", subtotal = 0, weightKg = 0.5 } = body;
+  const sub = Number(subtotal);
+  const weight = Number(weightKg);
+  if (!Number.isFinite(sub) || sub < 0 || !Number.isFinite(weight) || weight <= 0 ||
+      (destinationZip !== "" && !/^\d{5}$/.test(String(destinationZip)))) {
+    return jsonResp({ error: "Revisa el código postal, subtotal y peso" }, 400);
+  }
 
   const options = [
     {
@@ -61,7 +69,7 @@ export async function onRequestPost({ request, env }) {
         body: JSON.stringify({
           zip_from: env.ORIGIN_ZIP || "66200",
           zip_to: String(destinationZip),
-          parcel: { weight: Number(weightKg), height: 15, width: 20, length: 20 },
+          parcel: { weight, height: 15, width: 20, length: 20 },
         }),
       });
       const rates = await resp.json();
@@ -75,7 +83,7 @@ export async function onRequestPost({ request, env }) {
           price: Math.ceil(Number(r.total_pricing)),
           days: `${r.days} días hábiles`,
         }));
-      if (mapped.length) return jsonResp({ options: [...mapped, ...options] });
+      if (resp.ok && mapped.length) return jsonResp({ options: [...mapped, ...options] });
     } catch (_) {}
   }
 

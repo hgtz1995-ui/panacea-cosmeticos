@@ -21,6 +21,7 @@
 
   let catalog = null;
   let orders = [];
+  let individualOrderUpdates = false;
   let orderFilter = "all";
   let undoStack = [];
   let storageMode = "local"; // "api" | "browser"
@@ -893,7 +894,10 @@
         const r = await fetch("/api/orders", { headers, cache: "no-store" });
         if (r.ok) {
           const j = await r.json();
-          if (Array.isArray(j.orders)) loaded = j.orders;
+          if (Array.isArray(j.orders)) {
+            loaded = j.orders;
+            individualOrderUpdates = Boolean(j.individualUpdates);
+          }
         }
       } catch (_) {}
     }
@@ -907,22 +911,31 @@
     orders = Array.isArray(loaded) ? loaded : [];
   }
 
-  async function saveOrders(msg = "📦 Pedidos actualizados") {
-    localStorage.setItem(LS_ORDERS_KEY, JSON.stringify(orders));
+  async function saveOrders(msg, change, nextOrders) {
     if (storageMode === "api") {
       try {
         const headers = { "Content-Type": "application/json" };
         const pin = sessionStorage.getItem(PIN_KEY);
         if (pin) headers["X-Admin-Pin"] = pin;
-        await fetch("/api/orders", {
-          method: "PUT",
+        const create = individualOrderUpdates && change.order;
+        const body = create || (individualOrderUpdates ? change : { orders: nextOrders });
+        const response = await fetch("/api/orders", {
+          method: create ? "POST" : "PUT",
           headers,
-          body: JSON.stringify({ orders })
+          body: JSON.stringify(body),
         });
-      } catch (_) {}
+        if (!response.ok) throw new Error("El servidor rechazó el cambio");
+      } catch (_) {
+        toast("No se pudo guardar el cambio. Actualiza los pedidos e inténtalo otra vez.");
+        return false;
+      }
+    } else {
+      localStorage.setItem(LS_ORDERS_KEY, JSON.stringify(nextOrders));
     }
+    orders = nextOrders;
     toast(msg);
     renderOrders();
+    return true;
   }
 
   function renderOrders() {
@@ -962,6 +975,8 @@
           <div class="order-items">
             <strong>${mxn(o.total)} MXN</strong> — ${itemsHtml}
             ${o.delivery ? `<div class="hint" style="margin-top:4px;">🚚 ${esc(o.delivery)} ${o.payment ? "· 💳 " + esc(o.payment) : ""}</div>` : ""}
+            ${o.address ? `<div class="hint">${esc(o.address)} · CP ${esc(o.zip)}</div>` : ""}
+            ${o.providerReference ? `<div class="hint">Referencia de pago ${esc(o.providerReference)}</div>` : ""}
             ${o.notes ? `<div class="hint" style="margin-top:4px;">📝 ${esc(o.notes)}</div>` : ""}
           </div>
           <div class="order-actions">
@@ -977,15 +992,17 @@
       b.addEventListener("click", () => {
         const o = orders.find((x) => x.id === b.dataset.nextOrder);
         if (!o) return;
-        o.status = b.dataset.nextSt;
-        saveOrders(`Pedido ${o.id} cambiado a ${ORDER_FLOW[o.status].label}`);
+        const status = b.dataset.nextSt;
+        saveOrders(`Pedido ${o.id} cambiado a ${ORDER_FLOW[status].label}`,
+          { id: o.id, status, previousStatus: o.status },
+          orders.map(entry => entry.id === o.id ? { ...entry, status } : entry));
       })
     );
     $$("[data-del-order]").forEach((b) =>
       b.addEventListener("click", () => {
         if (!confirm("¿Borrar este pedido de la lista?")) return;
-        orders = orders.filter((x) => x.id !== b.dataset.delOrder);
-        saveOrders("🗑️ Pedido eliminado");
+        const id = b.dataset.delOrder;
+        saveOrders("🗑️ Pedido eliminado", { id, remove: true }, orders.filter(order => order.id !== id));
       })
     );
   }
@@ -1003,10 +1020,10 @@
   $("#closeOrderModal").addEventListener("click", closeOrderModal);
   $("#cancelOrderBtn").addEventListener("click", closeOrderModal);
 
-  $("#orderForm").addEventListener("submit", (e) => {
+  $("#orderForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const order = {
-      id: "PED-" + String(Date.now()).slice(-6),
+      id: "PED-" + crypto.randomUUID(),
       createdAt: new Date().toISOString(),
       status: "nuevo",
       customerName: $("#ofName").value.trim(),
@@ -1017,11 +1034,10 @@
       items: [{ qty: 1, title: $("#ofItems").value.trim() }],
       notes: $("#ofNotes").value.trim()
     };
-    orders.unshift(order);
+    if (!await saveOrders(`📦 Pedido de ${order.customerName} anotado`, { order }, [order, ...orders])) return;
     e.target.reset();
     $("#ofDelivery").value = "Envío Nacional";
     closeOrderModal();
-    saveOrders(`📦 Pedido de ${order.customerName} anotado`);
   });
 
   function renderAll() {

@@ -5,7 +5,7 @@
  *
  * Variable de entorno requerida en Vercel:
  *   SKYDROPX_API_KEY=xxxxxxxx
- *   ORIGIN_ZIP=66220 (San Pedro Garza García / Monterrey, NL)
+ *   ORIGIN_ZIP=66200 (San Pedro Garza García / Monterrey, NL)
  */
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -55,7 +55,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        zip_from: process.env.ORIGIN_ZIP || "66220",
+        zip_from: process.env.ORIGIN_ZIP || "66200",
         zip_to: String(destinationZip),
         parcel: { weight: Number(weightKg), height: 15, width: 20, length: 20 },
       }),

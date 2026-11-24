@@ -1,78 +1,101 @@
-/**
- * Cloudflare Pages Function: /api/orders
- * Guarda y administra pedidos de Panacea Cosméticos en Cloudflare KV ($0/mes).
- * Usa el mismo binding PANACEA_KV y secreto ADMIN_PIN que /api/catalog.
- */
+// Orders written by the old deployment are read from the legacy array.
+const LEGACY_KEY = "panacea_orders_v1";
+const ORDER_PREFIX = "panacea_order_v2:";
+const STATUS = ["nuevo", "pendiente_pago", "pagado", "enviado", "entregado"];
 
-const ORDERS_KEY = "panacea_orders_v1";
-
-function jsonResp(data, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "Cache-Control": "no-store",
-    },
-  });
+function json(data, status = 200) {
+  return Response.json(data, { status, headers: { "Cache-Control": "no-store" } });
 }
 
 function isAuthorized(request, env) {
   return Boolean(env.ADMIN_PIN) && request.headers.get("X-Admin-Pin") === String(env.ADMIN_PIN);
 }
 
+export async function saveOrder(env, order) {
+  await env.PANACEA_KV.put(
+    ORDER_PREFIX + order.id,
+    JSON.stringify({ createdAt: new Date().toISOString(), ...order }),
+  );
+}
+
 export async function onRequestGet({ request, env }) {
-  if (!isAuthorized(request, env)) {
-    return jsonResp({ error: "No autorizado" }, 401);
-  }
-  if (!env.PANACEA_KV) {
-    return jsonResp({ orders: [], note: "Falta enlazar PANACEA_KV" });
-  }
-  const raw = await env.PANACEA_KV.get(ORDERS_KEY);
-  return jsonResp({ orders: raw ? JSON.parse(raw) : [] });
+  if (!isAuthorized(request, env)) return json({ error: "No autorizado" }, 401);
+  const kv = env.PANACEA_KV;
+  if (!kv) return json({ error: "Falta enlazar PANACEA_KV" }, 503);
+  const legacy = await kv.get(LEGACY_KEY, { type: "json" }) ?? [];
+  const orders = new Map(legacy.map(order => [order.id, order]));
+  let cursor;
+  do {
+    const page = await kv.list({ prefix: ORDER_PREFIX, cursor, limit: 1000 });
+    for (const { name, metadata } of page.keys) {
+      if (metadata?.deleted) orders.delete(name.slice(ORDER_PREFIX.length));
+    }
+    const records = page.keys.filter(key => !key.metadata?.deleted);
+    for (let i = 0; i < records.length; i += 100) {
+      const batch = await kv.get(records.slice(i, i + 100).map(key => key.name), { type: "json" });
+      for (const order of batch.values()) {
+        if (order) orders.set(order.id, order);
+      }
+    }
+    cursor = page.list_complete ? undefined : page.cursor;
+  } while (cursor);
+  const latest = [...orders.values()].sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt));
+  return json({ orders: latest.slice(0, 500), individualUpdates: true });
 }
 
 export async function onRequestPost({ request, env }) {
-  if (!env.PANACEA_KV) {
-    return jsonResp({ ok: false, error: "Falta enlazar PANACEA_KV" }, 500);
+  const kv = env.PANACEA_KV;
+  if (!kv || !env.ADMIN_PIN) return json({ error: "Pedidos no configurados" }, 503);
+  const body = await request.json().catch(() => null);
+  if (!Array.isArray(body?.items) || !body.items.length || body.items.length > 50 ||
+      body.items.some(item => !item || typeof item.title !== "string" ||
+        !Number.isInteger(item.qty) || item.qty < 1 || item.qty > 99)) {
+    return json({ error: "Pedido inválido" }, 400);
   }
-  const order = await request.json().catch(() => null);
-  if (!order || !Array.isArray(order.items) || !order.items.length) {
-    return jsonResp({ error: "Pedido inválido" }, 400);
-  }
-  const raw = await env.PANACEA_KV.get(ORDERS_KEY);
-  const list = raw ? JSON.parse(raw) : [];
-  const cleanOrder = {
-    id: String(order.id || "PED-" + String(Date.now()).slice(-6)),
-    createdAt: order.createdAt || new Date().toISOString(),
-    status: String(order.status || "nuevo"),
-    customerName: String(order.customerName || "").slice(0, 120),
-    phone: String(order.phone || "").slice(0, 40),
-    delivery: String(order.delivery || "").slice(0, 120),
-    payment: String(order.payment || "").slice(0, 120),
-    coupon: String(order.coupon || "").slice(0, 40),
-    total: Number(order.total || 0),
-    items: order.items.slice(0, 50).map((i) => ({
-      title: String(i.title || "").slice(0, 160),
-      qty: Number(i.qty || 1),
-      price: Number(i.price || 0),
-    })),
-  };
-  list.unshift(cleanOrder);
-  await env.PANACEA_KV.put(ORDERS_KEY, JSON.stringify(list.slice(0, 500)));
-  return jsonResp({ ok: true, id: cleanOrder.id }, 201);
+
+  const admin = isAuthorized(request, env);
+  const id = typeof body.id === "string" && /^PED-[a-f0-9-]{8,36}$/i.test(body.id)
+    ? body.id : "PED-" + crypto.randomUUID();
+  if (await kv.get(ORDER_PREFIX + id)) return json({ ok: true, id });
+  const text = (value, length) => typeof value === "string" ? value.trim().slice(0, length) : "";
+  const total = Number(body.total);
+  await saveOrder(env, {
+    id,
+    status: "nuevo",
+    customerName: text(body.customerName, 120),
+    phone: text(body.phone, 40),
+    delivery: text(body.delivery, 120),
+    address: text(body.address, 400),
+    zip: text(body.zip, 5),
+    payment: admin ? text(body.payment, 120) : "WhatsApp",
+    coupon: text(body.coupon, 40),
+    total: Number.isFinite(total) && total >= 0 ? total : 0,
+    items: body.items.map(item => ({ title: text(item.title, 160), qty: item.qty })),
+    notes: admin ? text(body.notes, 400) : "",
+  });
+  return json({ ok: true, id }, 201);
 }
 
 export async function onRequestPut({ request, env }) {
-  if (!isAuthorized(request, env)) {
-    return jsonResp({ error: "No autorizado" }, 401);
-  }
-  if (!env.PANACEA_KV) {
-    return jsonResp({ error: "Falta enlazar PANACEA_KV" }, 500);
-  }
+  if (!isAuthorized(request, env)) return json({ error: "No autorizado" }, 401);
+  const kv = env.PANACEA_KV;
+  if (!kv) return json({ error: "Falta enlazar PANACEA_KV" }, 503);
   const body = await request.json().catch(() => null);
-  if (!body || !Array.isArray(body.orders)) {
-    return jsonResp({ error: "Lista de pedidos inválida" }, 400);
+  const id = body?.id;
+  if (typeof id !== "string" || !id || id.length > 120 || (!body.remove && !STATUS.includes(body.status))) {
+    return json({ error: "Cambio de pedido inválido" }, 400);
   }
-  await env.PANACEA_KV.put(ORDERS_KEY, JSON.stringify(body.orders.slice(0, 500)));
-  return jsonResp({ ok: true });
+  const key = ORDER_PREFIX + id;
+  const record = await kv.getWithMetadata(key, { type: "json" });
+  if (record.metadata?.deleted) return json({ error: "Pedido eliminado" }, 404);
+  const legacy = record.value ? [] : await kv.get(LEGACY_KEY, { type: "json" }) ?? [];
+  const order = record.value ?? legacy.find(entry => entry.id === id);
+  if (!order) return json({ error: "Pedido no encontrado" }, 404);
+  if (body.remove) {
+    await kv.put(key, "{}", { metadata: { deleted: true } });
+  } else if (order.status !== body.status) {
+    if (order.status !== body.previousStatus) return json({ error: "El pedido ya cambió" }, 409);
+    await saveOrder(env, { ...order, status: body.status });
+  }
+  return json({ ok: true });
 }

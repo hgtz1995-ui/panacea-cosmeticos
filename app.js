@@ -848,6 +848,17 @@
             </div>
           </div>
 
+          <div class="checkout-grid" id="deliveryAddress">
+            <div class="field-group">
+              <label for="checkoutAddress">Domicilio completo</label>
+              <input id="checkoutAddress" name="address" autocomplete="street-address" maxlength="400" placeholder="Calle, número, colonia, ciudad y estado">
+            </div>
+            <div class="field-group">
+              <label for="checkoutZip">Código postal</label>
+              <input id="checkoutZip" name="zip" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5">
+            </div>
+          </div>
+
           <div style="background:var(--ivory);border:1px solid var(--border);border-radius:10px;padding:14px;margin:14px 0;font-size:0.86rem;">
             <strong>Resumen (${state.cart.reduce((a, i) => a + i.qty, 0)} artículos):</strong>
             ${state.cart.map((i) => `${i.qty}× ${escapeHtml(i.title)}`).join(" · ")}
@@ -876,6 +887,12 @@
     const checkoutTotal = () => afterDiscount + (deliveryCode() === "national" ? shipping : 0);
     let onlineAvailable = false;
     const updateCheckout = () => {
+      const national = deliveryCode() === "national";
+      $("#deliveryAddress").style.display = national ? "" : "none";
+      for (const field of [form.elements.address, form.elements.zip]) {
+        field.required = national;
+        field.disabled = !national;
+      }
       $("#checkoutTotal").textContent = deliveryCode()
         ? `Total: ${mxn(checkoutTotal())} MXN`
         : `Productos: ${mxn(afterDiscount)} MXN · Envío por confirmar`;
@@ -912,7 +929,7 @@
             delivery: deliveryCode(),
             expectedTotal: checkoutTotal(),
             coupon: state.coupon,
-            customer: { name: fd.get("name"), phone: fd.get("phone") }
+            customer: { name: fd.get("name"), phone: fd.get("phone"), address: fd.get("address"), zip: fd.get("zip") }
           })
         });
         const data = await res.json();
@@ -933,12 +950,14 @@
       e.preventDefault();
       const fd = new FormData(e.target);
       const orderPayload = {
-        id: "PED-" + String(Date.now()).slice(-6),
+        id: "PED-" + crypto.randomUUID(),
         createdAt: new Date().toISOString(),
         status: "nuevo",
         customerName: String(fd.get("name") || "").trim(),
         phone: String(fd.get("phone") || "").trim(),
         delivery: String(fd.get("delivery") || ""),
+        address: String(fd.get("address") || ""),
+        zip: String(fd.get("zip") || ""),
         payment: String(fd.get("payment") || ""),
         coupon: state.coupon || "",
         total: checkoutTotal(),
@@ -963,6 +982,7 @@
         `Nombre: ${fd.get("name")}`,
         `Tel: ${fd.get("phone")}`,
         `Entrega: ${fd.get("delivery")}`,
+        orderPayload.address ? `Domicilio: ${orderPayload.address}, CP ${orderPayload.zip}` : "",
         `Pago: ${fd.get("payment")}`
       ].filter(Boolean);
       const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
